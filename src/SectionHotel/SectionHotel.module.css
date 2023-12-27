@@ -1,0 +1,131 @@
+.SectionHotel {
+    max-width: 1230px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.divSpecialofers h2{
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.divContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+.divTextContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+.imgSerze {
+    position: absolute;
+    padding-left: 318px;
+    padding-top: 20px;
+}
+
+.zirca {
+    position: absolute;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.hotelImg {
+    padding: 10px 10px 0px 10px
+}
+
+.divPidContainer {
+    border: 1px solid;
+    border-color: #8080803b;
+    border-radius: 15px;
+    margin: 20px;
+}
+
+.divtext {
+    padding-left: 10px;
+}
+
+.divTextContainer div {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.divTextContainer img {
+    width: 25px;
+    height: 25px;
+    padding-right: 5px;
+}
+
+.divTextContainer p {
+    margin: 0;
+}
+
+.divtext h2{
+    color: #5c5959;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.divtext h3{
+    color: gray;
+    margin: 0;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.divtext h4{
+    margin-top: 10px;
+    color: #656262;
+    font-weight: 700;
+}
+
+.divtext p{
+    color: #2ec5ee;
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.divtext span{
+    font-size: 18px;
+}
+
+
+@media(max-width: 1280px){
+    .divContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 860px){
+    .divtext h3{
+        display: none;
+    }
+
+    .divTextContainer{
+        display: none;
+    }
+
+    .divPidContainer{
+        max-width: 280px;
+        width: 100%; 
+        margin: 0px 0px 20px 0px;  
+    }
+
+    .hotelImg{
+        max-width: 260px;
+        width: 100%;
+    }
+
+    .imgSerze{
+        padding-left: 230px;
+    }
+}

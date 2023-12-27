@@ -1,0 +1,89 @@
+.Sectionrecentr {
+    max-width: 1280px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.RecentrLogoH1 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.RecentrLogoH1 h1 {
+    font-size: 45px;
+}
+
+.DivCintainerRecent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.DivMinContainer h2 {
+    display: flex;
+    justify-content: space-between;
+    color: grey;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.DivMinContainer h3 {
+    margin: 0
+}
+
+.TimeField1 {
+    position: relative;
+    left: 2px;
+    top: 4px;
+}
+
+.TimeField2 {
+    position: relative;
+    left: -4px;
+    top: 4px;
+}
+
+.TimeField3 {
+    position: relative;
+    left: 2px;
+    top: 4px;
+}
+
+.DivMinContainer span {
+    color: #25bde4;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.DivMinContainer p {
+    color: gray;
+}
+
+.DivMinContainer {
+    margin: 20px;
+}
+
+@media(max-width: 1280px) {
+    .DivCintainerRecent {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 860px){
+    .DivMinContainer{
+        max-width: 280px;
+        width: 100%;
+    }
+
+    .DivMinContainer img {
+        max-width: 280px;
+        width: 100%;   
+    }
+
+    .DivMinContainer p {
+        font-size: 13px;
+    }
+}

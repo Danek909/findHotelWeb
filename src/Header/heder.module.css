@@ -1,0 +1,204 @@
+.sectionHeder {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 100%;
+    max-height: 300px;
+    height: 100%;
+    padding-bottom: 25px;
+}
+
+.activeLink a{
+    width: 100px;
+    height: 100px;
+}
+
+.yourLogoHeder h1 {
+    font-size: 25px;
+    color: blue;
+    font-weight: 900;
+}
+
+.heder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    height: 40px;
+    margin: 0 auto;
+
+}
+
+.yourLogoHeder span {
+    color: palevioletred;
+    font-weight: 900;
+}
+
+.yourLogoHeder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 650px;
+    width: 100%;
+
+}
+
+.yourLogoHeder ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 11px;
+}
+
+.yourLogoHeder ul a {
+    color: black;
+    text-decoration: none;
+}
+
+.imgHeder {
+    width: 120px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dolalrsHeder {
+    width: 12px;
+    height: 24px;
+}
+
+.languageHeder {
+    width: 27px;
+    height: 24px;
+}
+
+.userPhotoHeder {
+    width: 32px;
+    height: 32px;
+}
+
+.btn_Menu {
+    display: none;
+}
+
+.meregi_Btn{
+    display: none;
+}
+
+.mobile_btn{
+    display: none;
+}
+
+@media (max-width: 850px) {
+    .yourLogoHeder {
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 700px) {
+    .mobile_btn {
+        display: block;
+        position: absolute;
+        left: 30px;
+        top: 10px;
+        cursor: pointer;
+    }
+
+    .menu {
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -120%;
+        right: 0;
+        transition: left 1s;
+    }
+
+    .yourLogoHeder ul {
+        flex-direction: column;
+        height: 100vh;
+        background: #ffffff;
+        justify-content: flex-start;
+        margin-top: 39px;
+        padding-left: 30px;
+        overflow: auto;
+    }
+
+
+    .meregi_Btn {
+        display: block;
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 50px;
+        color: #2A90D9;
+    }
+
+    .btn_Menu{
+        display: block;
+        margin-top: 40px
+    }
+
+    .btn_Menu svg{
+        color: #EE685F;
+        margin-right: 10px;
+    }
+
+    .active {
+        left: 0;
+    }
+
+    .yourLogoHeder a {
+        padding-top: 30px;
+    }
+
+    .yourLogoHeder {
+        padding-top: 5px;
+        padding-left: 60px;
+    }
+
+    .userPhotoHeder {
+        position: absolute;
+        right: 30px;
+        top: 10px;
+    }
+
+    .yourLogoHeder {
+        margin: 0;
+    }
+
+    .dolalrsHeder {
+        display: none;
+    }
+
+    .languageHeder {
+        display: none;
+    }
+}
+
+@media (max-width: 530px) {
+
+    .yourLogoHeder ul{
+        padding-left: 20px;
+    }
+    .mobile_btn{
+        top: 5px;
+        left: 20px;
+    }
+
+    .heder{
+        position: fixed;
+        z-index: 11;
+        background-color: #ffffff;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    .userPhotoHeder{
+        right: 20px;
+        top: 5px;
+    }
+}

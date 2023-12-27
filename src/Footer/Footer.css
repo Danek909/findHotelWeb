@@ -1,0 +1,184 @@
+.SectionFooter {
+    max-width: 1280px;
+    max-height: 320px;
+    min-height: 320px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #bebdbd54;
+}
+
+.DivFooterContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 40px 10px 40px
+}
+
+.DivFooterContainer h2 {
+    font-weight: 500;
+    font-size: 19px;
+    margin: 0px;
+}
+
+.DivFooterContainer ul {
+    padding: 0px;
+}
+
+.DivFooterContainer ul li {
+    list-style: none;
+    padding-bottom: 20px;
+}
+
+.DivFooterContainer ul li a {
+    text-decoration: none;
+    color: #797272;
+}
+
+.DivFooterContainer textarea {
+    width: 264px;
+    height: 30px;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: coral;
+}
+
+.DivFooterContainer h3 {
+    margin: 0;
+    padding-right: 100px;
+    padding-bottom: 10px;
+}
+
+.DivFooterContainer button {
+    right: 6px;
+    width: 36px;
+    height: 38px;
+    position: relative;
+    bottom: 14px;
+    border: 2px solid;
+    border-color: coral;
+    background: coral;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.DivFooterContainer p {
+    color: #797272;
+}
+
+.PoloskaBootom {
+    display: flex;
+    justify-content: center;
+}
+
+.PoloskaBootom img {
+    max-width: 1186px;
+    width: 100%;
+    padding-right: 9px;
+    margin: 0 auto;
+}
+
+.MinContainer {
+    padding-top: 30px;
+}
+
+.FooterMin {
+    max-width: 1185px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 43px;
+}
+
+.FooterMin h1 {
+    color: #2048d5;
+}
+
+.FooterMin h1 span {
+    color: #db35ab;
+}
+
+.FooterMin span {
+    color: blue;
+}
+
+.minDivFooter {
+    display: flex;
+    justify-content: space-between;
+    max-width: 170px;
+    width: 100%;
+
+}
+
+.minDivFooter svg {
+    color: #2A90D9;
+}
+
+@media(max-width: 1280px) {
+    .FooterMin {
+        padding: 0;
+    }
+
+    .FooterMin h1 {
+        padding-left: 30px;
+    }
+
+    .minDivFooter {
+        padding-right: 30px;
+    }
+
+    .PoloskaBootom img {
+        width: 95%;
+    }
+}
+
+
+@media(max-width: 1280px) {
+    .DivFooterContainer {
+        flex-wrap: wrap;
+    }
+
+    .SectionFooter {
+        min-height: 100%;
+        max-height: 100%;
+        height: 100%;
+    }
+}
+
+@media(max-width: 520px){
+    .FooterMin{
+        flex-wrap: wrap;
+        width: 70%;
+        padding-left: 20px;
+    }
+
+    .FooterMin h1{
+        padding-left: 0px;
+        padding-right: 10px;
+    }
+
+    
+}
+
+@media(max-width: 390px) {
+    .DivFooterContainer textarea {
+        max-width: 190px;
+        width: 100%;
+    }
+
+    .DivMinContaier h3{
+        font-size: 11px;
+        padding-bottom: 0px;
+    }
+
+    .DivMinContaier p{
+        margin: 10px 0px;
+    }
+}
+
+@media(max-width: 337px) {
+    .DivFooterContainer {
+        padding: 30px 60px 10px 20px;
+    }
+}
