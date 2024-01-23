@@ -5,16 +5,25 @@ import Line from '../image/Line.png'
 import { MdPhoneInTalk } from "react-icons/md";
 import { FaYoutube, FaFacebook, FaInstagramSquare, FaTelegram } from "react-icons/fa";
 
-const Footer = () => {
+const Footer = (props) => {
+
+let newPostElement = React.createRef();
+
+let addPost =(props) =>{
+    let text = newPostElement.current.value;
+    props.addPost(text)
+}
     return (
         <section className="SectionFooter">
 
             <div className="DivFooterContainer">
+
                 <div className="DivMinContaier">
                     <h2>Title of section</h2>
                     <ul>
                         <li>
                             <a href="#">Page title</a>
+                         
                         </li>
                         <li>
                             <a href="#">Page title</a>
@@ -58,8 +67,13 @@ const Footer = () => {
                 <div className="DivMinContaier">
                     <h3>Subscribe to Newsletter</h3>
                     <p>Your email</p>
-                    <textarea name="Hellos" id="" cols="30" rows="10"></textarea><button><BsSendCheck /></button>
+                    <form>
+                        <textarea ref={newPostElement}></textarea>
+                        <button onClick={addPost}><BsSendCheck /></button>
+                    </form>
                 </div>
+
+               
             </div>
 
             <div className="PoloskaBootom"><img src={Line} alt="Delete" /></div>
@@ -69,11 +83,11 @@ const Footer = () => {
                     <h1>Your.<span>logo</span></h1>
                     <p>Design by <span>Delvig</span></p>
                     <div className="minDivFooter">
-                    <MdPhoneInTalk/>
-                    <FaFacebook/>
-                    <FaYoutube/>
-                    <FaInstagramSquare/>
-                    <FaTelegram/>
+                        <MdPhoneInTalk />
+                        <FaFacebook />
+                        <FaYoutube />
+                        <FaInstagramSquare />
+                        <FaTelegram />
                     </div>
                 </div>
             </div>

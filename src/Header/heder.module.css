@@ -8,9 +8,9 @@
     padding-bottom: 25px;
 }
 
-.activeLink a{
-    width: 100px;
-    height: 100px;
+.active{
+    width: 300px;
+    height: 300px;
 }
 
 .yourLogoHeder h1 {

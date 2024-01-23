@@ -108,15 +108,7 @@ const SectionHotel = () => {
                             <p>1,350 Sq Ft</p>
                         </div>
                     </div>
-
                 </div>
-
-
-
-
-
-
-
             </div>
         </section>
     )
