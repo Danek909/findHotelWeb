@@ -1,32 +1,323 @@
-.SectionLogin h1{
-   color: grey;
-   display: flex;
-   justify-content: center;
-   margin: 10px 0px 30px 0px;
+.SectionLogin h1 {
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px 30px 0px;
 }
 
-.SectionLogin p{
-    margin: 10px 0px 10px 0px;
+.Div_2 p {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
 }
 
-.SectionLogin button{
+.SectionLogin button {
     margin-top: 20px;
 }
 
-.Div_1{
-    margin-bottom: 20px;
-}
-.Div_1 input{
-    width: 180px;
-}
-
-.Div_1{
-    margin-top: 0;
-    margin-bottom: 30px;
+.Div_0 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px 0px 40px 0px;
 }
 
-.Div_3{
+
+.Div_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px 0px 40px 0px;
+}
+
+.passworDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px 0px 40px 0px;
+}
+
+.Div_3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px 0px 40px 0px;
+}
+
+
+.Div_4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px 0px 40px 0px;
+}
+
+.divContLoginForm_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px 0px 20px 0px;
+}
+
+.divContLoginForm_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0px 20px 0px;
+}
+
+input {
+    border-color: black;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    outline: none;
+    max-width: 300px;
+    width: 100%;
+}
+
+input:focus {
+    border-color: rgb(111, 255, 0);
+}
+
+.successfullyReg {
     display: flex;
     align-items: center;
-    margin: 20px 0px 0px 0px;
+    justify-content: center;
+    margin: 10px 0px 10px 0px;
+    font-size: 20px;
+    color: red;
+    font-weight: 900;
+}
+
+.divLoginFormContBtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divLoginFormContBtn button {
+    background: darkgray;
+    color: white;
+    font-size: 16px;
+    border: 0;
+    border-radius: 3px;
+    width: 180px;
+    height: 30px;
+}
+
+.AcauntMesage span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.AcauntMesage h3 {
+    font-weight: 900;
+    color: black;
+    font-size: 16px;
+}
+
+.erorsBlock svg {
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+}
+
+.erorsBlock p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: red;
+    padding-bottom: 20px;
+}
+
+.LoginName{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.erorsBlock h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #26ed26;
+    padding-bottom: 20px;
+}
+
+.RegistrationDivBtn button {
+    background: darkgray;
+    color: white;
+    font-size: 16px;
+    border: 0;
+    border-radius: 3px;
+    width: 180px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.RegistrationDivBtn button:active {
+    background-color: red;
+}
+
+.RegForm {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.RegistrationDivBtn {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.divErrors {
+    margin-top: -10px;
+    margin-bottom: 28px;
+    color: red;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.divErrors_Password{
+    margin-top: -8px;
+    margin-bottom: 23px;
+    color: red;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.divErrors svg {
+    position: relative;
+    top: 3px;
+    left: 5px;
+}
+
+.divErrorsPsConfirm {
+    position: relative;
+    margin-top: -10px;
+    margin-bottom: 28px;
+    color: red;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.divErrorsPsConfirm svg {
+    position: relative;
+    top: 3px;
+    left: 5px;
+}
+
+.iconsExclamation {
+    position: absolute;
+    right: 112px;
+    top: -10px;
+    width: 13px;
+}
+
+.errorsPasword {
+    margin: 0;
+    font-size: 13px;
+    color: red;
+    font-weight: 900;
+    position: relative;
+    top: -18px;
+}
+
+.errorsPasword svg {
+    position: relative;
+    top: 3px;
+    left: 3px;
+}
+
+
+.divContainerRegForm_1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px;
+    width: 100%;
+}
+
+.divContainerRegForm_2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divContainerRegForm_3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divContainerRegForm_4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divContainerRegForm_5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divModalWindow {
+    min-width: 300px;
+    width: 100%;
+    min-height: 250px;
+    height: 100%;
+}
+.divModalWindow img{
+    width: 200px;
+    margin-left: 40px;
+}
+
+.divModalWindow h1{
+    display: flex;
+    justify-content: center;
+}
+.divModalWindow p{
+    margin-left: 55px;
+    margin-top: 30px;
+}
+
+.RegForm input {
+    max-width: 350px;
+    width: 100%;
+}
+
+
+.erorr_Input_RegForm {
+    width: 100px;
+}
+
+
+.PasswordChecklistRegForm{
+    position: relative;
+    right: 35px;
+    top: 10px;
+}
+
+.ModalLoginForm_3{
+    max-height: 350px;
+}
+
+.paternMessage{
+    color: black;
 }

@@ -7,12 +7,12 @@ import { FaYoutube, FaFacebook, FaInstagramSquare, FaTelegram } from "react-icon
 
 const Footer = (props) => {
 
-let newPostElement = React.createRef();
+    let newPostElement = React.createRef();
 
-let addPost =(props) =>{
-    let text = newPostElement.current.value;
-    props.addPost(text)
-}
+    let addPost = (props) => {
+        let text = newPostElement.current.value;
+        props.addPost(text)
+    }
     return (
         <section className="SectionFooter">
 
@@ -23,7 +23,7 @@ let addPost =(props) =>{
                     <ul>
                         <li>
                             <a href="#">Page title</a>
-                         
+
                         </li>
                         <li>
                             <a href="#">Page title</a>
@@ -73,7 +73,7 @@ let addPost =(props) =>{
                     </form>
                 </div>
 
-               
+
             </div>
 
             <div className="PoloskaBootom"><img src={Line} alt="Delete" /></div>
@@ -84,7 +84,9 @@ let addPost =(props) =>{
                     <p>Design by <span>Delvig</span></p>
                     <div className="minDivFooter">
                         <MdPhoneInTalk />
-                        <FaFacebook />
+                        <a href="https://uk-ua.facebook.com/">
+                            <FaFacebook />
+                        </a>
                         <FaYoutube />
                         <FaInstagramSquare />
                         <FaTelegram />

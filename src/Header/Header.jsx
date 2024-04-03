@@ -8,75 +8,70 @@ import { GrLanguage } from "react-icons/gr";
 import { PiCurrencyDollarBold } from "react-icons/pi";
 import { FaSquarePhone } from "react-icons/fa6";
 import { FaFacebook, FaYoutube, FaInstagramSquare, FaTelegram } from "react-icons/fa";
-import Modal from "../Modal/Modal";
-import Login from "../Login/Login";
+import { ConfigProvider, Modal } from 'antd';
+import RegistrationForm from "../Login/RegistrationForm";
 
 
 
 const Header = (props) => {
     const [nav, setNav] = useState(false);
 
-  
-        const [isModalOpen, setModalOpen] = useState(false);
-    
-        const openModal = () => {
-            setModalOpen(true);
-        };
-    
-        const closeModal = () => {
-            setModalOpen(false);
-        };
-    
-    
-
-        return (
-
-            <heder className={styles.sectionHeder}>
-                <div className={styles.heder}>
-                    <div className={styles.yourLogoHeder}>
-                        <h1>Your.<span>logo</span></h1>
-                        <ul className={nav ? [styles.menu, styles.active].join(' ') : [styles.menu]}>
-                            <a href="#">Last Minute Deals</a>
-                            <a href="#">Blog</a>
-                            <a href="#">About us</a>
-                            <a href="#">Contacts</a>
-
-                            <div className={styles.btn_Menu}>
-                                <GrLanguage size={25} />
-                                <PiCurrencyDollarBold size={25} />
-                            </div>
-                            <div className={styles.meregi_Btn}>
-                                <FaSquarePhone />
-                                <FaFacebook />
-                                <FaYoutube />
-                                <FaInstagramSquare />
-                                <FaTelegram />
-                            </div>
-                        </ul>
-                    </div>
-
-                    <div className={styles.imgHeder}>
-                        <img src={dolalrs} className={styles.dolalrsHeder} alt="Delete" />
-                        <img src={language} className={styles.languageHeder} alt="Delete" />
+    const [isModalOpen, setModalOpen] = useState(false);
+    const openModal = () => {
+        setModalOpen(true);
+    };
+    const closeModal = () => {
+        setModalOpen(false);
+    };
 
 
-                        <img src={userPhoto} onClick={openModal} alt="Delete" />
 
-                        <Modal isOpen={isModalOpen} onClose={closeModal}>
-                           <Login/>
-                        </Modal>
-                    </div>
-                    <div onClick={() => setNav(!nav)} className={styles.mobile_btn}>
-                        {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
-                    </div>
+    return (
+
+        <heder className={styles.sectionHeder}>
+            <div className={styles.heder}>
+                <div className={styles.yourLogoHeder}>
+                    <h1>Your.<span>logo</span></h1>
+                    <ul className={nav ? [styles.menu, styles.active].join(' ') : [styles.menu]}>
+                        <a href="#">Last Minute Deals</a>
+                        <a href="#">Blog</a>
+                        <a href="#">About us</a>
+                        <a href="#">Contacts</a>
+
+                        <div className={styles.btn_Menu}>
+                            <GrLanguage size={25} />
+                            <PiCurrencyDollarBold size={25} />
+                        </div>
+                        <div className={styles.meregi_Btn}>
+                            <FaSquarePhone />
+                            <FaFacebook />
+                            <FaYoutube />
+                            <FaInstagramSquare />
+                            <FaTelegram />
+                        </div>
+                    </ul>
                 </div>
-            </heder>
-        )
-    }
 
+                <div className={styles.imgHeder}>
+                    <img src={dolalrs} className={styles.dolalrsHeder} alt="Delete" />
+                    <img src={language} className={styles.languageHeder} alt="Delete" />
+                    <img src={userPhoto} onClick={openModal} alt="Delete" />
+                    <ConfigProvider theme={{
+                        token: {
+                            colorBgMask: 'black',
+                        },
+                    }}>
+                        <Modal open={isModalOpen} onCancel={closeModal} maskClosable={true} footer={null}>
+                            <RegistrationForm closeModal={closeModal} />
+                        </Modal>
+                    </ConfigProvider>
+                </div>
+                <div onClick={() => setNav(!nav)} className={styles.mobile_btn}>
+                    {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
+                </div>
+            </div>
+        </heder>
+    )
+}
 
-
-
-
-
-    export default Header;
+export default Header;
