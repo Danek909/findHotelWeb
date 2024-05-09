@@ -1,4 +1,5 @@
 .SectionLogin h1 {
+    font-family: monospace;
     color: black;
     display: flex;
     justify-content: center;
@@ -119,12 +120,15 @@ input:focus {
     align-items: center;
     justify-content: center;
     font-size: 15px;
+    font-family: sans-serif;
+    height: 30px;
 }
 
 .AcauntMesage h3 {
     font-weight: 900;
     color: black;
     font-size: 16px;
+    text-indent: 3px;
 }
 
 .erorsBlock svg {
@@ -146,12 +150,14 @@ input:focus {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: monospace;
 }
 
 .erorsBlock h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: ui-monospace;
     font-size: 22px;
     color: #26ed26;
     padding-bottom: 20px;
@@ -278,6 +284,10 @@ input:focus {
 }
 
 .divModalWindow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     min-width: 300px;
     width: 100%;
     min-height: 250px;
@@ -285,7 +295,7 @@ input:focus {
 }
 .divModalWindow img{
     width: 200px;
-    margin-left: 40px;
+   margin-top: 10px;
 }
 
 .divModalWindow h1{
@@ -293,8 +303,9 @@ input:focus {
     justify-content: center;
 }
 .divModalWindow p{
-    margin-left: 55px;
+    font-family: sans-serif;
     margin-top: 30px;
+    font-size: 15px;
 }
 
 .RegForm input {

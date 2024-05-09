@@ -8,20 +8,24 @@ import { FormProvider, useForm } from 'react-hook-form';
 import { InputOutlined } from "./components/InputOutlined/inputOutLinet";
 import { BsExclamationCircle } from "react-icons/bs";
 import ModalHappyWindow from "./ModalHappyWindow";
+import { useCookies } from 'react-cookie';
 
 const RegistrationForm = (props) => {
     const [password, setPassword] = useState("");
     const [registerState, setRegisterState] = useState('');
     const [loginModalIsOpen, setLoginModalIsOpen] = useState(false);
     const [happyModalWindow, setHappyModalWindow] = useState(false);
-    const updateUsers = useAuthStore((state) => state.updateUsers)
+    const updateUsers = useAuthStore((state) => state.updateUsers);
+    const currentUser = useAuthStore((state) => state.currentUser);
     const users = useAuthStore((state) => state.users);
-    console.log(users, "users")
-
     const form = useForm({ mode: "onBlur" });
+    const [cookies, setCookie] = useCookies(['username']);
 
     const { handleSubmit, formState, setError } = form;
+
     const registerUser = (values) => {
+        setCookie('userData', { username: values.username, password: values.password, isLogined: "no_autarized" });
+
         const { password, PasswordConfirmation } = values;
         if (password === PasswordConfirmation) {
             updateUsers({
@@ -38,6 +42,7 @@ const RegistrationForm = (props) => {
             setError("PasswordConfirmation", { type: "manual", passwordMes: "Passwords do not match" });
         }
     };
+
     const { errors } = formState;
 
     const openLoginModal = () => {
@@ -59,13 +64,13 @@ const RegistrationForm = (props) => {
             <FormProvider {...form}>
                 <form onSubmit={handleSubmit(registerUser)} className={styles.RegForm}>
                     <div>
-
                         <div className={styles.divContainerRegForm_1}>
-                            <InputOutlined style={errors.username ? { borderColor: 'red' } : null} name="username" type="text" placeholder="User Name" rules={{
-                                required: "This field must be filled in",
-                                maxLength: { value: 15, message: "No more than 15 characters" },
-                                minLength: { value: 2, message: "At least 2 characters!" }
-                            }} /><p className={styles.divErrors}>{errors?.username?.message}{errors?.username && <BsExclamationCircle />}</p>
+                            <InputOutlined style={errors.username ? { borderColor: 'red' } : null}
+                                name="username" type="text" placeholder="User Name" rules={{
+                                    required: "This field must be filled in",
+                                    maxLength: { value: 15, message: "No more than 15 characters" },
+                                    minLength: { value: 2, message: "At least 2 characters!" }
+                                }} /><p className={styles.divErrors}>{errors?.username?.message}{errors?.username && <BsExclamationCircle />}</p>
                         </div>
 
                         <div className={styles.divContainerRegForm_2}>
@@ -129,11 +134,9 @@ const RegistrationForm = (props) => {
                     <Modal open={happyModalWindow} onCancel={closeHappyModal} footer={null}><ModalHappyWindow openLoginModal={openLoginModal} users={users} /></Modal>
                 </form>
             </FormProvider>
-
             <div className={styles.AcauntMesage}>
                 <span> Already have an account?<h3 onClick={openLoginModal}>Enter</h3></span>
             </div>
-
             <Modal open={loginModalIsOpen} onCancel={closeLoginModal} className={styles.ModalLoginWindow} footer={null}>
                 <LoginForm />
             </Modal>

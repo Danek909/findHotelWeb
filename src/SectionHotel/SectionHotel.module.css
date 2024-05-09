@@ -6,6 +6,7 @@
 }
 
 .divSpecialofers h2{
+    font-family: monospace;
     padding-top: 100px;
     padding-bottom: 50px;
     font-size: 40px;
@@ -64,16 +65,19 @@
 }
 
 .divTextContainer p {
+    font-family: sans-serif;
     margin: 0;
 }
 
 .divtext h2{
+    font-family: system-ui;
     color: #5c5959;
     font-weight: 500;
     margin-bottom: 5px;
 }
 
 .divtext h3{
+    font-family: system-ui;
     color: gray;
     margin: 0;
     font-weight: 400;
@@ -81,6 +85,7 @@
 }
 
 .divtext h4{
+    font-family: math;
     margin-top: 10px;
     color: #656262;
     font-weight: 700;

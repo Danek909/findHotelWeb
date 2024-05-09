@@ -14,6 +14,7 @@
 }
 
 .DivFooterContainer h2 {
+    font-family: sans-serif;
     font-weight: 500;
     font-size: 19px;
     margin: 0px;
@@ -29,6 +30,7 @@
 }
 
 .DivFooterContainer ul li a {
+    font-family: sans-serif;
     text-decoration: none;
     color: #797272;
 }
@@ -42,6 +44,7 @@
 }
 
 .DivFooterContainer h3 {
+    font-family: serif;
     margin: 0;
     padding-right: 100px;
     padding-bottom: 10px;
@@ -62,6 +65,7 @@
 }
 
 .DivFooterContainer p {
+    font-family: sans-serif;
     color: #797272;
 }
 
@@ -92,7 +96,11 @@
 }
 
 .FooterMin h1 {
+    font-family: sans-serif;
     color: #2048d5;
+}
+.FooterMin p{
+    font-family: sans-serif;
 }
 
 .FooterMin h1 span {
