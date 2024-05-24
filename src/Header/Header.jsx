@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import styles from '../Header/heder.module.css'
-import dolalrs from '../image/dolars.png'
-import language from '../image/language.jpg'
-import userPhoto from '../image/userPhoto.png'
-import PhotoUser from '../image/PhotoUser.avif'
+import styles from '../Header/heder.module.css';
+import dolalrs from '../image/dolars.png';
+import language from '../image/language.jpg';
+import userPhoto from '../image/userPhoto.png';
+import avatarka from '../image/Avatarka.jpg';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { GrLanguage } from "react-icons/gr";
 import { PiCurrencyDollarBold } from "react-icons/pi";
@@ -12,13 +12,13 @@ import { FaFacebook, FaYoutube, FaInstagramSquare, FaTelegram } from "react-icon
 import { ConfigProvider, Modal } from 'antd';
 import RegistrationForm from "../Login/RegistrationForm";
 import { cookies, useCookies } from 'react-cookie';
-
+import { Select } from 'antd';
 
 const Header = (props) => {
     const [nav, setNav] = useState(false);
     const [isModalOpen, setModalOpen] = useState(false);
-    // const [cookies, setCookie, removeCookie] = useCookies(['userData']);
-    // const [userData, setUserData] = useState(cookies.userData);
+    const [cookies, setCookie, removeCookie] = useCookies(['userData']);
+    const [userData, setUserData] = useState(cookies.userData);
 
     const openModal = () => {
         setModalOpen(true);
@@ -27,12 +27,12 @@ const Header = (props) => {
         setModalOpen(false);
     };
 
-    // console.log(userData, "userData Heder start");
-    // const exitLogin = () => {
-    //     setUserData(prewDataUser => ({ ...prewDataUser, isLogind: false }))
-    //     setCookie("userData", userData);
-    //     console.log(userData, "userData Heder");
-    // }
+    const exitLogin = () => {
+        const cookieUserData = cookies.userData;
+        cookieUserData.isLogined = 'noAutorized';
+        setCookie("userData", cookieUserData);
+        console.log(cookieUserData, "userData Heder");
+    }
 
     return (
         <header className={styles.sectionHeder}>
@@ -59,20 +59,46 @@ const Header = (props) => {
                     </ul>
                 </div>
 
+
+
+
                 <div className={styles.imgHeder}>
                     <img src={dolalrs} className={styles.dolalrsHeder} alt="Delete" />
-                    <img src={language} className={styles.languageHeder} alt="Delete" />
-                    <img src={userPhoto} onClick={openModal} alt="Delete" />
-                    <div>
-                {/* Це я пробував робити функціонал по розлогінюванні користувача  */}
-                        {/* <button onClick={exitLogin}>exit</button> */}
-                        {/* <p>{userData.username}</p> */}
-                        {/* {cookies.userData.isLogind = 'true' ? (
-                        <img className={styles.PhotoUser} onClick={openModal} src={PhotoUser} alt="delete" />
-                    )
-                        : cookies.userData.isLogind = 'false'(
-                            <img src={userPhoto} onClick={openModal} alt="Delete" />
-                        )} */}
+                        <Select
+                            suffixIcon=""
+                            defaultValue="English"
+                            style={{
+                                width: 60,
+                                height: 20,
+                                marginTop:45,
+                                marginLeft: 5,
+                                marginRight: 10
+                            }}
+                            options={[
+                                { label: <span>En</span>, value: 'English' },
+                                { label: <span>Uk</span>, value: 'Ukrainian' },
+                                { label: <span>PL</span>, value: 'Poland' },
+                            ]} />
+                    <div className={styles.autorizedDiv}>
+                        {cookies.userData.isLogined === 'autorized' ? (
+                            <button type="button" onClick={openModal}>
+                                <img className={styles.PhotoUser} src={avatarka} alt="delete" />
+                            </button>
+                        ) : (
+                            <button type="button" onClick={openModal}>
+                                <img className={styles.userPhoto} src={userPhoto} alt="Delete" />
+                            </button>
+                        )}
+
+                        <Select
+                            defaultValue={userData.username}
+                            style={{
+                                width: 90,
+                                height: 20,
+                            }}
+                            options={[
+                                { label: <button className={styles.buttonExit} type="button" onClick={exitLogin}>Log Out</button>, value: 'English' },
+                            ]} />
                     </div>
 
                     <ConfigProvider theme={{

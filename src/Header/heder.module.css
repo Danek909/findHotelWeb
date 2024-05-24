@@ -5,16 +5,22 @@
     width: 100%;
     max-height: 300px;
     height: 100%;
-    padding-bottom: 25px;
+    padding-top: 20px;
+    padding-bottom: 50px;
 }
 
-.PhotoUser{
+.PhotoUser {
     width: 40px;
+    border-radius: 20px;
+}
+
+.userPhoto {
+    padding-bottom: 5px;
 }
 
 .active {
     width: 300px;
-    height: 300px;
+    height: 100%;
 }
 
 .yourLogoHeder h1 {
@@ -22,6 +28,7 @@
     font-size: 25px;
     color: blue;
     font-weight: 900;
+    margin-bottom: -25px;
 }
 
 .heder {
@@ -29,7 +36,7 @@
     align-items: center;
     justify-content: space-between;
     width: 95%;
-    height: 40px;
+    height: 100%;
     margin: 0 auto;
 
 }
@@ -52,7 +59,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 11px;
+    margin-bottom: -30px;
 }
 
 .yourLogoHeder ul a {
@@ -62,14 +69,14 @@
 }
 
 .imgHeder {
-    width: 120px;
+    width: 200px;
     height: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.imgHeder p{
+.imgHeder p {
     position: absolute;
     top: 26px;
     right: 21px;
@@ -78,6 +85,7 @@
 .dolalrsHeder {
     width: 12px;
     height: 24px;
+    margin-top: 45px;
 }
 
 .languageHeder {
@@ -102,25 +110,52 @@
     display: none;
 }
 
-@media (max-width: 850px) {
+.autorizedDiv button {
+    border: 0;
+    background: #ffffff;
+}
+
+.buttonExit{
+    background: #000000;
+    border: 0;
+    width: 100%;
+    border-radius: 3px;
+    color: #ffffff;
+}
+
+.ant-select-arrow {
+    display: none;
+}
+
+.autorizedDiv {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media (max-width: 930px) {
     .yourLogoHeder {
         margin-right: 50px;
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
 
     .sectionHeder {
-        padding-bottom: 5px;
+        padding-bottom: 30px;
     }
 
     .yourLogoHeder h1 {
-        margin-top: 4px;
+        margin-bottom: 0px;
+        margin-top: -45px;
     }
 
     .imgHeder img {
-        position: absolute;
         right: 40px;
+    }
+
+    .userPhoto {
+        padding-bottom: 5px;
     }
 
     .mobile_btn {
@@ -146,8 +181,8 @@
         height: 100vh;
         background: #ffffff;
         justify-content: flex-start;
-        margin-top: 39px;
-        padding-left: 30px;
+        margin-top: 49px;
+        padding-left: 45px;
         overflow: auto;
     }
 
@@ -205,18 +240,27 @@
 }
 
 @media (max-width: 530px) {
+    .yourLogoHeder {
+        margin-left: 0px;
+        padding-left: 40px;
+    }
 
+    .imgHeder {
+        position: relative;
+        right: 15px;
+    }
 
-    .sectionHeder{
+    .sectionHeder {
         padding-bottom: 25px;
     }
+
     .yourLogoHeder ul {
         padding-left: 20px;
     }
 
     .mobile_btn {
         top: 5px;
-        left: 20px;
+        left: 5px;
     }
 
     .heder {
@@ -226,6 +270,7 @@
         top: 0;
         bottom: 0;
         width: 100%;
+        height: 80px;
     }
 
     .userPhotoHeder {
