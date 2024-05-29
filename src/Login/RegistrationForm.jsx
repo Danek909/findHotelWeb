@@ -16,7 +16,6 @@ const RegistrationForm = (props) => {
     const [loginModalIsOpen, setLoginModalIsOpen] = useState(false);
     const [happyModalWindow, setHappyModalWindow] = useState(false);
     const updateUsers = useAuthStore((state) => state.updateUsers);
-    const currentUser = useAuthStore((state) => state.currentUser);
     const users = useAuthStore((state) => state.users);
     const form = useForm({ mode: "onBlur" });
     const [cookies, setCookie] = useCookies(['username']);
@@ -24,7 +23,7 @@ const RegistrationForm = (props) => {
     const { handleSubmit, formState, setError } = form;
 
     const registerUser = (values) => {
-        setCookie('userData', { username: values.username, password: values.password, isLogined: "no_autarized" });
+        setCookie('userData', { path: 'expires(2)', username: values.username, password: values.password, isLogined: "no_autarized" });
 
         const { password, PasswordConfirmation } = values;
         if (password === PasswordConfirmation) {

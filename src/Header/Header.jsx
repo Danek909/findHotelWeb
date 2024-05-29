@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import styles from '../Header/heder.module.css';
 import dolalrs from '../image/dolars.png';
 import language from '../image/language.jpg';
@@ -13,6 +13,8 @@ import { ConfigProvider, Modal } from 'antd';
 import RegistrationForm from "../Login/RegistrationForm";
 import { cookies, useCookies } from 'react-cookie';
 import { Select } from 'antd';
+
+
 
 const Header = (props) => {
     const [nav, setNav] = useState(false);
@@ -64,21 +66,21 @@ const Header = (props) => {
 
                 <div className={styles.imgHeder}>
                     <img src={dolalrs} className={styles.dolalrsHeder} alt="Delete" />
-                        <Select
-                            suffixIcon=""
-                            defaultValue="English"
-                            style={{
-                                width: 60,
-                                height: 20,
-                                marginTop:45,
-                                marginLeft: 5,
-                                marginRight: 10
-                            }}
-                            options={[
-                                { label: <span>En</span>, value: 'English' },
-                                { label: <span>Uk</span>, value: 'Ukrainian' },
-                                { label: <span>PL</span>, value: 'Poland' },
-                            ]} />
+                    <Select
+                        suffixIcon=""
+                        defaultValue="English"
+                        style={{
+                            width: 60,
+                            height: 20,
+                            marginTop: 45,
+                            marginLeft: 5,
+                            marginRight: 10
+                        }}
+                        options={[
+                            { label: <span>En</span>, value: 'English' },
+                            { label: <span>Uk</span>, value: 'Ukrainian' },
+                            { label: <span>PL</span>, value: 'Poland' },
+                        ]} />
                     <div className={styles.autorizedDiv}>
                         {cookies.userData.isLogined === 'autorized' ? (
                             <button type="button" onClick={openModal}>

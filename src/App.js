@@ -14,29 +14,27 @@ import store from './redux/redux-store';
 import Login from './Login/Login';
 import { CookiesProvider } from 'react-cookie';
 
-
 function App() {
   return (
-    <BrowserRouter>
-      <Provider store={store} >
-        <CookiesProvider>
-          <Routes>
-            <Route path='/Header' element={<Header />} />
-          </Routes>
-          <Header />
-          <Banner />
-          <Choose />
-          <SectionHotel />
-          <Reviews />
-          <Recent />
-          <Footer />
-          <Modal />
-          <Routes>
-            <Route path='/login' element={<Login />} />
-          </Routes>
-        </CookiesProvider>
-      </Provider>
-    </BrowserRouter>)
+      <BrowserRouter>
+        <Provider store={store} >
+          <CookiesProvider>
+            <Routes>
+              <Route path='/Header' element={<Header />} />
+            </Routes>
+            <Header />
+            <Banner />
+            <Choose />
+            <SectionHotel />
+            <Reviews />
+            <Recent />
+            <Footer />
+            <Modal />
+            <Routes>
+              <Route path='/login' element={<Login />} />
+            </Routes>
+          </CookiesProvider>
+        </Provider>
+      </BrowserRouter>)
 };
-
 export default App;
