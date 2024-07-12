@@ -9,9 +9,9 @@ const LoginForm = (props) => {
     const [cookies, setCookie] = useCookies(['userData']);
     const [userData, setUserData] = useState(cookies.userData);
     const form = useForm({ mode: "onBlur" });
-    const { handleSubmit, formState, setError , clearErrors} = form;
+    const { handleSubmit, formState, setError, clearErrors } = form;
 
-    const resetErors = () =>{
+    const resetErors = () => {
         clearErrors("errorsMessageLoginForm");
     }
     const handleLogin = (values) => {

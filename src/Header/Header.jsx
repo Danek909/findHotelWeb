@@ -13,7 +13,7 @@ import { ConfigProvider, Modal } from 'antd';
 import RegistrationForm from "../Login/RegistrationForm";
 import { cookies, useCookies } from 'react-cookie';
 import { Select } from 'antd';
-
+import { useTranslation } from "react-i18next";
 
 
 const Header = (props) => {
@@ -21,6 +21,8 @@ const Header = (props) => {
     const [isModalOpen, setModalOpen] = useState(false);
     const [cookies, setCookie, removeCookie] = useCookies(['userData']);
     const [userData, setUserData] = useState(cookies.userData);
+    const { t, i18n } = useTranslation();
+
 
     const openModal = () => {
         setModalOpen(true);
@@ -36,16 +38,20 @@ const Header = (props) => {
         console.log(cookieUserData, "userData Heder");
     }
 
+    const changeLanguage = (language) => {
+        i18n.changeLanguage(language);
+    };
+
     return (
         <header className={styles.sectionHeder}>
             <div className={styles.heder}>
                 <div className={styles.yourLogoHeder}>
                     <h1>Your.<span>logo</span></h1>
                     <ul className={nav ? [styles.menu, styles.active].join(' ') : [styles.menu]}>
-                        <a href="#">Last Minute Deals</a>
-                        <a href="#">Blog</a>
-                        <a href="#">About us</a>
-                        <a href="#">Contacts</a>
+                        <a href="#">{t('header.navBar.text_1')}</a>
+                        <a href="#">{t('header.navBar.text_2')}</a>
+                        <a href="#">{t('header.navBar.text_3')}</a>
+                        <a href="#">{t('header.navBar.text_4')}</a>
 
                         <div className={styles.btn_Menu}>
                             <GrLanguage size={25} />
@@ -61,9 +67,6 @@ const Header = (props) => {
                     </ul>
                 </div>
 
-
-
-
                 <div className={styles.imgHeder}>
                     <img src={dolalrs} className={styles.dolalrsHeder} alt="Delete" />
                     <Select
@@ -77,9 +80,8 @@ const Header = (props) => {
                             marginRight: 10
                         }}
                         options={[
-                            { label: <span>En</span>, value: 'English' },
-                            { label: <span>Uk</span>, value: 'Ukrainian' },
-                            { label: <span>PL</span>, value: 'Poland' },
+                            { label: <button className={styles.Language_En} onClick={() => { changeLanguage("en") }}>En</button>, value: 'English' },
+                            { label: <button className={styles.Language_En}  onClick={() => { changeLanguage("ua") }}>Ua</button>, value: 'Ukrainian' },
                         ]} />
                     <div className={styles.autorizedDiv}>
                         {cookies.userData.isLogined === 'autorized' ? (
@@ -94,12 +96,17 @@ const Header = (props) => {
 
                         <Select
                             defaultValue={userData.username}
+                            // defaultValue={userData.username ? (
+                            //     <span className="user-ribbon">{userData.username}</span>
+                            //   ) : (
+                            //     <span className="empty-ribbon"></span>
+                            //   )}
                             style={{
                                 width: 90,
                                 height: 20,
                             }}
                             options={[
-                                { label: <button className={styles.buttonExit} type="button" onClick={exitLogin}>Log Out</button>, value: 'English' },
+                                { label: <button className={styles.buttonExit} type="button" onClick={exitLogin}>{t('header.navBar.log out')}</button>, value: 'English' },
                             ]} />
                     </div>
 

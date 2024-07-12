@@ -31,7 +31,7 @@ function App() {
             <Footer />
             <Modal />
             <Routes>
-              <Route path='/login' element={<Login />} />
+              <Route path='/login' element={<Login />} fallback={<div>Loading...</div>}/>
             </Routes>
           </CookiesProvider>
         </Provider>

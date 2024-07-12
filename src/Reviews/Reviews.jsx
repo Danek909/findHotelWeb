@@ -9,12 +9,17 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import icons from '../image/arrow.png'
+import { useTranslation } from "react-i18next";
 
 const Reviews = () => {
+      const { t, i18n } = useTranslation();
+      const changeLanguage = (language) => {
+        i18n.changeLanguage(language);
+    };
     return (
         <section className={styles.ReviewsSection}>
             <div>
-                <h2 className={styles.Reviews}>Reviews</h2>
+                <h2 className={styles.Reviews}>{t("Reviews.Title")}</h2>
             </div>
             <div className={styles.btnTop}>
                 <span className={styles.spanTopBtn}>
@@ -47,14 +52,14 @@ const Reviews = () => {
                             <div className={styles.SwiperSlide}>
                                 <img src={Ellipse1} alt="delete" />
                                 <h3>
-                                    I quickly found the right tour for me,<br />
-                                    but I had a few questions about the<br />
-                                    hotel, I wrote to tech support and they<br />
-                                    answered all my questions within an<br />
-                                    hour. The vacation itself was perfect.<br />
-                                    Thank you very much. I will come back<br />
-                                    again and again.<br />
-                                    <span>Jannike Borg,</span> Publisher
+                                {t("Reviews.text_1")}<br />
+                                {t("Reviews.text_2")}<br />
+                                {t("Reviews.text_3")}<br />
+                                {t("Reviews.text_4")}<br />
+                                {t("Reviews.text_5")}<br />
+                                {t("Reviews.text_6")}<br />
+                                {t("Reviews.text_7")}<br />
+                                    <span>{t("Reviews.span_Name_1")}</span> {t("Reviews.span_Name_2")}
                                 </h3>
                             </div>
                         </SwiperSlide>
@@ -63,14 +68,14 @@ const Reviews = () => {
                             <div className={styles.SwiperSlide}>
                                 <img src={Ellipse2} alt="delete" />
                                 <h3>
-                                    I quickly found the right tour for me,<br />
-                                    but I had a few questions about the<br />
-                                    hotel, I wrote to tech support and they<br />
-                                    answered all my questions within an<br />
-                                    hour. The vacation itself was perfect.<br />
-                                    Thank you very much. I will come back<br />
-                                    again and again.<br />
-                                    <span>Jannike Borg,</span> Publisher
+                                {t("Reviews.text_1")}<br />
+                                {t("Reviews.text_2")}<br />
+                                {t("Reviews.text_3")}<br />
+                                {t("Reviews.text_4")}<br />
+                                {t("Reviews.text_5")}<br />
+                                {t("Reviews.text_6")}<br />
+                                {t("Reviews.text_7")}<br />
+                                    <span>{t("Reviews.span_Name_1")}</span> {t("Reviews.span_Name_2")}
                                 </h3>
                             </div>
                         </SwiperSlide>
@@ -79,14 +84,14 @@ const Reviews = () => {
                             <div className={styles.SwiperSlide}>
                                 <img src={Ellipse3} alt="delete" />
                                 <h3>
-                                    I quickly found the right tour for me,<br />
-                                    but I had a few questions about the<br />
-                                    hotel, I wrote to tech support and they<br />
-                                    answered all my questions within an<br />
-                                    hour. The vacation itself was perfect.<br />
-                                    Thank you very much. I will come back<br />
-                                    again and again.<br />
-                                    <span>Jannike Borg,</span> Publisher
+                                {t("Reviews.text_1")}<br />
+                                {t("Reviews.text_2")}<br />
+                                {t("Reviews.text_3")}<br />
+                                {t("Reviews.text_4")}<br />
+                                {t("Reviews.text_5")}<br />
+                                {t("Reviews.text_6")}<br />
+                                {t("Reviews.text_7")}<br />
+                                    <span>{t("Reviews.span_Name_1")}</span> {t("Reviews.span_Name_2")}
                                 </h3>
                             </div>
                         </SwiperSlide>
@@ -95,14 +100,14 @@ const Reviews = () => {
                             <div className={styles.SwiperSlide}>
                                 <img src={Ellipse1} alt="delete" />
                                 <h3>
-                                    I quickly found the right tour for me,<br />
-                                    but I had a few questions about the<br />
-                                    hotel, I wrote to tech support and they<br />
-                                    answered all my questions within an<br />
-                                    hour. The vacation itself was perfect.<br />
-                                    Thank you very much. I will come back<br />
-                                    again and again.<br />
-                                    <span>Jannike Borg,</span> Publisher
+                                {t("Reviews.text_1")}<br />
+                                {t("Reviews.text_2")}<br />
+                                {t("Reviews.text_3")}<br />
+                                {t("Reviews.text_4")}<br />
+                                {t("Reviews.text_5")}<br />
+                                {t("Reviews.text_6")}<br />
+                                {t("Reviews.text_7")}<br />
+                                    <span>{t("Reviews.span_Name_1")}</span> {t("Reviews.span_Name_2")}
                                 </h3>
                             </div>
                         </SwiperSlide>
@@ -111,14 +116,14 @@ const Reviews = () => {
                             <div className={styles.SwiperSlide}>
                                 <img src={Ellipse2} alt="delete" />
                                 <h3>
-                                    I quickly found the right tour for me,<br />
-                                    but I had a few questions about the<br />
-                                    hotel, I wrote to tech support and they<br />
-                                    answered all my questions within an<br />
-                                    hour. The vacation itself was perfect.<br />
-                                    Thank you very much. I will come back<br />
-                                    again and again.<br />
-                                    <span>Jannike Borg,</span> Publisher
+                                {t("Reviews.text_1")}<br />
+                                {t("Reviews.text_2")}<br />
+                                {t("Reviews.text_3")}<br />
+                                {t("Reviews.text_4")}<br />
+                                {t("Reviews.text_5")}<br />
+                                {t("Reviews.text_6")}<br />
+                                {t("Reviews.text_7")}<br />
+                                    <span>{t("Reviews.span_Name_1")}</span> {t("Reviews.span_Name_2")}
                                 </h3>
                             </div>
                         </SwiperSlide>
@@ -127,14 +132,14 @@ const Reviews = () => {
                             <div className={styles.SwiperSlide}>
                                 <img src={Ellipse3} alt="delete" />
                                 <h3>
-                                    I quickly found the right tour for me,<br />
-                                    but I had a few questions about the<br />
-                                    hotel, I wrote to tech support and they<br />
-                                    answered all my questions within an<br />
-                                    hour. The vacation itself was perfect.<br />
-                                    Thank you very much. I will come back<br />
-                                    again and again.<br />
-                                    <span>Jannike Borg,</span> Publisher
+                                {t("Reviews.text_1")}<br />
+                                {t("Reviews.text_2")}<br />
+                                {t("Reviews.text_3")}<br />
+                                {t("Reviews.text_4")}<br />
+                                {t("Reviews.text_5")}<br />
+                                {t("Reviews.text_6")}<br />
+                                {t("Reviews.text_7")}<br />
+                                    <span>{t("Reviews.span_Name_1")}</span> {t("Reviews.span_Name_2")}
                                 </h3>
                             </div>
                         </SwiperSlide>
