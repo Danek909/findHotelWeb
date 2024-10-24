@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Header from './Header/Header';
 import Banner from './Banner/Banner';
 import Choose from './Choose/Choose';
 import SectionHotel from './SectionHotel/SectionHotel';
@@ -13,6 +12,8 @@ import { Provider } from 'react-redux';
 import store from './redux/redux-store';
 import Login from './Login/Login';
 import { CookiesProvider } from 'react-cookie';
+import Header from './Header/Header';
+
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
             <Routes>
               <Route path='/Header' element={<Header />} />
             </Routes>
-            <Header />
+            <Header/>
             <Banner />
             <Choose />
             <SectionHotel />

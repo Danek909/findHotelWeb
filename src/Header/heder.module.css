@@ -16,13 +16,14 @@
     padding-right: 0px;
 }
 
-.PhotoUser {
+.userPhoto {
     width: 40px;
     border-radius: 20px;
 }
 
-.userPhoto {
-    padding-bottom: 5px;
+.PhotoUser{
+    width: 40px;
+    border-radius: 20px;
 }
 
 .active {
@@ -159,10 +160,6 @@
 
     .imgHeder img {
         right: 40px;
-    }
-
-    .userPhoto {
-        padding-bottom: 5px;
     }
 
     .mobile_btn {

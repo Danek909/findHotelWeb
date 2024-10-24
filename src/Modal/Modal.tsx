@@ -1,7 +1,14 @@
-import React from "react";
+import React from 'react';
 import './Modal.css';
 
-const Modal = ({ isOpen, onClose, children, styles }) => {
+type Props = {
+  isOpen: boolean
+  onClose: undefined
+  children: boolean 
+  styles: string
+}
+
+const Modal: React.FC<Props> = ({isOpen, onClose, children, styles}) => {
   if (!isOpen) return null;
 
   return (

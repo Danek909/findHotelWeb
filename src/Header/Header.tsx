@@ -1,9 +1,8 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, SetStateAction } from "react";
 import styles from '../Header/heder.module.css';
 import dolalrs from '../image/dolars.png';
-import language from '../image/language.jpg';
-import userPhoto from '../image/userPhoto.png';
-import avatarka from '../image/Avatarka.jpg';
+import guestPhoto from "../image/GuestPhoto.jpg";
+import userPhoto from "../image/userPhoto.jpeg";
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { GrLanguage } from "react-icons/gr";
 import { PiCurrencyDollarBold } from "react-icons/pi";
@@ -11,43 +10,41 @@ import { FaSquarePhone } from "react-icons/fa6";
 import { FaFacebook, FaYoutube, FaInstagramSquare, FaTelegram } from "react-icons/fa";
 import { ConfigProvider, Modal } from 'antd';
 import RegistrationForm from "../Login/RegistrationForm";
-import { cookies, useCookies } from 'react-cookie';
+import { useCookies } from 'react-cookie';
 import { Select } from 'antd';
 import { useTranslation } from "react-i18next";
 
+const Header = (props: void) => {
 
-const Header = (props) => {
-    const [nav, setNav] = useState(false);
-    const [isModalOpen, setModalOpen] = useState(false);
-    const [cookies, setCookie, removeCookie] = useCookies(['userData']);
-    const [userData, setUserData] = useState(cookies.userData);
+    const [nav, setNav] = useState<SetStateAction<boolean>>(false);
+    const [isModalOpen, setModalOpen] = useState<boolean | undefined>(false);
+    const [cookie, setCookie, removeCookie] = useCookies(['userData']);
+    const [userData, setUserData] = useState(cookie.userData);
     const { t, i18n } = useTranslation();
 
-
-    const openModal = () => {
+    const openModal = (): void => {
         setModalOpen(true);
     };
-    const closeModal = () => {
+    const closeModal = (): void => {
         setModalOpen(false);
     };
 
-    const exitLogin = () => {
-        const cookieUserData = cookies.userData;
+    const exitLogin = (): void => {
+        const cookieUserData = cookie.userData;
         cookieUserData.isLogined = 'noAutorized';
         setCookie("userData", cookieUserData);
-        console.log(cookieUserData, "userData Heder");
     }
 
-    const changeLanguage = (language) => {
+    const changeLanguage = (language: string) => {
         i18n.changeLanguage(language);
     };
-
+    
     return (
         <header className={styles.sectionHeder}>
             <div className={styles.heder}>
                 <div className={styles.yourLogoHeder}>
                     <h1>Your.<span>logo</span></h1>
-                    <ul className={nav ? [styles.menu, styles.active].join(' ') : [styles.menu]}>
+                    <ul className={nav ? [styles.menu, styles.active].join(' ') : styles.menu}>
                         <a href="#">{t('header.navBar.text_1')}</a>
                         <a href="#">{t('header.navBar.text_2')}</a>
                         <a href="#">{t('header.navBar.text_3')}</a>
@@ -66,7 +63,6 @@ const Header = (props) => {
                         </div>
                     </ul>
                 </div>
-
                 <div className={styles.imgHeder}>
                     <img src={dolalrs} className={styles.dolalrsHeder} alt="Delete" />
                     <Select
@@ -81,26 +77,22 @@ const Header = (props) => {
                         }}
                         options={[
                             { label: <button className={styles.Language_En} onClick={() => { changeLanguage("en") }}>En</button>, value: 'English' },
-                            { label: <button className={styles.Language_En}  onClick={() => { changeLanguage("ua") }}>Ua</button>, value: 'Ukrainian' },
+                            { label: <button className={styles.Language_En} onClick={() => { changeLanguage("ua") }}>Ua</button>, value: 'Ukrainian' },
                         ]} />
                     <div className={styles.autorizedDiv}>
-                        {cookies.userData.isLogined === 'autorized' ? (
+                        {cookie?.userData?.isLogined === 'autorized' ? (
                             <button type="button" onClick={openModal}>
-                                <img className={styles.PhotoUser} src={avatarka} alt="delete" />
+                                <img className={styles.PhotoUser} src={userPhoto} alt="User Photo" />
                             </button>
                         ) : (
                             <button type="button" onClick={openModal}>
-                                <img className={styles.userPhoto} src={userPhoto} alt="Delete" />
+                                <img className={styles.userPhoto} src={guestPhoto} alt="Guest Photo" />
                             </button>
                         )}
 
+
                         <Select
-                            defaultValue={userData.username}
-                            // defaultValue={userData.username ? (
-                            //     <span className="user-ribbon">{userData.username}</span>
-                            //   ) : (
-                            //     <span className="empty-ribbon"></span>
-                            //   )}
+                            defaultValue={userData?.username ? userData?.username : "Exit"}
                             style={{
                                 width: 90,
                                 height: 20,

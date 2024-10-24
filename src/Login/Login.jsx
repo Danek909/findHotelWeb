@@ -7,7 +7,6 @@ import RegistrationForm from "./RegistrationForm";
 const LoginReduxForm = reduxForm({ form: 'Login' })(RegistrationForm)
 
 const Login = (props) => {
-    console.log(props, "Props Login");
     return (
         <div>
             <RegistrationForm props={props} />

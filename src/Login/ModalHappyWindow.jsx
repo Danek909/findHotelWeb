@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "../Login/Login.module.css"
-import Avatarka from "../image/Avatarka.jpeg"
+import styles from "../Login/Login.module.css";
+import userPhoto from '../image/userPhoto.jpeg';
 import { useCookies } from 'react-cookie';
 
 
@@ -13,7 +13,7 @@ const ModalHappyWindow = (props) => {
                 <div className={styles.AcauntMesage}>
                     <span>Do you want to go to the login form?<h3 onClick={props.openLoginModal}>Enter</h3> </span>
                 </div>
-                <img src={Avatarka} alt="delete" />
+                <img src={userPhoto}alt="delete" />
             </div>
         </section>
     )
