@@ -3,8 +3,17 @@ import styles from "../Login/Login.module.css";
 import userPhoto from '../image/userPhoto.jpeg';
 import { useCookies } from 'react-cookie';
 
+type UserType = {
+    username: string;
+    password: string;
+  };
+  
+  type PropsType = {
+    users: UserType[];
+    openLoginModal?: () => void;
+  };
 
-const ModalHappyWindow = (props) => {
+const ModalHappyWindow: React.FC<PropsType> = (props) => {
     const [cookies] = useCookies(['username', 'email']);
     return (
         <section>

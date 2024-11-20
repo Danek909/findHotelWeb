@@ -1,20 +1,30 @@
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import styles from "../Login/Login.module.css"
 import { InputOutlined } from "./components/InputOutlined/inputOutLinet";
 import { BsExclamationCircle } from "react-icons/bs";
 import { useCookies } from 'react-cookie';
 
-const LoginForm = (props) => {
+type PropsType = {
+    message?: string,
+    username: string,
+    password: string,
+    errorsMessageLoginForm?: string,
+}
+
+const LoginForm: React.FC<PropsType> = (props: PropsType) => {
     const [cookies, setCookie] = useCookies(['userData']);
     const [userData, setUserData] = useState(cookies.userData);
-    const form = useForm({ mode: "onBlur" });
+    const form = useForm<PropsType>({ mode: "onBlur" });
+
+
+
     const { handleSubmit, formState, setError, clearErrors } = form;
 
     const resetErors = () => {
         clearErrors("errorsMessageLoginForm");
     }
-    const handleLogin = (values) => {
+    const handleLogin = (values: PropsType) => {
         if (userData.username === values.username && userData.password === values.password) {
             const cookieUserData = cookies.userData;
             cookieUserData.isLogined = 'autorized';
@@ -22,7 +32,7 @@ const LoginForm = (props) => {
             setCookie("userData", cookieUserData);
             window.location.reload();
         } else {
-            setError("errorsMessageLoginForm", { type: "manual", passwordMesage: "Check the password field and username" });
+            setError("errorsMessageLoginForm", { type: "manual", message: "Check the password field and username" });
         }
         console.log(userData, "UserData LoginForm");
     };
@@ -55,7 +65,7 @@ const LoginForm = (props) => {
                         <p className={styles.divErrors}>{errors?.password?.message} {errors?.password && <BsExclamationCircle />}</p>
                     </div>
                     <div className={styles.erorsBlock}>
-                        <p>{errors?.errorsMessageLoginForm?.passwordMesage} {errors?.errorsMessageLoginForm && <BsExclamationCircle />} </p>
+                        <p>{errors?.errorsMessageLoginForm?.message} {errors?.errorsMessageLoginForm && <BsExclamationCircle />} </p>
                     </div>
                     <div className={styles.divLoginFormContBtn}>
                         <button type="submit">Login</button>

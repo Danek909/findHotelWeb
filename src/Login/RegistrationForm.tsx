@@ -10,19 +10,29 @@ import { BsExclamationCircle } from "react-icons/bs";
 import ModalHappyWindow from "./ModalHappyWindow";
 import { useCookies } from 'react-cookie';
 
-const RegistrationForm = (props) => {
+type PropsType = {
+    openLoginModal?: () => void;
+    closeModal(): void;
+    password: string,
+    PasswordConfirmation: string,
+    username: string,
+    email: string,
+    phoneNumber: string,
+}
+
+const RegistrationForm: React.FC<PropsType> = (props) => {
     const [password, setPassword] = useState("");
     const [registerState, setRegisterState] = useState('');
     const [loginModalIsOpen, setLoginModalIsOpen] = useState(false);
     const [happyModalWindow, setHappyModalWindow] = useState(false);
     const updateUsers = useAuthStore((state) => state.updateUsers);
     const users = useAuthStore((state) => state.users);
-    const form = useForm({ mode: "onBlur" });
-    const [cookies, setCookie] = useCookies(['username']);
+    const form = useForm<PropsType>({ mode: "onBlur" });
+    const [cookies, setCookie] = useCookies(['userData']);
 
     const { handleSubmit, formState, setError } = form;
 
-    const registerUser = (values) => {
+    const registerUser = (values: PropsType) => {
         setCookie('userData', { path: 'expires(2)', username: values.username, password: values.password, isLogined: "no_autarized" });
 
         const { password, PasswordConfirmation } = values;
@@ -35,10 +45,10 @@ const RegistrationForm = (props) => {
             if (userExsist) {
                 setHappyModalWindow(true);
             } else {
-                setRegisterState("Щось пішло не так!");
+                setRegisterState("Something went wrong!");
             }
         } else {
-            setError("PasswordConfirmation", { type: "manual", passwordMes: "Passwords do not match" });
+            setError("PasswordConfirmation", { type: "manual", message: "Passwords do not match" });
         }
     };
 
@@ -69,25 +79,29 @@ const RegistrationForm = (props) => {
                                     required: "This field must be filled in",
                                     maxLength: { value: 15, message: "No more than 15 characters" },
                                     minLength: { value: 2, message: "At least 2 characters!" }
-                                }} /><p className={styles.divErrors}>{errors?.username?.message}{errors?.username && <BsExclamationCircle />}</p>
+                                }} /><p className={styles.divErrors}>{errors?.username?.message}
+                                {errors?.username && <BsExclamationCircle />}</p>
                         </div>
 
                         <div className={styles.divContainerRegForm_2}>
-                            <InputOutlined style={errors.email ? { borderColor: 'red' } : null} className={errors?.email ? 'erorr_Input_RegForm' : ' '} name="email" type="email" placeholder="Email" rules={{
-                                required: "This field must be filled in",
-                                maxLength: { value: 55, message: "No more than 55 characters" },
-                                minLength: { value: 2, message: "At least 2 characters!" },
-                                pattern: {
-                                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                                    message: 'The email address must contain the "@." sign',
-                                },
+                            <InputOutlined style={errors.email ? { borderColor: 'red' } : null}
+                                className={errors?.email ? 'erorr_Input_RegForm' : ' '} name="email" type="email" placeholder="Email" rules={{
+                                    required: "This field must be filled in",
+                                    maxLength: { value: 55, message: "No more than 55 characters" },
+                                    minLength: { value: 2, message: "At least 2 characters!" },
+                                    pattern: {
+                                        value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                                        message: 'The email address must contain the "@." sign',
+                                    },
 
-                            }} /><p className={styles.divErrors}>{errors?.email?.message}{errors?.email && <BsExclamationCircle />}</p>
+                                }} /><p className={styles.divErrors}>{errors?.email?.message}
+                                {errors?.email && <BsExclamationCircle />}</p>
                         </div>
 
                         <div className={styles.divContainerRegForm_3}>
-                            <InputOutlined style={errors.password ? { borderColor: 'red', } : null} name="password" type="password"
-                                onChange={e => setPassword(e.target.value)} placeholder="Password"
+                            <InputOutlined style={errors.password ? { borderColor: 'red', } : null}
+                                name="password" type="password"
+                                onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setPassword(e.target.value)} placeholder="Password"
                                 rules={{
                                     required: "This field must be filled in",
                                     maxLength: { value: 15, message: "No more than 15 characters" },
@@ -97,7 +111,8 @@ const RegistrationForm = (props) => {
                                         message: "Password must contain at least one letter, one number, and one special character"
                                     }
                                 }} />
-                            <p className={styles.divErrors_Password}>{errors?.password?.message} {errors?.password && <BsExclamationCircle />}</p>
+                            <p className={styles.divErrors_Password}>{errors?.password?.message}
+                                {errors?.password && <BsExclamationCircle />}</p>
                         </div>
 
                         <div className={styles.divContainerRegForm_4}>
@@ -106,12 +121,16 @@ const RegistrationForm = (props) => {
                                 maxLength: { value: 15, message: "No more than 15 characters" },
                                 minLength: { value: 2, message: "At least 2 characters!" },
                             }} />
-                            {<p className={styles.divErrorsPsConfirm}>{errors?.PasswordConfirmation?.message} {errors?.PasswordConfirmation?.message && <BsExclamationCircle />}</p>}
-                            {errors.PasswordConfirmation && <p className={styles.errorsPasword}>{errors?.PasswordConfirmation?.passwordMes} {errors?.PasswordConfirmation?.passwordMes && <BsExclamationCircle />} </p>}
+                            {<p className={styles.divErrorsPsConfirm}>{errors?.PasswordConfirmation?.message}
+                                {errors?.PasswordConfirmation?.message && <BsExclamationCircle />}</p>}
+                            {errors.PasswordConfirmation && <p className={styles.errorsPasword}>
+                                {errors?.PasswordConfirmation?.message}
+                                {errors?.PasswordConfirmation?.message && <BsExclamationCircle />} </p>}
                         </div>
 
                         <div className={styles.divContainerRegForm_5}>
-                            <InputOutlined style={errors.phoneNumber ? { borderColor: 'red' } : null} name="phoneNumber" type="tel" placeholder="Phone Number"
+                            <InputOutlined style={errors.phoneNumber ? { borderColor: 'red' } : null}
+                                name="phoneNumber" type="tel" placeholder="Phone Number"
                                 rules={{
                                     required: "This field must be filled in",
                                     maxLength: { value: 15, message: "No more than 15 characters" },
@@ -121,7 +140,8 @@ const RegistrationForm = (props) => {
                                         message: 'Invalid phone number',
                                     },
                                 }} />
-                            <p className={styles.divErrors}>{errors?.phoneNumber?.message} {errors?.phoneNumber && <BsExclamationCircle />}</p>
+                            <p className={styles.divErrors}>{errors?.phoneNumber?.message}
+                                {errors?.phoneNumber && <BsExclamationCircle />}</p>
 
                         </div>
 
@@ -130,14 +150,15 @@ const RegistrationForm = (props) => {
                         <button type="submit">Registration</button>
                     </div>
                     {registerState.length > 0 && <div>{registerState}</div>}
-                    <Modal open={happyModalWindow} onCancel={closeHappyModal} footer={null}><ModalHappyWindow openLoginModal={openLoginModal} users={users} /></Modal>
+                    <Modal open={happyModalWindow} onCancel={closeHappyModal}
+                        footer={null}><ModalHappyWindow openLoginModal={openLoginModal} users={users} /></Modal>
                 </form>
             </FormProvider>
             <div className={styles.AcauntMesage}>
                 <span> Already have an account?<h3 onClick={openLoginModal}>Enter</h3></span>
             </div>
             <Modal open={loginModalIsOpen} onCancel={closeLoginModal} className={styles.ModalLoginWindow} footer={null}>
-                <LoginForm />
+                <LoginForm username={""} password={""} />
             </Modal>
         </section >
     )

@@ -108,7 +108,7 @@ const Header = (props: void) => {
                         },
                     }}>
                         <Modal open={isModalOpen} onCancel={closeModal} maskClosable={true} footer={null}>
-                            <RegistrationForm closeModal={closeModal} />
+                            <RegistrationForm closeModal={closeModal} password={""} PasswordConfirmation={""} username={""} email={""} phoneNumber={""} />
                         </Modal>
                     </ConfigProvider>
                 </div>
