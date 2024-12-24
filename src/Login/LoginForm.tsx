@@ -43,7 +43,7 @@ const LoginForm: React.FC<PropsType> = (props: PropsType) => {
 
     return (
         <div>
-            <h1 className={styles.LoginName}>Login</h1>
+            <h1 className={styles.LoginName}>{t('LoginForm.Title')}</h1>
             <FormProvider {...form}>
                 <form onSubmit={handleSubmit(handleLogin)} onChange={resetErrors}>
                     <div className={styles.divContLoginForm_1}>

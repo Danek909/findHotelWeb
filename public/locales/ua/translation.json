@@ -109,6 +109,7 @@
         "text_span": "Delvig"
     },
     "RegistrationForm": {
+        "Title":"Реєстрація",
         "errors": "Щось пішло не так!",
         "passwordConfirm_message": "Паролі не збігаються",
         "required": "Це поле має бути заповнене",
@@ -136,6 +137,7 @@
         "button_Enter": "Ввести"
     },
     "LoginForm": {
+        "Title": "Логін",
         "placeholder_UserName": "Ім'я користувача",
         "placeholder_password": "Пароль",
         "setError_message": "Перевірте поле пароля та ім'я користувача",

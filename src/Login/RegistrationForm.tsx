@@ -72,7 +72,7 @@ const RegistrationForm: React.FC<PropsType> = (props) => {
 
     return (
         <section className={styles.SectionLogin}>
-            <h1>Registration</h1>
+            <h1>{t('RegistrationForm.Title')}</h1>
             <FormProvider {...form}>
                 <form onSubmit={handleSubmit(registerUser)} className={styles.RegForm}>
                     <div>

@@ -7,9 +7,7 @@ import { useTranslation } from "react-i18next";
 
 const Footer: React.FC = (props) => {
     let newPostElement = React.createRef();
-
-   
-       const { t, i18n } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const changeLanguage = (language: string) => {
         i18n.changeLanguage(language);
@@ -26,40 +24,40 @@ const Footer: React.FC = (props) => {
                             <a href="#">{t("Footer.subTitle")}</a>
                         </li>
                         <li>
-                              <a href="#">{t("Footer.subTitle")}</a>
+                            <a href="#">{t("Footer.subTitle")}</a>
                         </li>
                         <li>
-                             <a href="#">{t("Footer.subTitle")}</a>
+                            <a href="#">{t("Footer.subTitle")}</a>
                         </li>
                     </ul>
                 </div>
 
                 <div className="DivMinContaier">
-                   <h2>{t("Footer.Title")}</h2>
+                    <h2>{t("Footer.Title")}</h2>
                     <ul>
                         <li>
                             <a href="#">{t("Footer.subTitle")}</a>
                         </li>
                         <li>
-                              <a href="#">{t("Footer.subTitle")}</a>
+                            <a href="#">{t("Footer.subTitle")}</a>
                         </li>
                         <li>
-                             <a href="#">{t("Footer.subTitle")}</a>
+                            <a href="#">{t("Footer.subTitle")}</a>
                         </li>
                     </ul>
                 </div>
 
                 <div className="DivMinContaier">
-                  <h2>{t("Footer.Title")}</h2>
+                    <h2>{t("Footer.Title")}</h2>
                     <ul>
                         <li>
                             <a href="#">{t("Footer.subTitle")}</a>
                         </li>
                         <li>
-                              <a href="#">{t("Footer.subTitle")}</a>
+                            <a href="#">{t("Footer.subTitle")}</a>
                         </li>
                         <li>
-                             <a href="#">{t("Footer.subTitle")}</a>
+                            <a href="#">{t("Footer.subTitle")}</a>
                         </li>
                     </ul>
                 </div>
