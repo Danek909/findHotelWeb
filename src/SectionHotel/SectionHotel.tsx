@@ -1,17 +1,9 @@
 import React from "react";
 import styles from '../SectionHotel/SectionHotel.module.css'
-import Hotel1 from '../image/hotel1.png'
-import Hotel2 from '../image/hotel2.png'
-import Hotel3 from '../image/hotel3.png'
-import IconSerze from '../image/iconSerze.png'
-import IconZirca from '../image/ivonZirca.png'
-import pidHotel1 from '../image/pidHotel1.png'
-import pidHotel2 from '../image/pidHotel2.png'
-import pidHotel3 from '../image/pidHotel3.png'
 import { useTranslation } from "react-i18next";
 
-const SectionHotel = () => {
-    const changeLanguage = (language) => {
+const SectionHotel: React.FC  = () => {
+    const changeLanguage = (language: string) => {
         i18n.changeLanguage(language);
     };
     const { t, i18n } = useTranslation();
@@ -25,9 +17,9 @@ const SectionHotel = () => {
             <div className={styles.divContainer}>
                 <div className={styles.divPidContainer}>
                     <div className={styles.imgBlock}>
-                        <img className={styles.imgSerze} src={IconSerze} alt="delete" />
-                        <img className={styles.zirca} src={IconZirca} alt="delete" />
-                        <img className={styles.hotelImg} src={Hotel1} alt="delete" />
+                    <img className={styles.imgSerze} src="../image/iconSerze.png" alt="delete" />
+                        <img className={styles.zirca} src="../image/ivonZirca.png" alt="delete" />
+                        <img className={styles.hotelImg} src="../image/hotel1.png" alt="delete" />
                     </div>
 
                     <div className={styles.divtext}>
@@ -39,15 +31,15 @@ const SectionHotel = () => {
 
                     <div className={styles.divTextContainer}>
                         <div>
-                            <img src={pidHotel1} alt="deletet" />
+                            <img src="../image/pidHotel1.png" alt="deletet" />
                             <p>{t('SectionHotel.Container_1.span_1')}</p>
                         </div>
                         <div>
-                            <img src={pidHotel2} alt="deletet" />
+                            <img src="../image/pidHotel2.png" alt="deletet" />
                             <p>{t('SectionHotel.Container_1.span_2')}</p>
                         </div>
                         <div>
-                            <img src={pidHotel3} alt="deletet" />
+                            <img src="../image/pidHotel3.png" alt="deletet" />
                             <p>{t('SectionHotel.Container_1.span_3')}</p>
                         </div>
                     </div>
@@ -57,9 +49,9 @@ const SectionHotel = () => {
 
                 <div className={styles.divPidContainer}>
                     <div className={styles.imgBlock}>
-                        <img className={styles.imgSerze} src={IconSerze} alt="delete" />
-                        <img className={styles.zirca} src={IconZirca} alt="delete" />
-                        <img className={styles.hotelImg} src={Hotel2} alt="delete" />
+                    <img className={styles.imgSerze} src="../image/iconSerze.png" alt="delete" />
+                        <img className={styles.zirca} src="../image/ivonZirca.png" alt="delete" />
+                        <img className={styles.hotelImg} src="../image/hotel2.png" alt="delete" />
                     </div>
 
                     <div className={styles.divtext}>
@@ -71,15 +63,15 @@ const SectionHotel = () => {
 
                     <div className={styles.divTextContainer}>
                     <div>
-                            <img src={pidHotel1} alt="deletet" />
+                            <img src="../image/pidHotel1.png" alt="deletet" />
                             <p>{t('SectionHotel.Container_1.span_1')}</p>
                         </div>
                         <div>
-                            <img src={pidHotel2} alt="deletet" />
+                            <img src="../image/pidHotel2.png" alt="deletet" />
                             <p>{t('SectionHotel.Container_1.span_2')}</p>
                         </div>
                         <div>
-                            <img src={pidHotel3} alt="deletet" />
+                            <img src="../image/pidHotel3.png" alt="deletet" />
                             <p>{t('SectionHotel.Container_1.span_3')}</p>
                         </div>
                     </div>
@@ -88,9 +80,9 @@ const SectionHotel = () => {
 
                 <div className={styles.divPidContainer}>
                     <div className={styles.imgBlock}>
-                        <img className={styles.imgSerze} src={IconSerze} alt="delete" />
-                        <img className={styles.zirca} src={IconZirca} alt="delete" />
-                        <img className={styles.hotelImg} src={Hotel3} alt="delete" />
+                    <img className={styles.imgSerze} src="../image/iconSerze.png" alt="delete" />
+                        <img className={styles.zirca} src="../image/ivonZirca.png" alt="delete" />
+                        <img className={styles.hotelImg} src="../image/hotel3.png" alt="delete" />
                     </div>
 
                     <div className={styles.divtext}>
@@ -102,15 +94,15 @@ const SectionHotel = () => {
 
                     <div className={styles.divTextContainer}>
                     <div>
-                            <img src={pidHotel1} alt="deletet" />
+                            <img src="../image/pidHotel1.png" alt="deletet" />
                             <p>{t('SectionHotel.Container_1.span_1')}</p>
                         </div>
                         <div>
-                            <img src={pidHotel2} alt="deletet" />
+                            <img src="../image/pidHotel2.png" alt="deletet" />
                             <p>{t('SectionHotel.Container_1.span_2')}</p>
                         </div>
                         <div>
-                            <img src={pidHotel3} alt="deletet" />
+                            <img src="../image/pidHotel3.png" alt="deletet" />
                             <p>{t('SectionHotel.Container_1.span_3')}</p>
                         </div>
                     </div>

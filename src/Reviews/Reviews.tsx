@@ -1,19 +1,15 @@
 import React from "react";
-import styles from '../Reviews/Reviews.module.css'
-import Ellipse1 from '../image/Ellipse1.png'
-import Ellipse2 from '../image/Ellipse2.png'
-import Ellipse3 from '../image/Ellipse3.png'
+import styles from '../Reviews/Reviews.module.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import icons from '../image/arrow.png'
 import { useTranslation } from "react-i18next";
 
-const Reviews = () => {
+const Reviews: React.FC  = () => {
       const { t, i18n } = useTranslation();
-      const changeLanguage = (language) => {
+      const changeLanguage = (language: string) => {
         i18n.changeLanguage(language);
     };
     return (
@@ -50,7 +46,7 @@ const Reviews = () => {
 
                         <SwiperSlide className={styles.SwiperSliders}>
                             <div className={styles.SwiperSlide}>
-                                <img src={Ellipse1} alt="delete" />
+                                <img src="../image/Ellipse1.png" alt="delete" />
                                 <h3>
                                 {t("Reviews.text_1")}<br />
                                 {t("Reviews.text_2")}<br />
@@ -66,7 +62,7 @@ const Reviews = () => {
 
                         <SwiperSlide className={styles.SwiperSliders}>
                             <div className={styles.SwiperSlide}>
-                                <img src={Ellipse2} alt="delete" />
+                                <img src="../image/Ellipse2.png" alt="delete" />
                                 <h3>
                                 {t("Reviews.text_1")}<br />
                                 {t("Reviews.text_2")}<br />
@@ -82,7 +78,7 @@ const Reviews = () => {
 
                         <SwiperSlide className={styles.SwiperSliders}>
                             <div className={styles.SwiperSlide}>
-                                <img src={Ellipse3} alt="delete" />
+                                <img src="../image/Ellipse3.png" alt="delete" />
                                 <h3>
                                 {t("Reviews.text_1")}<br />
                                 {t("Reviews.text_2")}<br />
@@ -98,7 +94,7 @@ const Reviews = () => {
 
                         <SwiperSlide className={styles.SwiperSliders}>
                             <div className={styles.SwiperSlide}>
-                                <img src={Ellipse1} alt="delete" />
+                                <img src="../image/Ellipse1.png"alt="delete" />
                                 <h3>
                                 {t("Reviews.text_1")}<br />
                                 {t("Reviews.text_2")}<br />
@@ -114,7 +110,7 @@ const Reviews = () => {
 
                         <SwiperSlide className={styles.SwiperSliders}>
                             <div className={styles.SwiperSlide}>
-                                <img src={Ellipse2} alt="delete" />
+                                <img src="../image/Ellipse2.png" alt="delete" />
                                 <h3>
                                 {t("Reviews.text_1")}<br />
                                 {t("Reviews.text_2")}<br />
@@ -130,7 +126,7 @@ const Reviews = () => {
 
                         <SwiperSlide className={styles.SwiperSliders}>
                             <div className={styles.SwiperSlide}>
-                                <img src={Ellipse3} alt="delete" />
+                                <img src="../image/Ellipse3.png" alt="delete" />
                                 <h3>
                                 {t("Reviews.text_1")}<br />
                                 {t("Reviews.text_2")}<br />
@@ -147,7 +143,7 @@ const Reviews = () => {
                 </Swiper>
             </div>
             <div className={styles.btnBottom}>
-                <img src={icons} alt="delete" />
+                <img src="../image/arrow.png" alt="delete" />
             </div>
         </section>
     )

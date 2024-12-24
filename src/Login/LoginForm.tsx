@@ -1,9 +1,10 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import styles from "../Login/Login.module.css"
 import { InputOutlined } from "./components/InputOutlined/inputOutLinet";
 import { BsExclamationCircle } from "react-icons/bs";
 import { useCookies } from 'react-cookie';
+import { useTranslation } from "react-i18next";
 
 type PropsType = {
     message?: string,
@@ -16,50 +17,50 @@ const LoginForm: React.FC<PropsType> = (props: PropsType) => {
     const [cookies, setCookie] = useCookies(['userData']);
     const [userData, setUserData] = useState(cookies.userData);
     const form = useForm<PropsType>({ mode: "onBlur" });
+    const { register, handleSubmit, formState, setError, clearErrors } = form;
+    const { errors } = formState;
+    const { t, i18n } = useTranslation();
 
+    const changeLanguage = (language: string) => {
+        i18n.changeLanguage(language);
+    };
 
-
-    const { handleSubmit, formState, setError, clearErrors } = form;
-
-    const resetErors = () => {
+    const resetErrors = () => {
         clearErrors("errorsMessageLoginForm");
     }
     const handleLogin = (values: PropsType) => {
         if (userData.username === values.username && userData.password === values.password) {
             const cookieUserData = cookies.userData;
-            cookieUserData.isLogined = 'autorized';
+            cookieUserData.isLogined = 'authorized';
             console.log(cookieUserData, 'cookieUserData');
             setCookie("userData", cookieUserData);
             window.location.reload();
         } else {
-            setError("errorsMessageLoginForm", { type: "manual", message: "Check the password field and username" });
+            setError("errorsMessageLoginForm", { type: "manual", message: (t('LoginForm.setError_message')) });
         }
         console.log(userData, "UserData LoginForm");
     };
-
-    const { errors } = formState;
 
     return (
         <div>
             <h1 className={styles.LoginName}>Login</h1>
             <FormProvider {...form}>
-                <form onSubmit={handleSubmit(handleLogin)} onChange={resetErors}>
+                <form onSubmit={handleSubmit(handleLogin)} onChange={resetErrors}>
                     <div className={styles.divContLoginForm_1}>
-                        <InputOutlined name="username" type="text" placeholder="UserName"
+                        <InputOutlined {...register("username")} type="text" placeholder={t('LoginForm.placeholder_UserName')}
                             rules={{
-                                required: "This field must be filled in",
+                                required: (t('LoginForm.required')),
                                 minLength: {
-                                    value: 2, message: "At least 2 characters!"
-                                }
-                            }} />
+                                    value: 2, message:  (t('LoginForm.MinLenght'))
+                                }}} />
                         <p className={styles.divErrors}>{errors?.username?.message} {errors?.username && <BsExclamationCircle />}</p>
                     </div>
                     <div className={styles.divContLoginForm_2}>
-                        <InputOutlined name="password" type="password" placeholder="Password"
+                        <InputOutlined {...register("password")} type="password" placeholder={t('LoginForm.placeholder_password')}
                             rules={{
-                                required: "This field must be filled in",
+                                required: (t('LoginForm.required')),
                                 minLength: {
-                                    value: 2, message: "At least 2 characters!"
+                                    value: 2, message: (t('LoginForm.MinLenght'))
                                 }
                             }} />
                         <p className={styles.divErrors}>{errors?.password?.message} {errors?.password && <BsExclamationCircle />}</p>

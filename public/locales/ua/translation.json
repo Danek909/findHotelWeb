@@ -107,5 +107,39 @@
         "subTitle": "Назва сторінки",
         "text": "Дизайн",
         "text_span": "Delvig"
+    },
+    "RegistrationForm": {
+        "errors": "Щось пішло не так!",
+        "passwordConfirm_message": "Паролі не збігаються",
+        "required": "Це поле має бути заповнене",
+        "userName_MaxLenght": "Не більше 15 символів",
+        "email_MaxLenght": "Не більше 55 символів",
+        "MaxLenght": "Не більше 15 символів",
+        "MinLenght": "Принаймні 2 символи!",
+        "userName_placeholder": "Ім'я користувача",
+        "email_placeholder": "Електронна пошта",
+        "RegistrationForm.email_MaxLenght": "Не більше 55 символів",
+        "pattern_message": "Адреса електронної пошти має містити символ '@'.",
+        "password_placeholder": "Пароль",
+        "pattern_message_password": "Пароль має містити принаймні одну літеру, одну цифру та один спеціальний символ",
+        "passwordConfirmation_placeholder": "Підтвердження пароля",
+        "pattern_message_PhoneNumber": "Недійсний номер телефону",
+        "PhoneNumber_placeholder": "Номер телефону",
+        "button_Registration": "Реєстрація",
+        "span_Message_account": "Вже маєте обліковий запис?",
+        "button_Enter": "Ввести"
+    },
+    "ModalHappyWindow": {
+        "P_text": "Вітаємо",
+        "P_text_happy": "Ви успішно зареєструвалися!!!",
+        "span_text": "Ви бажаєте перейти до форми входу?",
+        "button_Enter": "Ввести"
+    },
+    "LoginForm": {
+        "placeholder_UserName": "Ім'я користувача",
+        "placeholder_password": "Пароль",
+        "setError_message": "Перевірте поле пароля та ім'я користувача",
+        "required": "Це поле має бути заповнене",
+        "MinLenght": "Принаймні 2 символи!"
     }
 }

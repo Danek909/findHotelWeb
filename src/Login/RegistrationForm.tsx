@@ -9,6 +9,7 @@ import { InputOutlined } from "./components/InputOutlined/inputOutLinet";
 import { BsExclamationCircle } from "react-icons/bs";
 import ModalHappyWindow from "./ModalHappyWindow";
 import { useCookies } from 'react-cookie';
+import { useTranslation } from "react-i18next";
 
 type PropsType = {
     openLoginModal?: () => void;
@@ -20,6 +21,7 @@ type PropsType = {
     phoneNumber: string,
 }
 
+
 const RegistrationForm: React.FC<PropsType> = (props) => {
     const [password, setPassword] = useState("");
     const [registerState, setRegisterState] = useState('');
@@ -27,14 +29,14 @@ const RegistrationForm: React.FC<PropsType> = (props) => {
     const [happyModalWindow, setHappyModalWindow] = useState(false);
     const updateUsers = useAuthStore((state) => state.updateUsers);
     const users = useAuthStore((state) => state.users);
-    const form = useForm<PropsType>({ mode: "onBlur" });
     const [cookies, setCookie] = useCookies(['userData']);
-
-    const { handleSubmit, formState, setError } = form;
+    const form = useForm<PropsType>({ mode: "onBlur" });
+    const { register, handleSubmit, formState: { errors }, setError } = form;
+    const { t, i18n } = useTranslation();
 
     const registerUser = (values: PropsType) => {
-        setCookie('userData', { path: 'expires(2)', username: values.username, password: values.password, isLogined: "no_autarized" });
-
+        setCookie('userData', { username: values.username, password: values.password, isLogined: "no_authorized" });
+        console.log(values, "values");
         const { password, PasswordConfirmation } = values;
         if (password === PasswordConfirmation) {
             updateUsers({
@@ -45,15 +47,16 @@ const RegistrationForm: React.FC<PropsType> = (props) => {
             if (userExsist) {
                 setHappyModalWindow(true);
             } else {
-                setRegisterState("Something went wrong!");
+                setRegisterState((t('RegistrationForm.errors')));
             }
         } else {
-            setError("PasswordConfirmation", { type: "manual", message: "Passwords do not match" });
+            setError("PasswordConfirmation", { type: "manual", message: (t('RegistrationForm.passwordConfirm_message')) });
         }
     };
 
-    const { errors } = formState;
-
+    const changeLanguage = (language: string) => {
+        i18n.changeLanguage(language);
+    };
     const openLoginModal = () => {
         setLoginModalIsOpen(true);
     };
@@ -75,23 +78,26 @@ const RegistrationForm: React.FC<PropsType> = (props) => {
                     <div>
                         <div className={styles.divContainerRegForm_1}>
                             <InputOutlined style={errors.username ? { borderColor: 'red' } : null}
-                                name="username" type="text" placeholder="User Name" rules={{
-                                    required: "This field must be filled in",
-                                    maxLength: { value: 15, message: "No more than 15 characters" },
-                                    minLength: { value: 2, message: "At least 2 characters!" }
+                                {...register("username")} type="text" placeholder={t('RegistrationForm.userName_placeholder')} 
+                                rules={{
+                                    required: (t('RegistrationForm.required')),
+                                    maxLength: { value: 15, message: (t('RegistrationForm.userName_MaxLenght')) },
+                                    minLength: { value: 2, message: (t('RegistrationForm.MinLenght')) }
                                 }} /><p className={styles.divErrors}>{errors?.username?.message}
                                 {errors?.username && <BsExclamationCircle />}</p>
                         </div>
-
                         <div className={styles.divContainerRegForm_2}>
                             <InputOutlined style={errors.email ? { borderColor: 'red' } : null}
-                                className={errors?.email ? 'erorr_Input_RegForm' : ' '} name="email" type="email" placeholder="Email" rules={{
-                                    required: "This field must be filled in",
-                                    maxLength: { value: 55, message: "No more than 55 characters" },
-                                    minLength: { value: 2, message: "At least 2 characters!" },
+                                className={errors?.email ? 'erorr_Input_RegForm' : ' '} 
+                                 {...register("email")} type="email" 
+                                 placeholder={t('RegistrationForm.email_placeholder')}  
+                                 rules={{
+                                    required: (t('RegistrationForm.required')),
+                                    maxLength: { value: 55, message: (t('RegistrationForm.email_MaxLenght')) },
+                                    minLength: { value: 2, message: (t('RegistrationForm.MinLenght')) },
                                     pattern: {
                                         value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                                        message: 'The email address must contain the "@." sign',
+                                        message: (t('RegistrationForm.pattern_message')) ,
                                     },
 
                                 }} /><p className={styles.divErrors}>{errors?.email?.message}
@@ -100,15 +106,16 @@ const RegistrationForm: React.FC<PropsType> = (props) => {
 
                         <div className={styles.divContainerRegForm_3}>
                             <InputOutlined style={errors.password ? { borderColor: 'red', } : null}
-                                name="password" type="password"
-                                onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setPassword(e.target.value)} placeholder="Password"
+                                {...register("password")} type="password"
+                                onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setPassword(e.target.value)} 
+                                placeholder={t('RegistrationForm.password_placeholder')}  
                                 rules={{
-                                    required: "This field must be filled in",
-                                    maxLength: { value: 15, message: "No more than 15 characters" },
-                                    minLength: { value: 4, message: "At least 2 characters!" },
+                                    required: (t('RegistrationForm.required')),
+                                    maxLength: { value: 15, message: (t('RegistrationForm.MaxLenght')) },
+                                    minLength: { value: 2, message: (t('RegistrationForm.MinLenght'))},
                                     pattern: {
                                         value: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*()_-])[A-Za-z\d!@#$%^&*()_-]{8,}$/,
-                                        message: "Password must contain at least one letter, one number, and one special character"
+                                        message:(t('RegistrationForm.pattern_message_password'))
                                     }
                                 }} />
                             <p className={styles.divErrors_Password}>{errors?.password?.message}
@@ -116,28 +123,29 @@ const RegistrationForm: React.FC<PropsType> = (props) => {
                         </div>
 
                         <div className={styles.divContainerRegForm_4}>
-                            <InputOutlined style={errors.PasswordConfirmation ? { borderColor: 'red' } : null} name="PasswordConfirmation" type="password" placeholder="Password Confirmation" rules={{
-                                required: "This field must be filled in",
-                                maxLength: { value: 15, message: "No more than 15 characters" },
-                                minLength: { value: 2, message: "At least 2 characters!" },
+                            <InputOutlined style={errors.PasswordConfirmation ? { borderColor: 'red' } : null} 
+                            name="PasswordConfirmation" type="password" placeholder={t('RegistrationForm.passwordConfirmation_placeholder')}
+                            rules={{
+                                required: (t('RegistrationForm.required')),
+                                maxLength: { value: 15, message: (t('RegistrationForm.MaxLenght')) },
+                                minLength: { value: 2, message: (t('RegistrationForm.MinLenght'))},
                             }} />
                             {<p className={styles.divErrorsPsConfirm}>{errors?.PasswordConfirmation?.message}
                                 {errors?.PasswordConfirmation?.message && <BsExclamationCircle />}</p>}
-                            {errors.PasswordConfirmation && <p className={styles.errorsPasword}>
-                                {errors?.PasswordConfirmation?.message}
-                                {errors?.PasswordConfirmation?.message && <BsExclamationCircle />} </p>}
+
+
                         </div>
 
                         <div className={styles.divContainerRegForm_5}>
                             <InputOutlined style={errors.phoneNumber ? { borderColor: 'red' } : null}
-                                name="phoneNumber" type="tel" placeholder="Phone Number"
+                                name="phoneNumber" type="tel" placeholder={t('RegistrationForm.PhoneNumber_placeholder')}
                                 rules={{
-                                    required: "This field must be filled in",
-                                    maxLength: { value: 15, message: "No more than 15 characters" },
-                                    minLength: { value: 2, message: "At least 2 characters!" },
+                                    required: (t('RegistrationForm.required')),
+                                    maxLength: { value: 15, message: (t('RegistrationForm.MaxLenght')) },
+                                    minLength: { value: 2, message: (t('RegistrationForm.MinLenght'))},
                                     pattern: {
                                         value: /^[0-9]{10}$/,
-                                        message: 'Invalid phone number',
+                                        message: (t('RegistrationForm.pattern_message_PhoneNumber')),
                                     },
                                 }} />
                             <p className={styles.divErrors}>{errors?.phoneNumber?.message}
@@ -147,7 +155,7 @@ const RegistrationForm: React.FC<PropsType> = (props) => {
 
                     </div>
                     <div className={styles.RegistrationDivBtn}>
-                        <button type="submit">Registration</button>
+                        <button type="submit">{t('RegistrationForm.button_Registration')}</button>
                     </div>
                     {registerState.length > 0 && <div>{registerState}</div>}
                     <Modal open={happyModalWindow} onCancel={closeHappyModal}
@@ -155,7 +163,7 @@ const RegistrationForm: React.FC<PropsType> = (props) => {
                 </form>
             </FormProvider>
             <div className={styles.AcauntMesage}>
-                <span> Already have an account?<h3 onClick={openLoginModal}>Enter</h3></span>
+                <span>{t('RegistrationForm.span_Message_account')}<h3 onClick={openLoginModal}>{t('RegistrationForm.button_Enter')}</h3></span>
             </div>
             <Modal open={loginModalIsOpen} onCancel={closeLoginModal} className={styles.ModalLoginWindow} footer={null}>
                 <LoginForm username={""} password={""} />

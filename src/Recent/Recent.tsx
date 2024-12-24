@@ -1,15 +1,12 @@
 import React from "react";
 import '../Recent/Recent.css'
-import imgRec1 from '../image/1.png'
-import imgRec2 from '../image/2.png'
-import imgRec3 from '../image/3.png'
 import { MdAccessTimeFilled } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 
-const Recent = () => {
+const Recent: React.FC  = () => {
     const { t, i18n } = useTranslation();
 
-    const changeLanguage = (language) => {
+    const changeLanguage = (language: string) => {
         i18n.changeLanguage(language);
     };
     return (
@@ -21,7 +18,7 @@ const Recent = () => {
             <div className="DivCintainerRecent">
 
                 <div className="DivMinContainer">
-                    <img src={imgRec1} alt="delete" />
+                    <img src="../image/1.png" alt="delete" />
                     <h2>
                         {t("Recent.Container_1.textData_1")}<span><MdAccessTimeFilled className="TimeField1" />{t("Recent.Container_1.textData_2")}</span>
                     </h2>
@@ -34,7 +31,7 @@ const Recent = () => {
                 </div>
 
                 <div className="DivMinContainer">
-                    <img src={imgRec2} alt="delete" />
+                    <img src="../image/2.png" alt="delete" />
                     <h2>
                     {t("Recent.Container_2.textData_1")}<span> <MdAccessTimeFilled className="TimeField2" />{t("Recent.Container_2.textData_2")}</span>
                     </h2>
@@ -46,7 +43,7 @@ const Recent = () => {
                 </div>
 
                 <div className="DivMinContainer">
-                    <img src={imgRec3} alt="delete" />
+                    <img src="../image/3.png" alt="delete" />
                     <h2>
                     {t("Recent.Container_3.textData_1")}<span><MdAccessTimeFilled className="TimeField3" /> {t("Recent.Container_3.textData_2")}</span>
                     </h2>

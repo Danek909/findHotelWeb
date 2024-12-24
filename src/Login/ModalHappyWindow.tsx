@@ -1,28 +1,34 @@
 import React from "react";
 import styles from "../Login/Login.module.css";
-import userPhoto from '../image/userPhoto.jpeg';
 import { useCookies } from 'react-cookie';
+import { useTranslation } from "react-i18next";
 
 type UserType = {
     username: string;
     password: string;
-  };
-  
-  type PropsType = {
+};
+
+type PropsType = {
     users: UserType[];
     openLoginModal?: () => void;
-  };
+};
 
 const ModalHappyWindow: React.FC<PropsType> = (props) => {
     const [cookies] = useCookies(['username', 'email']);
+    const { t, i18n } = useTranslation();
+
+    const changeLanguage = (language: string) => {
+        i18n.changeLanguage(language);
+    };
+
     return (
         <section>
             <div className={styles.divModalWindow}>
-                <p>Congratulations {props.users[0].username} you have successfull registered!!!</p>
+                <p>{t('ModalHappyWindow.P_text')} {props.users[0].username} {t('ModalHappyWindow.P_text_happy')}</p>
                 <div className={styles.AcauntMesage}>
-                    <span>Do you want to go to the login form?<h3 onClick={props.openLoginModal}>Enter</h3> </span>
+                    <span>{t('ModalHappyWindow.span_text')} <h3 onClick={props.openLoginModal}> {t('ModalHappyWindow.button_Enter')}</h3> </span>
                 </div>
-                <img src={userPhoto}alt="delete" />
+                <img src="../image/userPhoto.jpeg" alt="delete" />
             </div>
         </section>
     )

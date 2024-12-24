@@ -4,15 +4,12 @@ import LoginForm from "./LoginForm";
 import RegistrationForm from "./RegistrationForm";
 
 
-const LoginReduxForm = reduxForm({ form: 'Login' })(RegistrationForm);
-
-
 type PropsType ={
    username: string, 
    password: string,
 }
 
-const Login =  ({ username, password}: PropsType) => {
+const Login: React.FC<PropsType> =  (props) => {
     return (
         <div>
             <RegistrationForm closeModal={function (): void {} } password={""} PasswordConfirmation={""} username={""} email={""} phoneNumber={""}  />

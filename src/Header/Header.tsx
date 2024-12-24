@@ -1,8 +1,5 @@
 import React, { useState, useContext, SetStateAction } from "react";
 import styles from '../Header/heder.module.css';
-import dolalrs from '../image/dolars.png';
-import guestPhoto from "../image/GuestPhoto.jpg";
-import userPhoto from "../image/userPhoto.jpeg";
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { GrLanguage } from "react-icons/gr";
 import { PiCurrencyDollarBold } from "react-icons/pi";
@@ -64,7 +61,7 @@ const Header = (props: void) => {
                     </ul>
                 </div>
                 <div className={styles.imgHeder}>
-                    <img src={dolalrs} className={styles.dolalrsHeder} alt="Delete" />
+                    <img src="../image/dolars.png" className={styles.dolalrsHeder} alt="Delete" />
                     <Select
                         suffixIcon=""
                         defaultValue="English"
@@ -80,13 +77,13 @@ const Header = (props: void) => {
                             { label: <button className={styles.Language_En} onClick={() => { changeLanguage("ua") }}>Ua</button>, value: 'Ukrainian' },
                         ]} />
                     <div className={styles.autorizedDiv}>
-                        {cookie?.userData?.isLogined === 'autorized' ? (
+                        {cookie?.userData?.isLogined === 'authorized' ? (
                             <button type="button" onClick={openModal}>
-                                <img className={styles.PhotoUser} src={userPhoto} alt="User Photo" />
+                                <img className={styles.PhotoUser} src="../image/userPhoto.jpeg" alt="User Photo" />
                             </button>
                         ) : (
                             <button type="button" onClick={openModal}>
-                                <img className={styles.userPhoto} src={guestPhoto} alt="Guest Photo" />
+                                <img className={styles.userPhoto} src="../image/GuestPhoto.jpg" alt="Guest Photo" />
                             </button>
                         )}
 

@@ -1,21 +1,17 @@
 import React from "react";
 import '../Footer/Footer.css'
 import { BsSendCheck } from "react-icons/bs";
-import Line from '../image/Line.png'
 import { MdPhoneInTalk } from "react-icons/md";
 import { FaYoutube, FaFacebook, FaInstagramSquare, FaTelegram } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
-const Footer = (props) => {
+const Footer: React.FC = (props) => {
     let newPostElement = React.createRef();
 
-    let addPost = (props) => {
-        let text = newPostElement.current.value;
-        props.addPost(text)
-    }
+   
        const { t, i18n } = useTranslation();
 
-    const changeLanguage = (language) => {
+    const changeLanguage = (language: string) => {
         i18n.changeLanguage(language);
     };
     return (
@@ -72,15 +68,15 @@ const Footer = (props) => {
                     <h3>{t("Footer.title_2")}</h3>
                     <p>{t("Footer.subTitle_2")}</p>
                     <form>
-                        <textarea ref={newPostElement}></textarea>
-                        <button onClick={addPost}><BsSendCheck /></button>
+                        <textarea></textarea>
+                        <button><BsSendCheck /></button>
                     </form>
                 </div>
 
 
             </div>
 
-            <div className="PoloskaBootom"><img src={Line} alt="Delete" /></div>
+            <div className="PoloskaBootom"><img src="../image/Line.png" alt="Delete" /></div>
 
             <div className="MinContainer">
                 <div className="FooterMin">

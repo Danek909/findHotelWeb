@@ -108,5 +108,40 @@
         "subTitle": "Page title",
         "text": "Design by",
         "text_span": "Delvig"
+    },
+    "RegistrationForm": {
+        "errors": "Something went wrong!",
+        "passwordConfirm_message": "Passwords do not match",
+        "required": "This field must be filled in",
+        "userName_MaxLenght": "No more than 15 characters",
+        "email_MaxLenght": "No more than 55 characters",
+        "MaxLenght": "No more than 15 characters",
+        "MinLenght": "At least 2 characters!",
+        "userName_placeholder": "User Name",
+        "email_placeholder": "Email",
+        "RegistrationForm.email_MaxLenght": "No more than 55 characters",
+        "pattern_message": "The email address must contain the '@.' sign",
+        "password_placeholder": "Password",
+        "pattern_message_password": "Password must contain at least one letter, one number, and one special character",
+        "passwordConfirmation_placeholder": "Password Confirmation",
+        "pattern_message_PhoneNumber": "Invalid phone number",
+        "PhoneNumber_placeholder": "Phone Number",
+        "button_Registration": "Registration",
+        "span_Message_account": "Already have an account?",
+        "button_Enter": "Enter"
+    },
+    "ModalHappyWindow": {
+        "P_text": "Congratulations",
+        "P_text_happy": "you have successfull registered!!!",
+        "span_text": "Do you want to go to the login form?",
+        "button_Enter": "Enter"
+    },
+    "LoginForm":{
+        "placeholder_UserName":"User Name",
+        "placeholder_password": "Password",
+        "setError_message":"Check the password field and username",
+        "required":"This field must be filled in",
+        "MinLenght":"At least 2 characters!"
+
     }
 }

@@ -1,15 +1,10 @@
 import React from "react";
 import styles from '../Banner/Banner.module.css'
-import bannerPhoto from '../image/Banner.jpg'
-import point from '../image/point.png'
-import calendar from '../image/calendar.png'
-import sertch from '../image/sertch.png'
-import Rectalge from '../image/Rectangle 5.jpg'
 import { useTranslation } from "react-i18next";
 
 const Banner = () => {
     const { t, i18n } = useTranslation();
-    const changeLanguage = (language) => {
+    const changeLanguage = (language: string) => {
         i18n.changeLanguage(language);
     };
     return (
@@ -25,13 +20,13 @@ const Banner = () => {
                 </div>
 
                 <div className={styles.divBanerPhoto}>
-                    <img src={bannerPhoto} className={styles.banerPhoto} alt="delete" />
-                    <img src={Rectalge} className={styles.ImgZamina} alt="dele" />
+                    <img src="../image/Banner.jpg" className={styles.banerPhoto} alt="delete" />
+                    <img src="../image/Rectangle 5.jpg" className={styles.ImgZamina} alt="dele" />
                 </div>
 
                 <div className={styles.divPitBaner}>
                     <div>
-                        <img src={point} alt="delete" />
+                        <img src="../image/point.png" alt="delete" />
                         <p>{t('Banner.search.p_1')}
                             <br /><span>{t('Banner.search.span_1')}</span></p>
                     </div>
@@ -39,12 +34,12 @@ const Banner = () => {
                     <div className={styles.divPoloska}><span ></span></div>
 
                     <div className={styles.divWhen}>
-                        <img src={calendar} alt="delete" />
+                        <img src="../image/calendar.png" alt="delete" />
                         <p>{t('Banner.search.p_2')}<br /><span>{t('Banner.search.span_2')}</span></p>
                     </div>
 
                     <div className={styles.imgSeartch}>
-                        <img src={sertch} alt="delete" />
+                        <img src="../image/sertch.png" alt="delete" />
                     </div>
                 </div>
             </div>
