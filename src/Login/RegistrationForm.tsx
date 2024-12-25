@@ -8,7 +8,7 @@ import { FormProvider, useForm } from 'react-hook-form';
 import { InputOutlined } from "./components/InputOutlined/inputOutLinet";
 import { BsExclamationCircle } from "react-icons/bs";
 import ModalHappyWindow from "./ModalHappyWindow";
-import { useCookies } from 'react-cookie';
+import { Cookies, useCookies } from 'react-cookie';
 import { useTranslation } from "react-i18next";
 
 type PropsType = {
@@ -36,7 +36,6 @@ const RegistrationForm: React.FC<PropsType> = (props) => {
 
     const registerUser = (values: PropsType) => {
         setCookie('userData', { username: values.username, password: values.password, isLogined: "no_authorized" });
-        console.log(values, "values");
         const { password, PasswordConfirmation } = values;
         if (password === PasswordConfirmation) {
             updateUsers({
@@ -70,6 +69,8 @@ const RegistrationForm: React.FC<PropsType> = (props) => {
         props.closeModal();
     };
 
+
+
     return (
         <section className={styles.SectionLogin}>
             <h1>{t('RegistrationForm.Title')}</h1>
@@ -78,7 +79,7 @@ const RegistrationForm: React.FC<PropsType> = (props) => {
                     <div>
                         <div className={styles.divContainerRegForm_1}>
                             <InputOutlined style={errors.username ? { borderColor: 'red' } : null}
-                                {...register("username")} type="text" placeholder={t('RegistrationForm.userName_placeholder')} 
+                                {...register("username")} type="text" placeholder={t('RegistrationForm.userName_placeholder')}
                                 rules={{
                                     required: (t('RegistrationForm.required')),
                                     maxLength: { value: 15, message: (t('RegistrationForm.userName_MaxLenght')) },
@@ -88,16 +89,16 @@ const RegistrationForm: React.FC<PropsType> = (props) => {
                         </div>
                         <div className={styles.divContainerRegForm_2}>
                             <InputOutlined style={errors.email ? { borderColor: 'red' } : null}
-                                className={errors?.email ? 'erorr_Input_RegForm' : ' '} 
-                                 {...register("email")} type="email" 
-                                 placeholder={t('RegistrationForm.email_placeholder')}  
-                                 rules={{
+                                className={errors?.email ? 'erorr_Input_RegForm' : ' '}
+                                {...register("email")} type="email"
+                                placeholder={t('RegistrationForm.email_placeholder')}
+                                rules={{
                                     required: (t('RegistrationForm.required')),
                                     maxLength: { value: 55, message: (t('RegistrationForm.email_MaxLenght')) },
                                     minLength: { value: 2, message: (t('RegistrationForm.MinLenght')) },
                                     pattern: {
                                         value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                                        message: (t('RegistrationForm.pattern_message')) ,
+                                        message: (t('RegistrationForm.pattern_message')),
                                     },
 
                                 }} /><p className={styles.divErrors}>{errors?.email?.message}
@@ -107,15 +108,15 @@ const RegistrationForm: React.FC<PropsType> = (props) => {
                         <div className={styles.divContainerRegForm_3}>
                             <InputOutlined style={errors.password ? { borderColor: 'red', } : null}
                                 {...register("password")} type="password"
-                                onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setPassword(e.target.value)} 
-                                placeholder={t('RegistrationForm.password_placeholder')}  
+                                onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setPassword(e.target.value)}
+                                placeholder={t('RegistrationForm.password_placeholder')}
                                 rules={{
                                     required: (t('RegistrationForm.required')),
                                     maxLength: { value: 15, message: (t('RegistrationForm.MaxLenght')) },
-                                    minLength: { value: 2, message: (t('RegistrationForm.MinLenght'))},
+                                    minLength: { value: 2, message: (t('RegistrationForm.MinLenght')) },
                                     pattern: {
                                         value: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*()_-])[A-Za-z\d!@#$%^&*()_-]{8,}$/,
-                                        message:(t('RegistrationForm.pattern_message_password'))
+                                        message: (t('RegistrationForm.pattern_message_password'))
                                     }
                                 }} />
                             <p className={styles.divErrors_Password}>{errors?.password?.message}
@@ -123,13 +124,13 @@ const RegistrationForm: React.FC<PropsType> = (props) => {
                         </div>
 
                         <div className={styles.divContainerRegForm_4}>
-                            <InputOutlined style={errors.PasswordConfirmation ? { borderColor: 'red' } : null} 
-                            name="PasswordConfirmation" type="password" placeholder={t('RegistrationForm.passwordConfirmation_placeholder')}
-                            rules={{
-                                required: (t('RegistrationForm.required')),
-                                maxLength: { value: 15, message: (t('RegistrationForm.MaxLenght')) },
-                                minLength: { value: 2, message: (t('RegistrationForm.MinLenght'))},
-                            }} />
+                            <InputOutlined style={errors.PasswordConfirmation ? { borderColor: 'red' } : null}
+                                name="PasswordConfirmation" type="password" placeholder={t('RegistrationForm.passwordConfirmation_placeholder')}
+                                rules={{
+                                    required: (t('RegistrationForm.required')),
+                                    maxLength: { value: 15, message: (t('RegistrationForm.MaxLenght')) },
+                                    minLength: { value: 2, message: (t('RegistrationForm.MinLenght')) },
+                                }} />
                             {<p className={styles.divErrorsPsConfirm}>{errors?.PasswordConfirmation?.message}
                                 {errors?.PasswordConfirmation?.message && <BsExclamationCircle />}</p>}
 
@@ -142,7 +143,7 @@ const RegistrationForm: React.FC<PropsType> = (props) => {
                                 rules={{
                                     required: (t('RegistrationForm.required')),
                                     maxLength: { value: 15, message: (t('RegistrationForm.MaxLenght')) },
-                                    minLength: { value: 2, message: (t('RegistrationForm.MinLenght'))},
+                                    minLength: { value: 2, message: (t('RegistrationForm.MinLenght')) },
                                     pattern: {
                                         value: /^[0-9]{10}$/,
                                         message: (t('RegistrationForm.pattern_message_PhoneNumber')),
@@ -163,7 +164,11 @@ const RegistrationForm: React.FC<PropsType> = (props) => {
                 </form>
             </FormProvider>
             <div className={styles.AcauntMesage}>
-                <span>{t('RegistrationForm.span_Message_account')}<h3 onClick={openLoginModal}>{t('RegistrationForm.button_Enter')}</h3></span>
+                {cookies?.userData !== undefined && (
+                    <span onClick={openLoginModal}>
+                        {t('RegistrationForm.span_Message_account')} <h3>{t('RegistrationForm.button_Enter')}</h3>
+                    </span>
+                )}
             </div>
             <Modal open={loginModalIsOpen} onCancel={closeLoginModal} className={styles.ModalLoginWindow} footer={null}>
                 <LoginForm username={""} password={""} />

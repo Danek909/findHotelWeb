@@ -87,7 +87,6 @@ const Header = (props: void) => {
                             </button>
                         )}
 
-
                         <Select
                             defaultValue={userData?.username ? userData?.username : "Exit"}
                             style={{

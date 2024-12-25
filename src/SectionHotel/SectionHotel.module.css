@@ -121,8 +121,7 @@
 
     .divPidContainer{
         max-width: 280px;
-        width: 100%; 
-        margin: 0px 0px 20px 0px;  
+        width: 100%;   
     }
 
     .hotelImg{
@@ -132,5 +131,13 @@
 
     .imgSerze{
         padding-left: 230px;
+    }
+}
+@media(max-width: 370px){
+    .divSpecialofers h2{
+        font-size: 30px;
+    }
+    .divContainer{
+        padding: 0px;
     }
 }

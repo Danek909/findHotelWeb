@@ -155,7 +155,7 @@
 
     .yourLogoHeder h1 {
         margin-bottom: 0px;
-        margin-top: -45px;
+        margin-top: -30px;
     }
 
     .imgHeder img {
@@ -247,6 +247,11 @@
     .yourLogoHeder {
         margin-left: 0px;
         padding-left: 40px;
+    }
+
+    .yourLogoHeder h1 {
+        margin-bottom: 0px;
+        margin-top: -50px;
     }
 
     .imgHeder {

@@ -81,7 +81,8 @@
 
 .divPoloska {
     display: block;
-    position: relative;
+    position: static;
+    margin-top: 10px;
     top: 11px;
     left: 61px;
     width: 2px;
@@ -134,7 +135,9 @@
 }
 
 @media(max-width: 530px) {
-
+    .divTextbaner{
+        margin-top: 50px;
+    }
     .banerPhoto {
         display: none;
     }

@@ -32,7 +32,6 @@ const LoginForm: React.FC<PropsType> = (props: PropsType) => {
         if (userData.username === values.username && userData.password === values.password) {
             const cookieUserData = cookies.userData;
             cookieUserData.isLogined = 'authorized';
-            console.log(cookieUserData, 'cookieUserData');
             setCookie("userData", cookieUserData);
             window.location.reload();
         } else {
