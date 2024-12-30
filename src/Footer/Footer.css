@@ -6,6 +6,9 @@
     margin: 0 auto;
     background-color: #bebdbd54;
 }
+.DivMinContaier{
+    margin-right: 20px;
+}
 
 .DivFooterContainer {
     display: flex;

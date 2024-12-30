@@ -28,64 +28,6 @@
     font-family: sans-serif;
 }
 
-.SwiperSlide span {
-    font-family: sans-serif;
-    color: black;
-    font-weight: 700;
-}
-
-.SwiperContainer {
-    max-width: 1180px;
-    width: 100%;
-}
-
-.spanTopBtn::before {
-    content: '';
-    width: 2px;
-    height: 15px;
-    background-color: #808080;
-    position: absolute;
-    left: 19px;
-    transform: rotate(45deg);
-    top: 13px;
-}
-
-
-.btnTop {
-    display: flex;
-    width: 50px;
-    height: 50px;
-    background-color: #80808099;
-    position: relative;
-    top: 242px;
-    left: -65px;
-    border-radius: 10px
-}
-
-.spanTopBtn::after {
-    content: ' ';
-    position: absolute;
-    width: 2px;
-    height: 15px;
-    background-color: #808080;
-    left: 18px;
-    top: 23px;
-    transform: rotate(-45deg);
-
-}
-
-.btnBottom {
-    width: 20px;
-    height: 20px;
-   
-}
-
-
-.btnBottom img{
-    position: relative;
-    right: -1286px;
-    top: -122px;
-}
 
 @media(max-width: 1435px){
     .btnBottom{

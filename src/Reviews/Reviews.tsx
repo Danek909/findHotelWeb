@@ -17,16 +17,10 @@ const Reviews: React.FC  = () => {
             <div>
                 <h2 className={styles.Reviews}>{t("Reviews.Title")}</h2>
             </div>
-            <div className={styles.btnTop}>
-                <span className={styles.spanTopBtn}>
-                </span>
-            </div>
             <div className={styles.divContainerSRew}>
-                <Swiper modules={[Navigation, Pagination, Scrollbar, A11y]}
+                <Swiper modules={[Pagination, Scrollbar, A11y]}
                     spaceBetween={100}
                     slidesPerView={1}
-                    navigation
-
                     breakpoints={{
                         640: {
                             slidesPerView: 1,
@@ -43,8 +37,7 @@ const Reviews: React.FC  = () => {
                     className={styles.Swiper} >
 
                     <div className={styles.SwiperContainer} >
-
-                        <SwiperSlide className={styles.SwiperSliders}>
+                        <SwiperSlide>
                             <div className={styles.SwiperSlide}>
                                 <img src="../image/Ellipse1.png" alt="delete" />
                                 <h3>
@@ -142,9 +135,7 @@ const Reviews: React.FC  = () => {
                     </div>
                 </Swiper>
             </div>
-            <div className={styles.btnBottom}>
-                <img src="../image/arrow.png" alt="delete" />
-            </div>
+         
         </section>
     )
 }

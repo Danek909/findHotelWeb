@@ -76,18 +76,25 @@
     }
 }
 
-@media(max-width: 860px){
-    .DivMinContainer{
+@media(max-width: 860px) {
+    .DivMinContainer {
         max-width: 280px;
         width: 100%;
     }
 
     .DivMinContainer img {
         max-width: 280px;
-        width: 100%;   
+        width: 100%;
     }
 
     .DivMinContainer p {
         font-size: 13px;
+    }
+}
+
+@media(max-width: 400px) {
+
+    .RecentrLogoH1 h1 {
+        font-size: 35px;
     }
 }
