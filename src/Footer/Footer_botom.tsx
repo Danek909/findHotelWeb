@@ -5,7 +5,7 @@ import { MdPhoneInTalk } from "react-icons/md";
 import { FaYoutube, FaFacebook, FaInstagramSquare, FaTelegram } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
-const Footer: React.FC = (props) => {
+const Footer: React.FC =  (props) => {
     let newPostElement = React.createRef();
     const { t, i18n } = useTranslation();
 

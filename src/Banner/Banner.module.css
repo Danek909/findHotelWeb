@@ -18,7 +18,6 @@
 
 .divBanerPhoto img {
     width: 100%;
-    height: 300px;
 }
 
 .divTextbaner {
@@ -145,6 +144,7 @@
 
     .ImgZamina {
         display: flex;
+        height: 300px;
     }
 
     .divWhen{

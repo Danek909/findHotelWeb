@@ -2,7 +2,7 @@ import React from "react";
 import styles from '../SectionHotel/SectionHotel.module.css'
 import { useTranslation } from "react-i18next";
 
-const SectionHotel: React.FC  = () => {
+const SectionHotel: React.FC = () => {
     const changeLanguage = (language: string) => {
         i18n.changeLanguage(language);
     };
@@ -17,9 +17,9 @@ const SectionHotel: React.FC  = () => {
             <div className={styles.divContainer}>
                 <div className={styles.divPidContainer}>
                     <div className={styles.imgBlock}>
-                    <img className={styles.imgSerze} src="../image/iconSerze.png" alt="delete" />
-                        <img className={styles.zirca} src="../image/ivonZirca.png" alt="delete" />
-                        <img className={styles.hotelImg} src="../image/hotel1.png" alt="delete" />
+                        <img className={styles.imgSerze} src="../image/iconSerze.png" alt="delete" rel="preload" />
+                        <img className={styles.zirca} src="../image/ivonZirca.png" alt="delete" rel="preload" />
+                        <img className={styles.hotelImg} src="../image/hotel1.png" alt="delete" rel="preload" />
                     </div>
 
                     <div className={styles.divtext}>
@@ -31,15 +31,15 @@ const SectionHotel: React.FC  = () => {
 
                     <div className={styles.divTextContainer}>
                         <div>
-                            <img src="../image/pidHotel1.png" alt="deletet" />
+                            <img src="../image/pidHotel1.png" alt="deletet" rel="preload" />
                             <p>{t('SectionHotel.Container_1.span_1')}</p>
                         </div>
                         <div>
-                            <img src="../image/pidHotel2.png" alt="deletet" />
+                            <img src="../image/pidHotel2.png" alt="deletet" rel="preload" />
                             <p>{t('SectionHotel.Container_1.span_2')}</p>
                         </div>
                         <div>
-                            <img src="../image/pidHotel3.png" alt="deletet" />
+                            <img src="../image/pidHotel3.png" alt="deletet" rel="preload" />
                             <p>{t('SectionHotel.Container_1.span_3')}</p>
                         </div>
                     </div>
@@ -49,29 +49,29 @@ const SectionHotel: React.FC  = () => {
 
                 <div className={styles.divPidContainer}>
                     <div className={styles.imgBlock}>
-                    <img className={styles.imgSerze} src="../image/iconSerze.png" alt="delete" />
-                        <img className={styles.zirca} src="../image/ivonZirca.png" alt="delete" />
-                        <img className={styles.hotelImg} src="../image/hotel2.png" alt="delete" />
+                        <img className={styles.imgSerze} src="../image/iconSerze.png" alt="delete" rel="preload" />
+                        <img className={styles.zirca} src="../image/ivonZirca.png" alt="delete" rel="preload" />
+                        <img className={styles.hotelImg} src="../image/hotel2.png" alt="delete" rel="preload" />
                     </div>
 
                     <div className={styles.divtext}>
-                    <h2>{t('SectionHotel.Container_1.title')}</h2>
+                        <h2>{t('SectionHotel.Container_1.title')}</h2>
                         <h3>{t('SectionHotel.Container_1.subTitle')}</h3>
                         <h4 >{t('SectionHotel.Container_1.textData')}</h4>
                         <p>{t('SectionHotel.Container_1.text_1Data')} <span>{t('SectionHotel.Container_1.text_2Data')}</span></p>
                     </div>
 
                     <div className={styles.divTextContainer}>
-                    <div>
-                            <img src="../image/pidHotel1.png" alt="deletet" />
+                        <div>
+                            <img src="../image/pidHotel1.png" alt="deletet" rel="preload" />
                             <p>{t('SectionHotel.Container_1.span_1')}</p>
                         </div>
                         <div>
-                            <img src="../image/pidHotel2.png" alt="deletet" />
+                            <img src="../image/pidHotel2.png" alt="deletet" rel="preload" />
                             <p>{t('SectionHotel.Container_1.span_2')}</p>
                         </div>
                         <div>
-                            <img src="../image/pidHotel3.png" alt="deletet" />
+                            <img src="../image/pidHotel3.png" alt="deletet" rel="preload" />
                             <p>{t('SectionHotel.Container_1.span_3')}</p>
                         </div>
                     </div>
@@ -80,29 +80,29 @@ const SectionHotel: React.FC  = () => {
 
                 <div className={styles.divPidContainer}>
                     <div className={styles.imgBlock}>
-                    <img className={styles.imgSerze} src="../image/iconSerze.png" alt="delete" />
-                        <img className={styles.zirca} src="../image/ivonZirca.png" alt="delete" />
-                        <img className={styles.hotelImg} src="../image/hotel3.png" alt="delete" />
+                        <img className={styles.imgSerze} src="../image/iconSerze.png" alt="delete" rel="preload" />
+                        <img className={styles.zirca} src="../image/ivonZirca.png" alt="delete" rel="preload" />
+                        <img className={styles.hotelImg} src="../image/hotel3.png" alt="delete" rel="preload" />
                     </div>
 
                     <div className={styles.divtext}>
-                    <h2>{t('SectionHotel.Container_1.title')}</h2>
+                        <h2>{t('SectionHotel.Container_1.title')}</h2>
                         <h3>{t('SectionHotel.Container_1.subTitle')}</h3>
                         <h4 >{t('SectionHotel.Container_1.textData')}</h4>
                         <p>{t('SectionHotel.Container_1.text_1Data')} <span>{t('SectionHotel.Container_1.text_2Data')}</span></p>
                     </div>
 
                     <div className={styles.divTextContainer}>
-                    <div>
-                            <img src="../image/pidHotel1.png" alt="deletet" />
+                        <div>
+                            <img src="../image/pidHotel1.png" alt="deletet" rel="preload" />
                             <p>{t('SectionHotel.Container_1.span_1')}</p>
                         </div>
                         <div>
-                            <img src="../image/pidHotel2.png" alt="deletet" />
+                            <img src="../image/pidHotel2.png" alt="deletet" rel="preload" />
                             <p>{t('SectionHotel.Container_1.span_2')}</p>
                         </div>
                         <div>
-                            <img src="../image/pidHotel3.png" alt="deletet" />
+                            <img src="../image/pidHotel3.png" alt="deletet" rel="preload" />
                             <p>{t('SectionHotel.Container_1.span_3')}</p>
                         </div>
                     </div>
