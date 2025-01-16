@@ -10,7 +10,7 @@ const Banner = () => {
     return (
         <section className={styles.BannerSection}>
             <div className={styles.divContainerBanner}>
-                <div className={styles.divTextbaner}>
+                <div className={styles.divTextbaner} >
                     <h2>{t('Banner.h2')}<br />
                         {t('Banner.h2_span')}
                     </h2>
@@ -21,12 +21,12 @@ const Banner = () => {
 
                 <div className={styles.divBanerPhoto}>
                     <img src="../image/Banner.jpg" className={styles.banerPhoto} alt="delete" rel="preload" />
-                    <img src="../image/Rectangle 5.jpg" className={styles.ImgZamina} alt="dele" rel="preload" />
+                    <img src="../image/Rectangle.jpg" className={styles.ImgZamina} alt="delete" rel="preload" />
                 </div>
 
                 <div className={styles.divPitBaner}>
                     <div>
-                        <img src="../image/point.png" alt="delete" />
+                        <img src="../image/point.png" alt="delete" loading="lazy" />
                         <p>{t('Banner.search.p_1')}
                             <br /><span>{t('Banner.search.span_1')}</span></p>
                     </div>
@@ -34,12 +34,12 @@ const Banner = () => {
                     <div className={styles.divPoloska}><span ></span></div>
 
                     <div className={styles.divWhen}>
-                        <img src="../image/calendar.png" alt="delete" />
+                        <img src="../image/calendar.png" alt="delete" loading="lazy" />
                         <p>{t('Banner.search.p_2')}<br /><span>{t('Banner.search.span_2')}</span></p>
                     </div>
 
                     <div className={styles.imgSeartch}>
-                        <img src="../image/sertch.png" alt="delete" />
+                        <img src="../image/sertch.png" alt="delete" loading="lazy"/>
                     </div>
                 </div>
             </div>

@@ -17,9 +17,9 @@ const SectionHotel: React.FC = () => {
             <div className={styles.divContainer}>
                 <div className={styles.divPidContainer}>
                     <div className={styles.imgBlock}>
-                        <img className={styles.imgSerze} src="../image/iconSerze.png" alt="delete" rel="preload" />
-                        <img className={styles.zirca} src="../image/ivonZirca.png" alt="delete" rel="preload" />
-                        <img className={styles.hotelImg} src="../image/hotel1.png" alt="delete" rel="preload" />
+                        <img className={styles.imgSerze} src="../image/iconSerze.png" alt="delete" loading="lazy" />
+                        <img className={styles.zirca} src="../image/ivonZirca.png" alt="delete" loading="lazy" />
+                        <img className={styles.hotelImg} src="../image/hotel1.png" alt="delete" loading="lazy" />
                     </div>
 
                     <div className={styles.divtext}>
@@ -31,15 +31,15 @@ const SectionHotel: React.FC = () => {
 
                     <div className={styles.divTextContainer}>
                         <div>
-                            <img src="../image/pidHotel1.png" alt="deletet" rel="preload" />
+                            <img src="../image/pidHotel1.png" alt="deletet" loading="lazy" />
                             <p>{t('SectionHotel.Container_1.span_1')}</p>
                         </div>
                         <div>
-                            <img src="../image/pidHotel2.png" alt="deletet" rel="preload" />
+                            <img src="../image/pidHotel2.png" alt="deletet" loading="lazy" />
                             <p>{t('SectionHotel.Container_1.span_2')}</p>
                         </div>
                         <div>
-                            <img src="../image/pidHotel3.png" alt="deletet" rel="preload" />
+                            <img src="../image/pidHotel3.png" alt="deletet" loading="lazy" />
                             <p>{t('SectionHotel.Container_1.span_3')}</p>
                         </div>
                     </div>
@@ -49,9 +49,9 @@ const SectionHotel: React.FC = () => {
 
                 <div className={styles.divPidContainer}>
                     <div className={styles.imgBlock}>
-                        <img className={styles.imgSerze} src="../image/iconSerze.png" alt="delete" rel="preload" />
-                        <img className={styles.zirca} src="../image/ivonZirca.png" alt="delete" rel="preload" />
-                        <img className={styles.hotelImg} src="../image/hotel2.png" alt="delete" rel="preload" />
+                        <img className={styles.imgSerze} src="../image/iconSerze.png" alt="delete" loading="lazy" />
+                        <img className={styles.zirca} src="../image/ivonZirca.png" alt="delete" loading="lazy" />
+                        <img className={styles.hotelImg} src="../image/hotel2.png" alt="delete" loading="lazy" />
                     </div>
 
                     <div className={styles.divtext}>
@@ -63,15 +63,15 @@ const SectionHotel: React.FC = () => {
 
                     <div className={styles.divTextContainer}>
                         <div>
-                            <img src="../image/pidHotel1.png" alt="deletet" rel="preload" />
+                            <img src="../image/pidHotel1.png" alt="deletet" loading="lazy" />
                             <p>{t('SectionHotel.Container_1.span_1')}</p>
                         </div>
                         <div>
-                            <img src="../image/pidHotel2.png" alt="deletet" rel="preload" />
+                            <img src="../image/pidHotel2.png" alt="deletet" loading="lazy" />
                             <p>{t('SectionHotel.Container_1.span_2')}</p>
                         </div>
                         <div>
-                            <img src="../image/pidHotel3.png" alt="deletet" rel="preload" />
+                            <img src="../image/pidHotel3.png" alt="deletet" loading="lazy" />
                             <p>{t('SectionHotel.Container_1.span_3')}</p>
                         </div>
                     </div>
@@ -80,9 +80,9 @@ const SectionHotel: React.FC = () => {
 
                 <div className={styles.divPidContainer}>
                     <div className={styles.imgBlock}>
-                        <img className={styles.imgSerze} src="../image/iconSerze.png" alt="delete" rel="preload" />
-                        <img className={styles.zirca} src="../image/ivonZirca.png" alt="delete" rel="preload" />
-                        <img className={styles.hotelImg} src="../image/hotel3.png" alt="delete" rel="preload" />
+                        <img className={styles.imgSerze} src="../image/iconSerze.png" alt="delete" loading="lazy" />
+                        <img className={styles.zirca} src="../image/ivonZirca.png" alt="delete" loading="lazy" />
+                        <img className={styles.hotelImg} src="../image/hotel3.png" alt="delete" loading="lazy" />
                     </div>
 
                     <div className={styles.divtext}>
@@ -94,15 +94,15 @@ const SectionHotel: React.FC = () => {
 
                     <div className={styles.divTextContainer}>
                         <div>
-                            <img src="../image/pidHotel1.png" alt="deletet" rel="preload" />
+                            <img src="../image/pidHotel1.png" alt="deletet" loading="lazy" />
                             <p>{t('SectionHotel.Container_1.span_1')}</p>
                         </div>
                         <div>
-                            <img src="../image/pidHotel2.png" alt="deletet" rel="preload" />
+                            <img src="../image/pidHotel2.png" alt="deletet" loading="lazy" />
                             <p>{t('SectionHotel.Container_1.span_2')}</p>
                         </div>
                         <div>
-                            <img src="../image/pidHotel3.png" alt="deletet" rel="preload" />
+                            <img src="../image/pidHotel3.png" alt="deletet" loading="lazy" />
                             <p>{t('SectionHotel.Container_1.span_3')}</p>
                         </div>
                     </div>

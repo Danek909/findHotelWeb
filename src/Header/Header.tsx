@@ -1,10 +1,6 @@
 import React, { useState, useContext, SetStateAction } from "react";
 import styles from '../Header/heder.module.css';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
-import { GrLanguage } from "react-icons/gr";
-import { PiCurrencyDollarBold } from "react-icons/pi";
-import { FaSquarePhone } from "react-icons/fa6";
-import { FaFacebook, FaYoutube, FaInstagramSquare, FaTelegram } from "react-icons/fa";
 import { ConfigProvider, Modal } from 'antd';
 import RegistrationForm from "../Login/RegistrationForm";
 import { useCookies } from 'react-cookie';
@@ -47,10 +43,7 @@ const Header = (props: void) => {
                         <a href="#">{t('header.navBar.text_3')}</a>
                         <a href="#">{t('header.navBar.text_4')}</a>
 
-                        <div className={styles.btn_Menu}>
-                            <GrLanguage size={25} />
-                            <PiCurrencyDollarBold size={25} />
-                        </div>
+                       
                         <div className={styles.meregi_Btn}>
                             <img src="../image/Phone_black.png" alt="undefined"  rel="preload"/>
                             <img src="../image/Facebook.png" alt="undefined"  rel="preload"/>

@@ -1,8 +1,6 @@
 import React from "react";
 import '../Footer/Footer.css'
 import { BsSendCheck } from "react-icons/bs";
-import { MdPhoneInTalk } from "react-icons/md";
-import { FaYoutube, FaFacebook, FaInstagramSquare, FaTelegram } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
 const Footer: React.FC = (props) => {
@@ -81,11 +79,11 @@ const Footer: React.FC = (props) => {
                     <h1>Your.<span>logo</span></h1>
                     <p>{t("Footer.text")}<span>{t("Footer.text_span")}</span></p>
                     <div className="minDivFooter">
-                        <img src="../image/Phone_black.png" alt="undefined" rel="preload" />
-                        <img src="../image/Facebook.png" alt="undefined" rel="preload" />
-                        <img src="../image/Youtube.png" alt="undefined" rel="preload" />
-                        <img src="../image/Instagram.png" alt="undefined" rel="preload" />
-                        <img src="../image/Telegram.png" alt="undefined" rel="preload" />
+                        <img src="../image/Phone_black.png" alt="undefined" loading="lazy"/>
+                        <img src="../image/Facebook.png" alt="undefined" loading="lazy" />
+                        <img src="../image/Youtube.png" alt="undefined" loading="lazy"/>
+                        <img src="../image/Instagram.png" alt="undefined" loading="lazy" />
+                        <img src="../image/Telegram.png" alt="undefined" loading="lazy" />
                     </div>
                 </div>
             </div>
