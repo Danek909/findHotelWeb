@@ -52,16 +52,16 @@ const Header = (props: void) => {
                             <PiCurrencyDollarBold size={25} />
                         </div>
                         <div className={styles.meregi_Btn}>
-                            <FaSquarePhone />
-                            <FaFacebook />
-                            <FaYoutube />
-                            <FaInstagramSquare />
-                            <FaTelegram />
+                            <img src="../image/Phone_black.png" alt="undefined"  rel="preload"/>
+                            <img src="../image/Facebook.png" alt="undefined"  rel="preload"/>
+                            <img src="../image/Youtube.png" alt="undefined"  rel="preload"/>
+                            <img src="../image/Instagram.png" alt="undefined"  rel="preload"/>
+                            <img src="../image/Telegram.png" alt="undefined"  rel="preload"/>
                         </div>
                     </ul>
                 </div>
                 <div className={styles.imgHeder}>
-                    <img src="../image/dolars.png" className={styles.dolalrsHeder} alt="Delete" />
+                    <img src="../image/dolars.png" className={styles.dolalrsHeder} alt="Delete" rel="preload" />
                     <Select
                         suffixIcon=""
                         defaultValue="English"
