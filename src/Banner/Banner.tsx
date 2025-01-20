@@ -20,8 +20,8 @@ const Banner = () => {
                 </div>
 
                 <div className={styles.divBanerPhoto}>
-                    <img src="../image/Banner.jpg" className={styles.banerPhoto} alt="delete" rel="preload" />
-                    <img src="../image/Rectangle.jpg" className={styles.ImgZamina} alt="delete" rel="preload" />
+                    <img src="../image/Banner.jpg" className={styles.banerPhoto} alt="delete"  decoding="async" loading="eager" style={{maxWidth: "1180px", width:"100%", height: "auto%" }}/>
+                    <img src="../image/Rectangle.jpg" className={styles.ImgZamina} alt="delete" decoding="async" loading="lazy"/>
                 </div>
 
                 <div className={styles.divPitBaner}>
@@ -39,7 +39,7 @@ const Banner = () => {
                     </div>
 
                     <div className={styles.imgSeartch}>
-                        <img src="../image/sertch.png" alt="delete" loading="lazy"/>
+                        <img src="../image/sertch.png" alt="delete" loading="lazy" />
                     </div>
                 </div>
             </div>

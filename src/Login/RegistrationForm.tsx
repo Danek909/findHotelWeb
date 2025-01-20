@@ -8,7 +8,7 @@ import { FormProvider, useForm } from 'react-hook-form';
 import { InputOutlined } from "./components/InputOutlined/inputOutLinet";
 import { BsExclamationCircle } from "react-icons/bs";
 import ModalHappyWindow from "./ModalHappyWindow";
-import { Cookies, useCookies } from 'react-cookie';
+import { useCookies } from 'react-cookie';
 import { useTranslation } from "react-i18next";
 
 type PropsType = {
