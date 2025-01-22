@@ -17,7 +17,7 @@ const Banner = lazy(() => import('./Banner/Banner'));
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/findHotelWeb">
       <Provider store={store} >
         <CookiesProvider>
           <Suspense>
