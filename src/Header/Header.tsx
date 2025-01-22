@@ -1,11 +1,11 @@
-import React, { useState, useContext, SetStateAction } from "react";
+import React, { useState, useContext, SetStateAction } from 'react';
 import styles from '../Header/heder.module.css';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { ConfigProvider, Modal } from 'antd';
-import RegistrationForm from "../Login/RegistrationForm";
+import RegistrationForm from '../Login/RegistrationForm';
 import { useCookies } from 'react-cookie';
 import { Select } from 'antd';
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
 const Header = (props: void) => {
 

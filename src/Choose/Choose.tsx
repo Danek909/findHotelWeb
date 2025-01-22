@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import styles from '../Choose/Choose.module.css'
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
 const Choose: React.FC = () => {
     const { t, i18n } = useTranslation();

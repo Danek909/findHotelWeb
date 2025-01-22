@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import styles from "../Login/Login.module.css"
-import "../Modal/Modal.css"
-import LoginForm from "./LoginForm";
+import React, { useState } from 'react';
+import styles from '../Login/Login.module.css';
+import '../Modal/Modal.css';
+import LoginForm from './LoginForm';
 import { Modal } from 'antd';
 import useAuthStore from './AuthStore';
 import { FormProvider, useForm } from 'react-hook-form';
-import { InputOutlined } from "./components/InputOutlined/inputOutLinet";
-import { BsExclamationCircle } from "react-icons/bs";
-import ModalHappyWindow from "./ModalHappyWindow";
+import { InputOutlined } from './components/InputOutlined/inputOutLinet';
+import { BsExclamationCircle } from 'react-icons/bs';
+import ModalHappyWindow from './ModalHappyWindow';
 import { useCookies } from 'react-cookie';
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
 type PropsType = {
     openLoginModal?: () => void;

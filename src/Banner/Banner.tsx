@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import styles from '../Banner/Banner.module.css'
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
 const Banner = () => {
     const { t, i18n } = useTranslation();

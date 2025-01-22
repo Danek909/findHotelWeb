@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { FormProvider, useForm } from "react-hook-form";
-import styles from "../Login/Login.module.css"
-import { InputOutlined } from "./components/InputOutlined/inputOutLinet";
-import { BsExclamationCircle } from "react-icons/bs";
+import React, { useState } from 'react';
+import { FormProvider, useForm } from 'react-hook-form';
+import styles from '../Login/Login.module.css';
+import { InputOutlined } from './components/InputOutlined/inputOutLinet';
+import { BsExclamationCircle } from 'react-icons/bs';
 import { useCookies } from 'react-cookie';
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
 type PropsType = {
     message?: string,

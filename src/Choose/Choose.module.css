@@ -62,17 +62,18 @@
     .divPidContainer {
         flex-wrap: wrap;
         padding-bottom: 30px;
-        justify-content: center;
     }
 
     .Choosesection {
         height: 100%;
     }
-
-    /* .divContainer {
-        height: 100%;
-    } */
 }
+@media(max-width: 580px){
+    .divPidContainer{
+        justify-content: center;
+    }
+}
+
 
 @media(max-width: 530px) {
     .divPidContainer {

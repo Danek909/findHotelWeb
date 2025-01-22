@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import '../Footer/Footer.css'
-import { BsSendCheck } from "react-icons/bs";
-import { useTranslation } from "react-i18next";
+import { BsSendCheck } from 'react-icons/bs';
+import { useTranslation } from 'react-i18next';
 
 const Footer: React.FC = (props) => {
     let newPostElement = React.createRef();

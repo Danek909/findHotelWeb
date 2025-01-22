@@ -1,25 +1,26 @@
-import React, { Suspense } from 'react';
+import React, { lazy, Suspense } from 'react';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { CookiesProvider } from 'react-cookie';
-import Banner from './Banner/Banner';
 import store from './redux/redux-store';
-import SectionHotel from './SectionHotel/SectionHotel';
-import Reviews from './Reviews/Reviews';
-import Footer from './Footer/Footer_botom';
-import Modal from './Modal/Modal';
 import Header from './Header/Header';
-import Login from './Login/Login';
-import Recent from './Recent/Recent';
-import Choose from './Choose/Choose';
+
+const Choose = lazy(() => import('./Choose/Choose'));
+const Recent = lazy(() => import('./Recent/Recent'));
+const Login = lazy(() => import('./Login/Login'));
+const Modal = lazy(() => import('./Modal/Modal'));
+const Footer = lazy(() => import('./Footer/Footer_botom'));
+const Reviews = lazy(() => import('./Reviews/Reviews'));
+const SectionHotel = lazy(() => import('./SectionHotel/SectionHotel'));
+const Banner = lazy(() => import('./Banner/Banner'));
 
 function App() {
   return (
     <BrowserRouter>
       <Provider store={store} >
         <CookiesProvider>
-          <Suspense fallback={<div>Loading...</div>} >
+          <Suspense>
             <Header />
             <Banner />
             <Choose />

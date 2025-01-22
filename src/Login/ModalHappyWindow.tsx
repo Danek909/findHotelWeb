@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "../Login/Login.module.css";
+import React from 'react';
+import styles from '../Login/Login.module.css';
 import { useCookies } from 'react-cookie';
 import { useTranslation } from "react-i18next";
 
