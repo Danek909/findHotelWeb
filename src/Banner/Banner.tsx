@@ -20,8 +20,8 @@ const Banner = () => {
                 </div>
 
                 <div className={styles.divBanerPhoto}>
-                    <img src="../image/Banner.jpg" className={styles.banerPhoto} alt="delete"  decoding="async" loading="eager" style={{maxWidth: "1180px", width:"100%", height: "auto%" }}/>
-                    <img src="../image/Rectangle.jpg" className={styles.ImgZamina} alt="delete" decoding="async" loading="lazy"/>
+                    <img src="../image/Banner.webp" className={styles.banerPhoto} alt="delete"  decoding="async" loading="eager" style={{maxWidth: "1180px", width:"100%", height: "auto%" }}/>
+                    <img src="../image/Rectangle.webp" className={styles.ImgZamina} alt="delete" decoding="async" loading="lazy"/>
                 </div>
 
                 <div className={styles.divPitBaner}>
@@ -34,7 +34,7 @@ const Banner = () => {
                     <div className={styles.divPoloska}><span ></span></div>
 
                     <div className={styles.divWhen}>
-                        <img src="../image/calendar.png" alt="delete" loading="lazy" />
+                        <img src="../image/calendar.webp" alt="delete" loading="lazy" />
                         <p>{t('Banner.search.p_2')}<br /><span>{t('Banner.search.span_2')}</span></p>
                     </div>
 

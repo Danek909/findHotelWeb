@@ -21,6 +21,12 @@
     display: flex;
     justify-content: space-between;
 }
+.DivMinContainer img{
+    max-width: 370px;
+    width: 100%;
+    max-height: 250px;
+    height: 100%;
+}
 
 .DivMinContainer h2 {
     display: flex;
@@ -85,6 +91,8 @@
     .DivMinContainer img {
         max-width: 280px;
         width: 100%;
+        max-height: 200px;
+        height: 100%;
     }
 
     .DivMinContainer p {

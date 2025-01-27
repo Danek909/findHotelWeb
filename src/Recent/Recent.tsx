@@ -18,7 +18,7 @@ const Recent: React.FC = () => {
             <div className="DivCintainerRecent">
 
                 <div className="DivMinContainer">
-                    <img src="../image/1.png" alt="delete" loading="lazy"/>
+                    <img src="../image/1.webp" alt="delete" loading="lazy"/>
                     <h2>
                         {t("Recent.Container_1.textData_1")}<span><MdAccessTimeFilled className="TimeField1" />{t("Recent.Container_1.textData_2")}</span>
                     </h2>
@@ -31,7 +31,7 @@ const Recent: React.FC = () => {
                 </div>
 
                 <div className="DivMinContainer">
-                    <img src="../image/2.png" alt="delete" loading="lazy" />
+                    <img src="../image/2.webp" alt="delete" loading="lazy" />
                     <h2>
                         {t("Recent.Container_2.textData_1")}<span> <MdAccessTimeFilled className="TimeField2" />{t("Recent.Container_2.textData_2")}</span>
                     </h2>
@@ -43,7 +43,7 @@ const Recent: React.FC = () => {
                 </div>
 
                 <div className="DivMinContainer">
-                    <img src="../image/3.png" alt="delete" loading="lazy" />
+                    <img src="../image/3.webp" alt="delete" loading="lazy" />
                     <h2>
                         {t("Recent.Container_3.textData_1")}<span><MdAccessTimeFilled className="TimeField3" /> {t("Recent.Container_3.textData_2")}</span>
                     </h2>

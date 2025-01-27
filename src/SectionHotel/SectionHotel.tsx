@@ -19,7 +19,7 @@ const SectionHotel: React.FC = () => {
                     <div className={styles.imgBlock}>
                         <img className={styles.imgSerze} src="../image/iconSerze.png" alt="delete" loading="lazy" />
                         <img className={styles.zirca} src="../image/ivonZirca.png" alt="delete" loading="lazy" />
-                        <img className={styles.hotelImg} src="../image/hotel1.png" alt="delete" loading="lazy" />
+                        <img className={styles.hotelImg} src="../image/hotel1.webp" alt="delete" loading="lazy" />
                     </div>
 
                     <div className={styles.divtext}>
@@ -51,7 +51,7 @@ const SectionHotel: React.FC = () => {
                     <div className={styles.imgBlock}>
                         <img className={styles.imgSerze} src="../image/iconSerze.png" alt="delete" loading="lazy" />
                         <img className={styles.zirca} src="../image/ivonZirca.png" alt="delete" loading="lazy" />
-                        <img className={styles.hotelImg} src="../image/hotel2.png" alt="delete" loading="lazy" />
+                        <img className={styles.hotelImg} src="../image/hotel2.webp" alt="delete" loading="lazy" />
                     </div>
 
                     <div className={styles.divtext}>
@@ -82,7 +82,7 @@ const SectionHotel: React.FC = () => {
                     <div className={styles.imgBlock}>
                         <img className={styles.imgSerze} src="../image/iconSerze.png" alt="delete" loading="lazy" />
                         <img className={styles.zirca} src="../image/ivonZirca.png" alt="delete" loading="lazy" />
-                        <img className={styles.hotelImg} src="../image/hotel3.png" alt="delete" loading="lazy" />
+                        <img className={styles.hotelImg} src="../image/hotel3.webp" alt="delete" loading="lazy" />
                     </div>
 
                     <div className={styles.divtext}>
