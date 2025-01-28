@@ -1,0 +1,149 @@
+{
+    "header": {
+        "navBar": {
+            "text_1": "Last Minute Deals",
+            "text_2": "Blog",
+            "text_3": "About us",
+            "text_4": "Contacts",
+            "log out": "Log out"
+        }
+    },
+    "Banner": {
+        "h2": " Find an apartment",
+        "h2_span": "for your vacation",
+        "p": "We have several thousand apartments",
+        "p_span": "for every taste in every corner of the globe",
+        "search": {
+            "p_1": "Where",
+            "span_1": "Search Destination",
+            "p_2": "When",
+            "span_2": "Select Date"
+        }
+    },
+    "Choose": {
+        "Title_Choose": "Why Choose Us",
+        "subtitle_1": "The main reason is because our competitors have",
+        "subtitle_2": "disgusting sites, but we can' t write that here,",
+        "subtitle_3": "so the text here will be different",
+        "Container_1": {
+            "title_Photo_1": "Payment methods",
+            "subtitle_1_Photo_1": "We have a lot of them,",
+            "subtitle_1_Photo_2": "from cryptocurrencies to barter ",
+            "subtitle_1_Photo_3": "for potatoes"
+        },
+        "Container_2": {
+            "title_Photo_2": "Simple search process",
+            "subtitle_2_Photo_1": "We have a lot of them,",
+            "subtitle_2_Photo_2": "did it, but it was my mom's ",
+            "subtitle_2_Photo_3": "friend's son"
+        },
+        "Container_3": {
+            "title_Photo_3": "24/7 Support",
+            "subtitle_3_Photo_1": "Is there something you don't",
+            "subtitle_3_Photo_2": "understand? Feel free to call us.",
+            "subtitle_3_Photo_3": "Phone number in the footer"
+        },
+        "Container_4": {
+            "title_Photo_4": "We are nice",
+            "subtitle_4_Photo_1": "Fantasy is over,",
+            "subtitle_4_Photo_2": "there will be something",
+            "subtitle_4_Photo_3": "really convincing here"
+        }
+    },
+    "SectionHotel": {
+        "title": "Special offers",
+        "Container_1": {
+            "title": "Wilderness Club at Big Ceddar",
+            "subTitle": "2 Bedroom Combined Lodge",
+            "textData": "28 October — 1 November",
+            "text_1Data": "$2016",
+            "text_2Data": " /6 night",
+            "span_1": "4 Beds",
+            "span_2": "8 Sleeps",
+            "span_3": "1,350 Sq Ft"
+        }
+    },
+    "Reviews": {
+        "Title": "Reviews",
+        "text_1": "I quickly found the right tour for me,",
+        "text_2": "but I had a few questions about the",
+        "text_3": "hotel, I wrote to tech support and they",
+        "text_4": "answered all my questions within an",
+        "text_5": "hour. The vacation itself was perfect.",
+        "text_6": "Thank you very much. I will come back",
+        "text_7": "again and again.",
+        "span_Name_1": "Jannike Borg,",
+        "span_Name_2": "Publisher"
+    },
+    "Recent": {
+        "title": "Recent posts",
+        "Container_1": {
+            "textData_1": "May 23, 2022",
+            "textData_2": " 5 minutes",
+            "subTitle": "My trip to Athens",
+            "text_blockRecent_1": "It would seem that in a city where Theseus,",
+            "text_blockRecent_2": "Plato and Epicurus once walked, the very",
+            "text_blockRecent_3": "idea of the subway is alien to the city, but already..."
+        },
+        "Container_2": {
+            "textData_1": "May 22, 2022",
+            "textData_2": "1 minutes",
+            "subTitle": "Vilnius resorts",
+            "text_blockRecent_1": "  I haven't seen any resorts in Vilnius,",
+            "text_blockRecent_2": "but there are wonderful people and pubs"
+        },
+        "Container_3": {
+            "textData_1": "May 23, 2022",
+            "textData_2": "  15 minutes",
+            "subTitle": "Tips for flying on a plane",
+            "text_blockRecent_1": "If you have a fear of flying, here's a helpful",
+            "text_blockRecent_2": "tip: bring your co-pilot so you can take a nap,",
+            "text_blockRecent_3": "while he steers the plane for you"
+        }
+    },
+    "Footer": {
+        "Title": "Title of section",
+        "title_2": "Subscribe to Newsletter",
+        "subTitle_2": "Your email",
+        "subTitle": "Page title",
+        "text": "Design by",
+        "text_span": "Delvig"
+    },
+    "RegistrationForm": {
+        "Title":"Registration",
+        "errors": "Something went wrong!",
+        "passwordConfirm_message": "Passwords do not match",
+        "required": "This field must be filled in",
+        "userName_MaxLenght": "No more than 15 characters",
+        "email_MaxLenght": "No more than 55 characters",
+        "MaxLenght": "No more than 15 characters",
+        "MinLenght": "At least 2 characters!",
+        "userName_placeholder": "User Name",
+        "email_placeholder": "Email",
+        "RegistrationForm.email_MaxLenght": "No more than 55 characters",
+        "pattern_message": "The email address must contain the '@.' sign",
+        "password_placeholder": "Password",
+        "pattern_message_password": "Password must contain at least one letter, one number, and one special character",
+        "passwordConfirmation_placeholder": "Password Confirmation",
+        "pattern_message_PhoneNumber": "Invalid phone number",
+        "PhoneNumber_placeholder": "Phone Number",
+        "button_Registration": "Registration",
+        "span_Message_account": "Already have an account?",
+        "button_Enter": "Enter"
+    },
+    "ModalHappyWindow": {
+        "P_text": "Congratulations",
+        "P_text_happy": "you have successfull registered!!!",
+        "span_text": "Do you want to go to the login form?",
+        "button_Enter": "Enter"
+    },
+    "LoginForm":{
+        "Title": "Login",
+        "placeholder_UserName":"User Name",
+        "placeholder_password": "Password",
+        "setError_message":"Check the password field and username",
+        "required":"This field must be filled in",
+        "MinLenght":"At least 2 characters!"
+
+    }
+}
