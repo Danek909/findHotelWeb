@@ -20,7 +20,7 @@ const Banner = () => {
                 </div>
 
                 <div className={styles.divBanerPhoto}>
-                    <img src="../image/Banner.webp" className={styles.banerPhoto} alt="delete"  decoding="async" loading="eager" style={{maxWidth: "1180px", width:"100%", height: "auto%" }}/>
+                    <img src="../image/Banner.webp" className={styles.banerPhoto} alt="delete"  decoding="async" loading="eager"/>
                     <img src="../image/Rectangle.webp" className={styles.ImgZamina} alt="delete" decoding="async" loading="lazy"/>
                 </div>
 
