@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 import styles from '../Login/Login.module.css';
 import { InputOutlined } from './components/InputOutlined/inputOutLinet';
-import { BsExclamationCircle } from 'react-icons/bs';
 import { useCookies } from 'react-cookie';
 import { useTranslation } from 'react-i18next';
 
@@ -52,7 +51,7 @@ const LoginForm: React.FC<PropsType> = (props: PropsType) => {
                                 minLength: {
                                     value: 2, message:  (t('LoginForm.MinLenght'))
                                 }}} />
-                        <p className={styles.divErrors}>{errors?.username?.message} {errors?.username && <BsExclamationCircle />}</p>
+                        <p className={styles.divErrors}>{errors?.username?.message} {errors?.username &&<img src='../image/errorImg.png'className={styles.errorImg} alt='undefined'/>}</p>
                     </div>
                     <div className={styles.divContLoginForm_2}>
                         <InputOutlined {...register("password")} type="password" placeholder={t('LoginForm.placeholder_password')}
@@ -62,10 +61,10 @@ const LoginForm: React.FC<PropsType> = (props: PropsType) => {
                                     value: 2, message: (t('LoginForm.MinLenght'))
                                 }
                             }} />
-                        <p className={styles.divErrors}>{errors?.password?.message} {errors?.password && <BsExclamationCircle />}</p>
+                        <p className={styles.divErrors}>{errors?.password?.message} {errors?.password && <img src='../image/errorImg.png'className={styles.errorImg} alt='undefined'/>}</p>
                     </div>
                     <div className={styles.erorsBlock}>
-                        <p>{errors?.errorsMessageLoginForm?.message} {errors?.errorsMessageLoginForm && <BsExclamationCircle />} </p>
+                        <p>{errors?.errorsMessageLoginForm?.message} {errors?.errorsMessageLoginForm && <img src='../image/errorImg.png'className={styles.errorImg} alt='undefined'/>} </p>
                     </div>
                     <div className={styles.divLoginFormContBtn}>
                         <button type="submit">Login</button>

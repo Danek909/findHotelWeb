@@ -222,10 +222,13 @@ input:focus {
     font-weight: 900;
 }
 
-.divErrorsPsConfirm svg {
+.errorImg {
     position: relative;
     top: 3px;
     left: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
 }
 
 .iconsExclamation {

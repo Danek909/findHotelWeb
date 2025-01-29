@@ -9,7 +9,7 @@
     padding-bottom: 50px;
 }
 
-.Language_En{
+.Language_En {
     background-color: #ffffff;
     border: 0px;
     height: 10px;
@@ -22,8 +22,9 @@
     border-radius: 20px;
 }
 
-.PhotoUser{
-    width: 40px;
+.PhotoUser {
+    width: 32px;
+    height: 32px;
     border-radius: 20px;
 }
 
@@ -124,7 +125,7 @@
     background: #ffffff;
 }
 
-.buttonExit{
+.buttonExit {
     background: #000000;
     border: 0;
     width: 100%;

@@ -6,7 +6,6 @@ import { Modal } from 'antd';
 import useAuthStore from './AuthStore';
 import { FormProvider, useForm } from 'react-hook-form';
 import { InputOutlined } from './components/InputOutlined/inputOutLinet';
-import { BsExclamationCircle } from 'react-icons/bs';
 import ModalHappyWindow from './ModalHappyWindow';
 import { useCookies } from 'react-cookie';
 import { useTranslation } from 'react-i18next';
@@ -85,7 +84,7 @@ const RegistrationForm: React.FC<PropsType> = (props) => {
                                     maxLength: { value: 15, message: (t('RegistrationForm.userName_MaxLenght')) },
                                     minLength: { value: 2, message: (t('RegistrationForm.MinLenght')) }
                                 }} /><p className={styles.divErrors}>{errors?.username?.message}
-                                {errors?.username && <BsExclamationCircle />}</p>
+                                {errors?.username && <img src='../image/errorImg.png'className={styles.errorImg} alt='undefined'/>}</p>
                         </div>
                         <div className={styles.divContainerRegForm_2}>
                             <InputOutlined style={errors.email ? { borderColor: 'red' } : null}
@@ -102,7 +101,7 @@ const RegistrationForm: React.FC<PropsType> = (props) => {
                                     },
 
                                 }} /><p className={styles.divErrors}>{errors?.email?.message}
-                                {errors?.email && <BsExclamationCircle />}</p>
+                                {errors?.email &&  <img src='../image/errorImg.png'className={styles.errorImg} alt='undefined'/>}</p>
                         </div>
 
                         <div className={styles.divContainerRegForm_3}>
@@ -120,7 +119,7 @@ const RegistrationForm: React.FC<PropsType> = (props) => {
                                     }
                                 }} />
                             <p className={styles.divErrors_Password}>{errors?.password?.message}
-                                {errors?.password && <BsExclamationCircle />}</p>
+                                {errors?.password &&  <img src='../image/errorImg.png' className={styles.errorImg} alt='undefined'/>}</p>
                         </div>
 
                         <div className={styles.divContainerRegForm_4}>
@@ -132,7 +131,7 @@ const RegistrationForm: React.FC<PropsType> = (props) => {
                                     minLength: { value: 2, message: (t('RegistrationForm.MinLenght')) },
                                 }} />
                             {<p className={styles.divErrorsPsConfirm}>{errors?.PasswordConfirmation?.message}
-                                {errors?.PasswordConfirmation?.message && <BsExclamationCircle />}</p>}
+                                {errors?.PasswordConfirmation?.message && <img src='../image/errorImg.png'className={styles.errorImg} alt='undefined'/>}</p>}
 
 
                         </div>
@@ -150,7 +149,7 @@ const RegistrationForm: React.FC<PropsType> = (props) => {
                                     },
                                 }} />
                             <p className={styles.divErrors}>{errors?.phoneNumber?.message}
-                                {errors?.phoneNumber && <BsExclamationCircle />}</p>
+                                {errors?.phoneNumber && <img src='../image/errorImg.png'className={styles.errorImg} alt='undefined'/> }</p>
 
                         </div>
 
