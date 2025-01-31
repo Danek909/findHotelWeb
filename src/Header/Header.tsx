@@ -7,8 +7,6 @@ import { useCookies } from 'react-cookie';
 import { Select } from 'antd';
 import { useTranslation } from 'react-i18next';
 
-
-
 const Header = (props: void) => {
 
     const [nav, setNav] = useState<SetStateAction<boolean>>(false);
@@ -44,8 +42,6 @@ const Header = (props: void) => {
                         <a href="#">{t('header.navBar.text_2')}</a>
                         <a href="#">{t('header.navBar.text_3')}</a>
                         <a href="#">{t('header.navBar.text_4')}</a>
-
-                       
                         <div className={styles.meregi_Btn}>
                             <img src="../image/Phone_black.png" alt="undefined"  rel="preload"/>
                             <img src="../image/Facebook.png" alt="undefined"  rel="preload"/>

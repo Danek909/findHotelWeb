@@ -12,9 +12,7 @@ const Footer: React.FC = (props) => {
     };
     return (
         <section className="SectionFooter">
-
             <div className="DivFooterContainer">
-
                 <div className="DivMinContaier">
                     <h2>{t("Footer.Title")}</h2>
                     <ul>
@@ -29,7 +27,6 @@ const Footer: React.FC = (props) => {
                         </li>
                     </ul>
                 </div>
-
                 <div className="DivMinContaier">
                     <h2>{t("Footer.Title")}</h2>
                     <ul>
@@ -44,7 +41,6 @@ const Footer: React.FC = (props) => {
                         </li>
                     </ul>
                 </div>
-
                 <div className="DivMinContaier">
                     <h2>{t("Footer.Title")}</h2>
                     <ul>
@@ -59,7 +55,6 @@ const Footer: React.FC = (props) => {
                         </li>
                     </ul>
                 </div>
-
                 <div className="DivMinContaier">
                     <h3>{t("Footer.title_2")}</h3>
                     <p>{t("Footer.subTitle_2")}</p>
@@ -68,20 +63,16 @@ const Footer: React.FC = (props) => {
                         <button><BsSendCheck /></button>
                     </form>
                 </div>
-
-
             </div>
-
             <div className="PoloskaBootom"><img src="../image/Line.png" alt="Delete" /></div>
-
             <div className="MinContainer">
                 <div className="FooterMin">
                     <h1>Your.<span>logo</span></h1>
                     <p>{t("Footer.text")}<span>{t("Footer.text_span")}</span></p>
                     <div className="minDivFooter">
-                        <img src="../image/Phone_black.png" alt="undefined" loading="lazy"/>
+                        <img src="../image/Phone_black.png" alt="undefined" loading="lazy" />
                         <img src="../image/Facebook.png" alt="undefined" loading="lazy" />
-                        <img src="../image/Youtube.png" alt="undefined" loading="lazy"/>
+                        <img src="../image/Youtube.png" alt="undefined" loading="lazy" />
                         <img src="../image/Instagram.png" alt="undefined" loading="lazy" />
                         <img src="../image/Telegram.png" alt="undefined" loading="lazy" />
                     </div>
