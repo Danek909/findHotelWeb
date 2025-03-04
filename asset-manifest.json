@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/findHotelWeb/static/css/main.88ef40fd.css",
+    "main.css": "/findHotelWeb/static/css/main.d9441de1.css",
     "main.js": "/findHotelWeb/static/js/main.c94b0b8b.js",
     "static/css/761.a420ddbe.chunk.css": "/findHotelWeb/static/css/761.a420ddbe.chunk.css",
     "static/js/761.c8098622.chunk.js": "/findHotelWeb/static/js/761.c8098622.chunk.js",
@@ -21,7 +21,7 @@
     "static/js/127.c925b1ec.chunk.js": "/findHotelWeb/static/js/127.c925b1ec.chunk.js",
     "index.html": "/findHotelWeb/index.html",
     "static/media/getFetch.cjs": "/findHotelWeb/static/media/getFetch.7a7a1c81840c96d5a3ea.cjs",
-    "main.88ef40fd.css.map": "/findHotelWeb/static/css/main.88ef40fd.css.map",
+    "main.d9441de1.css.map": "/findHotelWeb/static/css/main.d9441de1.css.map",
     "main.c94b0b8b.js.map": "/findHotelWeb/static/js/main.c94b0b8b.js.map",
     "761.a420ddbe.chunk.css.map": "/findHotelWeb/static/css/761.a420ddbe.chunk.css.map",
     "761.c8098622.chunk.js.map": "/findHotelWeb/static/js/761.c8098622.chunk.js.map",
@@ -42,7 +42,7 @@
     "127.c925b1ec.chunk.js.map": "/findHotelWeb/static/js/127.c925b1ec.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.88ef40fd.css",
+    "static/css/main.d9441de1.css",
     "static/js/main.c94b0b8b.js"
   ]
 }
