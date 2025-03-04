@@ -72,7 +72,7 @@ const Footer: React.FC = (props) => {
                     <p>{t("Footer.text")}<span>{t("Footer.text_span")}</span></p>
                     <div className="minDivFooter">
                         <img src={`/findHotelWeb/image/Phone_black.png`} alt="undefined" loading="lazy" />
-                        <img src={`/findHotelWeb/image/Facebook.png`} alt="undefined" loading="lazy" />
+                        <img src={`/findHotelWeb/image/facebook.png`} alt="undefined" loading="lazy" />
                         <img src={`/findHotelWeb/image/Youtube.png`} alt="undefined" loading="lazy" />
                         <img src={`/findHotelWeb/image/Instagram.png`} alt="undefined" loading="lazy" />
                         <img src={`/findHotelWeb/image/Telegram.png`} alt="undefined" loading="lazy" />
