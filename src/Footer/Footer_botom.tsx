@@ -12,6 +12,7 @@ const Footer: React.FC = (props) => {
     };
     return (
         <section className="SectionFooter">
+            <h1>Danya</h1>
             <div className="DivFooterContainer">
                 <div className="DivMinContaier">
                     <h2>{t("Footer.Title")}</h2>
