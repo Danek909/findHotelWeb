@@ -28,7 +28,7 @@ const ModalHappyWindow: React.FC<PropsType> = (props) => {
                 <div className={styles.AcauntMesage}>
                     <span>{t('ModalHappyWindow.span_text')} <h3 onClick={props.openLoginModal}> {t('ModalHappyWindow.button_Enter')}</h3> </span>
                 </div>
-                <img src="../image/userPhoto.jpeg" alt="delete" />
+                <img src={`/findHotelWeb/image/userPhoto.jpeg`} alt="delete" />
             </div>
         </section>
     )

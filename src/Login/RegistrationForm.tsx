@@ -82,7 +82,7 @@ const RegistrationForm: React.FC<PropsType> = (props) => {
                                     maxLength: { value: 15, message: (t('RegistrationForm.userName_MaxLenght')) },
                                     minLength: { value: 2, message: (t('RegistrationForm.MinLenght')) }
                                 }} /><p className={styles.divErrors}>{errors?.username?.message}
-                                {errors?.username && <img src='../image/errorImg.png' className={styles.errorImg} alt='undefined' />}</p>
+                                {errors?.username && <img src={`/findHotelWeb/image/errorImg.png`} className={styles.errorImg} alt='undefined' />}</p>
                         </div>
                         <div className={styles.divContainerRegForm_2}>
                             <InputOutlined style={errors.email ? { borderColor: 'red' } : null}
@@ -99,7 +99,7 @@ const RegistrationForm: React.FC<PropsType> = (props) => {
                                     },
 
                                 }} /><p className={styles.divErrors}>{errors?.email?.message}
-                                {errors?.email && <img src='../image/errorImg.png' className={styles.errorImg} alt='undefined' />}</p>
+                                {errors?.email && <img src={`/findHotelWeb/image/errorImg.png`} className={styles.errorImg} alt='undefined' />}</p>
                         </div>
 
                         <div className={styles.divContainerRegForm_3}>
@@ -117,7 +117,7 @@ const RegistrationForm: React.FC<PropsType> = (props) => {
                                     }
                                 }} />
                             <p className={styles.divErrors_Password}>{errors?.password?.message}
-                                {errors?.password && <img src='../image/errorImg.png' className={styles.errorImg} alt='undefined' />}</p>
+                                {errors?.password && <img src={`/findHotelWeb/image/errorImg.png`} className={styles.errorImg} alt='undefined' />}</p>
                         </div>
 
                         <div className={styles.divContainerRegForm_4}>
@@ -129,7 +129,7 @@ const RegistrationForm: React.FC<PropsType> = (props) => {
                                     minLength: { value: 2, message: (t('RegistrationForm.MinLenght')) },
                                 }} />
                             {<p className={styles.divErrorsPsConfirm}>{errors?.PasswordConfirmation?.message}
-                                {errors?.PasswordConfirmation?.message && <img src='../image/errorImg.png' className={styles.errorImg} alt='undefined' />}</p>}
+                                {errors?.PasswordConfirmation?.message && <img src={`/findHotelWeb/image/errorImg.png`} className={styles.errorImg} alt='undefined' />}</p>}
 
 
                         </div>
@@ -147,7 +147,7 @@ const RegistrationForm: React.FC<PropsType> = (props) => {
                                     },
                                 }} />
                             <p className={styles.divErrors}>{errors?.phoneNumber?.message}
-                                {errors?.phoneNumber && <img src='../image/errorImg.png' className={styles.errorImg} alt='undefined' />}</p>
+                                {errors?.phoneNumber && <img src={`/findHotelWeb/image/errorImg.png`} className={styles.errorImg} alt='undefined' />}</p>
 
                         </div>
 

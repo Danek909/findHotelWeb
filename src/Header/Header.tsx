@@ -8,30 +8,25 @@ import { Select } from 'antd';
 import { useTranslation } from 'react-i18next';
 
 const Header = (props: void) => {
-
     const [nav, setNav] = useState<SetStateAction<boolean>>(false);
     const [isModalOpen, setModalOpen] = useState<boolean | undefined>(false);
     const [cookie, setCookie, removeCookie] = useCookies(['userData']);
     const [userData, setUserData] = useState(cookie.userData);
     const { t, i18n } = useTranslation();
-
     const openModal = (): void => {
         setModalOpen(true);
     };
     const closeModal = (): void => {
         setModalOpen(false);
     };
-
     const exitLogin = (): void => {
         const cookieUserData = cookie.userData;
         cookieUserData.isLogined = 'noAutorized';
         setCookie("userData", cookieUserData);
     }
-
     const changeLanguage = (language: string) => {
         i18n.changeLanguage(language);
     };
-    
     return (
         <header className={styles.sectionHeder}>
             <div className={styles.heder}>
@@ -43,16 +38,16 @@ const Header = (props: void) => {
                         <a href="#">{t('header.navBar.text_3')}</a>
                         <a href="#">{t('header.navBar.text_4')}</a>
                         <div className={styles.meregi_Btn}>
-                            <img src="../image/Phone_black.png" alt="undefined"  rel="preload"/>
-                            <img src="../image/Facebook.png" alt="undefined"  rel="preload"/>
-                            <img src="../image/Youtube.png" alt="undefined"  rel="preload"/>
-                            <img src="../image/Instagram.png" alt="undefined"  rel="preload"/>
-                            <img src="../image/Telegram.png" alt="undefined"  rel="preload"/>
+                            <img src="../image/Phone_black.png" alt="undefined" rel="preload" />
+                            <img src="../image/Facebook.png" alt="undefined" rel="preload" />
+                            <img src="../image/Youtube.png" alt="undefined" rel="preload" />
+                            <img src="../image/Instagram.png" alt="undefined" rel="preload" />
+                            <img src="../image/Telegram.png" alt="undefined" rel="preload" />
                         </div>
                     </ul>
                 </div>
                 <div className={styles.imgHeder}>
-                    <img src="../image/dolars.png" className={styles.dolalrsHeder} alt="Delete" rel="preload" />
+                    <img src={`/findHotelWeb//image/dolars.png`} className={styles.dolalrsHeder} alt="Delete" rel="preload" />
                     <Select
                         suffixIcon=""
                         defaultValue="English"
@@ -70,11 +65,11 @@ const Header = (props: void) => {
                     <div className={styles.autorizedDiv}>
                         {cookie?.userData?.isLogined === 'authorized' ? (
                             <button type="button" onClick={openModal}>
-                                <img className={styles.PhotoUser} src="../image/userPhoto.jpeg" alt="User Photo" />
+                                <img className={styles.PhotoUser} src={`/findHotelWeb/image/userPhoto.jpeg`} alt="User Photo" />
                             </button>
                         ) : (
                             <button type="button" onClick={openModal}>
-                                <img className={styles.userPhoto} src="../image/GuestPhoto.jpg" alt="Guest Photo" />
+                                <img className={styles.userPhoto} src={`/findHotelWeb/image/GuestPhoto.jpg`} alt="Guest Photo" />
                             </button>
                         )}
 
@@ -106,5 +101,4 @@ const Header = (props: void) => {
         </header>
     )
 }
-
 export default Header;

@@ -39,7 +39,7 @@ const Reviews: React.FC = () => {
                     <div className={styles.SwiperContainer} >
                         <SwiperSlide>
                             <div className={styles.SwiperSlide}>
-                                <img src="../image/Ellipse1.png" alt="delete" loading="lazy" />
+                                <img src={`/findHotelWeb/image/Ellipse1.png`} alt="delete" loading="lazy" />
                                 <h3>
                                     {t("Reviews.text_1")}<br />
                                     {t("Reviews.text_2")}<br />
@@ -55,7 +55,7 @@ const Reviews: React.FC = () => {
 
                         <SwiperSlide className={styles.SwiperSliders}>
                             <div className={styles.SwiperSlide}>
-                                <img src="../image/Ellipse2.png" alt="delete" loading="lazy" />
+                                <img src={`/findHotelWeb/image/Ellipse2.png`} alt="delete" loading="lazy" />
                                 <h3>
                                     {t("Reviews.text_1")}<br />
                                     {t("Reviews.text_2")}<br />
@@ -71,7 +71,7 @@ const Reviews: React.FC = () => {
 
                         <SwiperSlide className={styles.SwiperSliders}>
                             <div className={styles.SwiperSlide}>
-                                <img src="../image/Ellipse3.png" alt="delete" loading="lazy" />
+                                <img src={`/findHotelWeb/image/Ellipse3.png`} alt="delete" loading="lazy" />
                                 <h3>
                                     {t("Reviews.text_1")}<br />
                                     {t("Reviews.text_2")}<br />
@@ -87,7 +87,7 @@ const Reviews: React.FC = () => {
 
                         <SwiperSlide className={styles.SwiperSliders}>
                             <div className={styles.SwiperSlide}>
-                                <img src="../image/Ellipse1.png" alt="delete" loading="lazy" />
+                                <img src={`/findHotelWeb/image/Ellipse1.png`} alt="delete" loading="lazy" />
                                 <h3>
                                     {t("Reviews.text_1")}<br />
                                     {t("Reviews.text_2")}<br />
@@ -103,7 +103,7 @@ const Reviews: React.FC = () => {
 
                         <SwiperSlide className={styles.SwiperSliders}>
                             <div className={styles.SwiperSlide}>
-                                <img src="../image/Ellipse2.png" alt="delete" loading="lazy"/>
+                                <img src={`/findHotelWeb/image/Ellipse2.png`} alt="delete" loading="lazy"/>
                                 <h3>
                                     {t("Reviews.text_1")}<br />
                                     {t("Reviews.text_2")}<br />
@@ -119,7 +119,7 @@ const Reviews: React.FC = () => {
 
                         <SwiperSlide className={styles.SwiperSliders}>
                             <div className={styles.SwiperSlide}>
-                                <img src="../image/Ellipse3.png" alt="delete" loading="lazy"/>
+                                <img src={`/findHotelWeb/image/Ellipse3.png`} alt="delete" loading="lazy"/>
                                 <h3>
                                     {t("Reviews.text_1")}<br />
                                     {t("Reviews.text_2")}<br />

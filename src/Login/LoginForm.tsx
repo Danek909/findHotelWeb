@@ -51,7 +51,7 @@ const LoginForm: React.FC<PropsType> = (props: PropsType) => {
                                 minLength: {
                                     value: 2, message:  (t('LoginForm.MinLenght'))
                                 }}} />
-                        <p className={styles.divErrors}>{errors?.username?.message} {errors?.username &&<img src='../image/errorImg.png'className={styles.errorImg} alt='undefined'/>}</p>
+                        <p className={styles.divErrors}>{errors?.username?.message} {errors?.username &&<img src={`/findHotelWeb/image/errorImg.png`}className={styles.errorImg} alt='undefined'/>}</p>
                     </div>
                     <div className={styles.divContLoginForm_2}>
                         <InputOutlined {...register("password")} type="password" placeholder={t('LoginForm.placeholder_password')}
@@ -61,10 +61,10 @@ const LoginForm: React.FC<PropsType> = (props: PropsType) => {
                                     value: 2, message: (t('LoginForm.MinLenght'))
                                 }
                             }} />
-                        <p className={styles.divErrors}>{errors?.password?.message} {errors?.password && <img src='../image/errorImg.png'className={styles.errorImg} alt='undefined'/>}</p>
+                        <p className={styles.divErrors}>{errors?.password?.message} {errors?.password && <img src={`/findHotelWeb/image/errorImg.png`}className={styles.errorImg} alt='undefined'/>}</p>
                     </div>
                     <div className={styles.erorsBlock}>
-                        <p>{errors?.errorsMessageLoginForm?.message} {errors?.errorsMessageLoginForm && <img src='../image/errorImg.png'className={styles.errorImg} alt='undefined'/>} </p>
+                        <p>{errors?.errorsMessageLoginForm?.message} {errors?.errorsMessageLoginForm && <img src={`/findHotelWeb/image/errorImg.png`}className={styles.errorImg} alt='undefined'/>} </p>
                     </div>
                     <div className={styles.divLoginFormContBtn}>
                         <button type="submit">Login</button>
