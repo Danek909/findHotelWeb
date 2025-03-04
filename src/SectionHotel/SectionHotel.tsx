@@ -50,7 +50,7 @@ const SectionHotel: React.FC = () => {
                 <div className={styles.divPidContainer}>
                     <div className={styles.imgBlock}>
                         <img className={styles.imgSerze} src={`/findHotelWeb/image/iconSerze.png`} alt="delete" loading="lazy" />
-                        <img className={styles.zirca} src={`/findHotelWebimage/ivonZirca.png`} alt="delete" loading="lazy" />
+                        <img className={styles.zirca} src={`/findHotelWeb/image/ivonZirca.png`} alt="delete" loading="lazy" />
                         <img className={styles.hotelImg} src={`/findHotelWeb/image/hotel2.webp`} alt="delete" loading="lazy" />
                     </div>
 

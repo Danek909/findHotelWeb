@@ -12,7 +12,6 @@ const Footer: React.FC = (props) => {
     };
     return (
         <section className="SectionFooter">
-            <h1>Робота Kogun Danil</h1>
             <div className="DivFooterContainer">
                 <div className="DivMinContaier">
                     <h2>{t("Footer.Title")}</h2>
@@ -65,7 +64,7 @@ const Footer: React.FC = (props) => {
                     </form>
                 </div>
             </div>
-            <div className="PoloskaBootom"><img src="../image/Line.png" alt="Delete" /></div>
+            <div className="PoloskaBootom"><img src={`/findHotelWeb/image/Line.png`} alt="Delete" /></div>
             <div className="MinContainer">
                 <div className="FooterMin">
                     <h1>Your.<span>logo</span></h1>
