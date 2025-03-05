@@ -146,7 +146,7 @@ input:focus {
     padding-bottom: 20px;
 }
 
-.LoginName{
+.LoginName {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -199,7 +199,7 @@ input:focus {
     font-weight: 900;
 }
 
-.divErrors_Password{
+.divErrors_Password {
     margin-top: -8px;
     margin-bottom: 23px;
     color: red;
@@ -258,7 +258,7 @@ input:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 300px;
+    min-width: 250px;
     width: 100%;
 }
 
@@ -296,16 +296,18 @@ input:focus {
     min-height: 250px;
     height: 100%;
 }
-.divModalWindow img{
+
+.divModalWindow img {
     width: 200px;
-   margin-top: 10px;
+    margin-top: 10px;
 }
 
-.divModalWindow h1{
+.divModalWindow h1 {
     display: flex;
     justify-content: center;
 }
-.divModalWindow p{
+
+.divModalWindow p {
     font-family: sans-serif;
     margin-top: 30px;
     font-size: 15px;
@@ -322,16 +324,43 @@ input:focus {
 }
 
 
-.PasswordChecklistRegForm{
+.PasswordChecklistRegForm {
     position: relative;
     right: 35px;
     top: 10px;
 }
 
-.ModalLoginForm_3{
+.ModalLoginForm_3 {
     max-height: 350px;
 }
 
-.paternMessage{
+.paternMessage {
     color: black;
+}
+@media(max-width: 450px){
+    .divModalWindow p{
+        font-size: 12px;
+    }
+    .AcauntMesage span{
+        font-size: 12px;
+    }
+    .erorsBlock p{
+        font-size: 15px;
+    }
+} 
+
+@media(max-width: 370px){
+    .divModalWindow {
+        min-width: 250px;
+        width: 100%;
+    }
+    .divModalWindow p{
+        font-size: 10px;
+    }
+    .erorsBlock p{
+        font-size: 12px;
+    }
+    .AcauntMesage span{
+        font-size: 10px;
+    }
 }

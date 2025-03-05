@@ -5,7 +5,7 @@
     padding-bottom: 100px;
 }
 
-.divSpecialofers h2{
+.divSpecialofers h2 {
     padding-top: 100px;
     padding-bottom: 50px;
     font-size: 40px;
@@ -70,14 +70,14 @@
     margin: 0;
 }
 
-.divtext h2{
+.divtext h2 {
     font-family: system-ui;
     color: #5c5959;
     font-weight: 500;
     margin-bottom: 5px;
 }
 
-.divtext h3{
+.divtext h3 {
     font-family: system-ui;
     color: gray;
     margin: 0;
@@ -85,60 +85,71 @@
     font-size: 17px;
 }
 
-.divtext h4{
+.divtext h4 {
     font-family: math;
     margin-top: 10px;
     color: #656262;
     font-weight: 700;
 }
 
-.divtext p{
+.divtext p {
     color: #2ec5ee;
     font-size: 23px;
     font-weight: 400;
 }
 
-.divtext span{
+.divtext span {
     font-size: 18px;
 }
 
 
-@media(max-width: 1280px){
-    .divContainer{
+@media(max-width: 1280px) {
+    .divContainer {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
 }
 
-@media(max-width: 860px){
-    .divtext h3{
+@media(max-width: 860px) {
+    .divtext h3 {
         display: none;
     }
 
-    .divTextContainer{
+    .divTextContainer {
         display: none;
     }
 
-    .divPidContainer{
+    .divPidContainer {
         max-width: 280px;
-        width: 100%;   
+        width: 100%;
     }
 
-    .hotelImg{
+    .hotelImg {
         max-width: 260px;
         width: 100%;
     }
 
-    .imgSerze{
+    .imgSerze {
         padding-left: 230px;
     }
 }
-@media(max-width: 370px){
-    .divSpecialofers h2{
+
+@media(max-width: 450px) {
+    .divSpecialofers h2 {
         font-size: 30px;
     }
-    .divContainer{
+}
+
+@media(max-width: 370px) {
+    .divSpecialofers h2 {
+        font-size: 30px;
+    }
+
+    .divContainer {
         padding: 0px;
+    }
+    .divSpecialofers h2 {
+        font-size: 27px;
     }
 }

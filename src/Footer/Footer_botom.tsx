@@ -56,7 +56,6 @@ const Footer: React.FC = (props) => {
                     </ul>
                 </div>
                 <div className="DivMinContaier">
-                    <h3>{t("Footer.title_2")}</h3>
                     <p>{t("Footer.subTitle_2")}</p>
                     <form>
                         <textarea></textarea>

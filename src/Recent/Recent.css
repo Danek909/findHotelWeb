@@ -99,10 +99,19 @@
         font-size: 13px;
     }
 }
-
-@media(max-width: 400px) {
-
+@media(max-width: 580px){
     .RecentrLogoH1 h1 {
         font-size: 35px;
+    }
+}
+@media(max-width: 470px){
+    .RecentrLogoH1 h1 {
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 400px){
+    .RecentrLogoH1 h1 {
+        font-size: 25px;
     }
 }

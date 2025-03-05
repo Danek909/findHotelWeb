@@ -183,3 +183,17 @@
     }
 
 }
+
+
+@media(max-width: 400px) {
+    .divTextbaner h2 {
+        font-size: 25px;
+    }
+
+}
+
+@media(max-width: 350px){
+    .divTextbaner h2 {
+        font-size: 23px;
+    }
+}
