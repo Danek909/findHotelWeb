@@ -15,9 +15,7 @@
         "p_span": "for every taste in every corner of the globe",
         "search": {
             "p_1": "Where",
-            "span_1": "Search Destination",
-            "p_2": "When",
-            "span_2": "Select Date"
+            "span_1": "Search Destination"
         }
     },
     "Choose": {
@@ -103,7 +101,6 @@
     },
     "Footer": {
         "Title": "Title of section",
-        "title_2": "Subscribe to Newsletter",
         "subTitle_2": "Your email",
         "subTitle": "Page title",
         "text": "Design by",
