@@ -60,7 +60,7 @@
     display: none;
 }
 
-.divPitBaner div {
+.divPitBaner {
     display: flex;
     align-items: center;
 }
@@ -71,9 +71,27 @@
     color: #2c2c2cf7;
 }
 
+.hover_input:hover {
+    background-color: inherit;
+    border-color: inherit;
+}
+
+.hover_input {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.hover_input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
 .divPitBaner span {
     font-family: sans-serif;
     color: #808080bf;
+}
+
+.block_left {
+    display: flex;
 }
 
 .divPitBaner img {
@@ -139,6 +157,16 @@
 }
 
 @media(max-width: 530px) {
+
+    .block_left {
+        display: none;
+    }
+    .hover_input {
+        display: flex;
+        max-width: 150px;
+        width: 100%;
+    }
+
     .divTextbaner {
         margin-top: 50px;
     }
@@ -192,7 +220,7 @@
 
 }
 
-@media(max-width: 350px){
+@media(max-width: 350px) {
     .divTextbaner h2 {
         font-size: 23px;
     }

@@ -38,11 +38,11 @@ const Header = (props: void) => {
                         <a href="#">{t('header.navBar.text_3')}</a>
                         <a href="#">{t('header.navBar.text_4')}</a>
                         <div className={styles.meregi_Btn}>
-                            <img src="../image/Phone_black.png" alt="undefined" rel="preload" />
-                            <img src="../image/Facebook.png" alt="undefined" rel="preload" />
-                            <img src="../image/Youtube.png" alt="undefined" rel="preload" />
-                            <img src="../image/Instagram.png" alt="undefined" rel="preload" />
-                            <img src="../image/Telegram.png" alt="undefined" rel="preload" />
+                            <img src={`/findHotelWeb/image/Phone_black.png`} alt="undefined" rel="preload" />
+                            <img src={`/findHotelWeb//image/Facebook.png`} alt="undefined" rel="preload" />
+                            <img src={`/findHotelWeb//image/Youtube.png`} alt="undefined" rel="preload" />
+                            <img src={`/findHotelWeb//image/Instagram.png`} alt="undefined" rel="preload" />
+                            <img src={`/findHotelWeb//image/Telegram.png`} alt="undefined" rel="preload" />
                         </div>
                     </ul>
                 </div>

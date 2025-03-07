@@ -1,4 +1,4 @@
-import  { lazy, Suspense } from 'react';
+import { lazy, Suspense, useState } from 'react';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -16,15 +16,16 @@ const SectionHotel = lazy(() => import('./SectionHotel/SectionHotel'));
 const Banner = lazy(() => import('./Banner/Banner'));
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState("")
   return (
     <BrowserRouter>
       <Provider store={store} >
         <CookiesProvider>
           <Suspense>
-            <Header />
-            <Banner />
+            <Header/>
+            <Banner onSearch={setSearchTerm}/>
             <Choose />
-            <SectionHotel />
+            <SectionHotel searchTerm={searchTerm}/>
             <Reviews />
             <Recent />
             <Footer />
