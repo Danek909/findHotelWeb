@@ -76,6 +76,7 @@ const Footer: React.FC = (props) => {
                         <img src={`/findHotelWeb/image/Telegram.png`} alt="undefined" loading="lazy" />
                     </div>
                 </div>
+                <span>Danil Kogun</span>
             </div>
         </section>
     )
