@@ -15,7 +15,8 @@
         "p_span": "for every taste in every corner of the globe",
         "search": {
             "p_1": "Where",
-            "span_1": "Search Destination"
+            "span_1": "Search Destination",
+            "text": "Search"
         }
     },
     "Choose": {
@@ -51,14 +52,25 @@
     "SectionHotel": {
         "title": "Special offers",
         "Container_1": {
-            "title": "Wilderness Club at Big Ceddar",
-            "subTitle": "2 Bedroom Combined Lodge",
-            "textData": "28 October — 1 November",
-            "text_1Data": "$2016",
-            "text_2Data": " /6 night",
-            "span_1": "4 Beds",
-            "span_2": "8 Sleeps",
-            "span_3": "1,350 Sq Ft"
+            "title_1": "Suite hotel",
+            "title_2": "Standard hotel",
+            "title_3": "Deluxe hotel",
+            "subTitle": "1 Bedroom Combined Lodge",
+            "subTitle_1": "2 Bedroom Combined Lodge",
+            "textData_1": "14 October — 1 November",
+            "textData_2": "1 February - 14 March",
+            "textData_3": "31 May - June 14",
+            "text_1Data": "$2000 / 10 nights",
+            "text_2Data": "$1000 / 10 nights",
+            "text_3Data": "$1000 / 10 nights",
+            "span_1": "1 Beds",
+            "span_beds": "2 Beds",
+            "span_2": "2 Sleeps",
+            "span_Sleeps": "4 Sleeps",
+            "span_3": "1,350 Sq Ft",
+            "span_4": "1,500 Sq Ft",
+            "span_5": "1,900 Sq Ft"
+            
         }
     },
     "Reviews": {
@@ -107,7 +119,7 @@
         "text_span": "Delvig"
     },
     "RegistrationForm": {
-        "Title":"Registration",
+        "Title": "Registration",
         "errors": "Something went wrong!",
         "passwordConfirm_message": "Passwords do not match",
         "required": "This field must be filled in",
@@ -134,13 +146,12 @@
         "span_text": "Do you want to go to the login form?",
         "button_Enter": "Enter"
     },
-    "LoginForm":{
+    "LoginForm": {
         "Title": "Login",
-        "placeholder_UserName":"User Name",
+        "placeholder_UserName": "User Name",
         "placeholder_password": "Password",
-        "setError_message":"Check the password field and username",
-        "required":"This field must be filled in",
-        "MinLenght":"At least 2 characters!"
-
+        "setError_message": "Check the password field and username",
+        "required": "This field must be filled in",
+        "MinLenght": "At least 2 characters!"
     }
 }
