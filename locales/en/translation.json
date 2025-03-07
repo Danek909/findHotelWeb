@@ -16,7 +16,8 @@
         "search": {
             "p_1": "Where",
             "span_1": "Search Destination",
-            "text": "Search"
+            "text": "Search",
+            "span_text": "Nothing found"
         }
     },
     "Choose": {
