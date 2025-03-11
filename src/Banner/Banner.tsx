@@ -12,20 +12,18 @@ const Banner: React.FC<SearchProps> = ({ onSearch }) => {
     const changeLanguage = (language: string) => {
         i18n.changeLanguage(language);
     };
-
-
-
     const [inputValue, setInputValue] = useState(""); // Для введеного тексту
     const [notFound, setNotFound] = useState(false); // Для відображення повідомлення, якщо нічого не знайдено
 
-    const [currentRoomNames, setCurrentRoomNames] = useState<{ suite: string; deluxe: string; standard: string } | null>(null);
+    const [currentRoomNames, setCurrentRoomNames] = useState<{ suite: string; deluxe: string; standard: string; } | null>(null);
 
     // Назви номерів для кожної мови
-    const roomNames: { [key: string]: { suite: string; deluxe: string; standard: string } } = {
+    const roomNames: { [key: string]: { suite: string; deluxe: string; standard: string; } } = {
         en: {
             suite: "suite",
             deluxe: "deluxe",
             standard: "standard",
+
         },
         ua: {  // Змінив uk на ua
             suite: "люкс",

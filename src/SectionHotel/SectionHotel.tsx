@@ -13,7 +13,7 @@ const SectionHotel: React.FC<SectionHotelProps> = ({ searchTerm }) => {
     const { t, i18n } = useTranslation();
     const currentLanguage = i18n.language || "uk";
 
-    const roomNames: { [key: string]: { suite: string; deluxe: string; standard: string } } = {
+    const roomNames: { [key: string]: { suite: string; deluxe: string; standard: string; } } = {
         en: {
             suite: "suite",
             deluxe: "deluxe",
@@ -32,6 +32,7 @@ const SectionHotel: React.FC<SectionHotelProps> = ({ searchTerm }) => {
     const suiteRef = useRef<HTMLDivElement | null>(null);
     const deluxeRef = useRef<HTMLDivElement | null>(null);
     const standardRef = useRef<HTMLDivElement | null>(null);
+    const hotelsRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
         const normalizedSearch = searchTerm.trim().toLowerCase(); // Нормалізація пошукового терміну
@@ -47,6 +48,7 @@ const SectionHotel: React.FC<SectionHotelProps> = ({ searchTerm }) => {
         const deluxeMatch = currentRoomNames.deluxe.toLowerCase().includes(normalizedSearch);
         const standardMatch = currentRoomNames.standard.toLowerCase().includes(normalizedSearch);
 
+
         // Логіка пошуку і прокрутки
         if (suiteMatch && suiteRef.current) {
             suiteRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -58,7 +60,7 @@ const SectionHotel: React.FC<SectionHotelProps> = ({ searchTerm }) => {
     }, [searchTerm, currentLanguage]);
 
     return (
-        <section className={styles.SectionHotel}>
+        <section className={styles.SectionHotel} >
             <div className={styles.divSpecialofers}>
                 <h2>{t('SectionHotel.title')}</h2>
             </div>

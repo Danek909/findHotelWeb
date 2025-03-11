@@ -123,6 +123,10 @@
 
 }
 
+.DivMinContaier_1 div{
+    width: 100%;
+}
+
 .minDivFooter img {
     width: 32px;
     height: 32px;

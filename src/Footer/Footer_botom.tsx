@@ -55,12 +55,14 @@ const Footer: React.FC = (props) => {
                         </li>
                     </ul>
                 </div>
-                <div className="DivMinContaier">
+                <div className="DivMinContaier_1">
                     <p>{t("Footer.subTitle_2")}</p>
-                    <form>
-                        <textarea></textarea>
-                        <button><BsSendCheck /></button>
-                    </form>
+                    <div>
+                        <form>
+                            <textarea></textarea>
+                            <button><BsSendCheck /></button>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div className="PoloskaBootom"><img src={`/findHotelWeb/image/Line.png`} alt="Delete" /></div>
