@@ -124,7 +124,10 @@
 }
 
 .DivMinContaier_1 div{
+    max-width: 308px;
     width: 100%;
+    max-height: 45px;
+    height: 100%;
 }
 
 .minDivFooter img {
