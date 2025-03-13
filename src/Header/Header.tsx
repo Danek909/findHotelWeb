@@ -13,6 +13,7 @@ const Header = (props: void) => {
     const [cookie, setCookie, removeCookie] = useCookies(['userData']);
     const [userData, setUserData] = useState(cookie.userData);
     const { t, i18n } = useTranslation();
+
     const openModal = (): void => {
         setModalOpen(true);
     };
@@ -33,16 +34,16 @@ const Header = (props: void) => {
                 <div className={styles.yourLogoHeder}>
                     <h1>Your.<span>logo</span></h1>
                     <ul className={nav ? [styles.menu, styles.active].join(' ') : styles.menu}>
-                        <a href="#">{t('header.navBar.text_1')}</a>
-                        <a href="#">{t('header.navBar.text_2')}</a>
-                        <a href="#">{t('header.navBar.text_3')}</a>
-                        <a href="#">{t('header.navBar.text_4')}</a>
+                        <a href="#SectionHotel">{t('header.navBar.text_1')}</a>
+                        <a href="#SectionBlog">{t('header.navBar.text_2')}</a>
+                        <a href="#SectionChoose">{t('header.navBar.text_3')}</a>
+                        <a href="#SectionContacts">{t('header.navBar.text_4')}</a>
                         <div className={styles.meregi_Btn}>
-                            <img src={`/findHotelWeb/image/Phone_black.png`} alt="undefined" rel="preload" />
-                            <img src={`/findHotelWeb/image/facebook.png`} alt="undefined" rel="preload" />
-                            <img src={`/findHotelWeb/image/Youtube.png`} alt="undefined" rel="preload" />
-                            <img src={`/findHotelWeb/image/Instagram.png`} alt="undefined" rel="preload" />
-                            <img src={`/findHotelWeb/image/Telegram.png`} alt="undefined" rel="preload" />
+                            <a href="https://www.whatsapp.com/?lang=ru_RU"> <img src={`/findHotelWeb/image/Phone_black.png`} alt="undefined" rel="preload" /></a>
+                            <a href="https://www.facebook.com/?locale=ru_RU"> <img src={`/findHotelWeb/image/facebook.png`} alt="undefined" rel="preload" /></a>
+                            <a href="https://www.youtube.com/?app=desktop&gl=UA&hl=uk"> <img src={`/findHotelWeb/image/Youtube.png`} alt="undefined" rel="preload" /> </a>
+                            <a href="https://www.instagram.com/"><img src={`/findHotelWeb/image/Instagram.png`} alt="undefined" rel="preload" /></a>
+                            <a href="https://web.telegram.org/"><img src={`/findHotelWeb/image/Telegram.png`} alt="undefined" rel="preload" /></a>
                         </div>
                     </ul>
                 </div>

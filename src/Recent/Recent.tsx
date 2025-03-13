@@ -10,7 +10,7 @@ const Recent: React.FC = () => {
         i18n.changeLanguage(language);
     };
     return (
-        <section className="Sectionrecentr">
+        <section className="Sectionrecentr" id="SectionBlog">
             <div className="RecentrLogoH1">
                 <h1>{t("Recent.title")}</h1>
             </div>

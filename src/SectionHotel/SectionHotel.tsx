@@ -65,7 +65,7 @@ const SectionHotel: React.FC<SectionHotelProps> = ({ searchTerm }) => {
                 <h2>{t('SectionHotel.title')}</h2>
             </div>
 
-            <div className={styles.divContainer}>
+            <div className={styles.divContainer} id="SectionHotel">
 
                 <div ref={suiteRef} className={styles.divPidContainer}>
                     <div className={styles.imgBlock}>

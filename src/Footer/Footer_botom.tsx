@@ -11,7 +11,7 @@ const Footer: React.FC = (props) => {
         i18n.changeLanguage(language);
     };
     return (
-        <section className="SectionFooter">
+        <section className="SectionFooter" id="SectionContacts">
             <div className="DivFooterContainer">
                 <div className="DivMinContaier">
                     <h2>{t("Footer.Title")}</h2>
@@ -71,11 +71,11 @@ const Footer: React.FC = (props) => {
                     <h1>Your.<span>logo</span></h1>
                     <p>{t("Footer.text")}<span>{t("Footer.text_span")}</span></p>
                     <div className="minDivFooter">
-                        <img src={`/findHotelWeb/image/Phone_black.png`} alt="undefined" loading="lazy" />
-                        <img src={`/findHotelWeb/image/facebook.png`} alt="undefined" loading="lazy" />
-                        <img src={`/findHotelWeb/image/Youtube.png`} alt="undefined" loading="lazy" />
-                        <img src={`/findHotelWeb/image/Instagram.png`} alt="undefined" loading="lazy" />
-                        <img src={`/findHotelWeb/image/Telegram.png`} alt="undefined" loading="lazy" />
+                        <a href="https://www.whatsapp.com/?lang=ru_RU"><img src={`/findHotelWeb/image/Phone_black.png`} alt="undefined" loading="lazy" /></a>
+                        <a href="https://www.facebook.com/?locale=ru_RU"> <img src={`/findHotelWeb/image/facebook.png`} alt="undefined" loading="lazy" /></a>
+                        <a href="https://www.youtube.com/?app=desktop&gl=UA&hl=uk"><img src={`/findHotelWeb/image/Youtube.png`} alt="undefined" loading="lazy" /></a>
+                        <a href="https://www.instagram.com/"><img src={`/findHotelWeb/image/Instagram.png`} alt="undefined" loading="lazy" /></a>
+                        <a href="https://web.telegram.org/"><img src={`/findHotelWeb/image/Telegram.png`} alt="undefined" loading="lazy" /></a>
                     </div>
                 </div>
                 <span>Danil Kogun</span>

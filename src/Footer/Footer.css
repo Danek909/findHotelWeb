@@ -50,12 +50,25 @@
     padding-bottom: 10px;
 }
 
-.DivFooterContainer button {
+/* .DivFooterContainer button {
     right: 6px;
     width: 36px;
     height: 38px;
     position: relative;
     bottom: 14px;
+    border: 2px solid;
+    border-color: coral;
+    background: coral;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+} */
+
+.DivFooterContainer button {
+    width: 36px;
+    height: 38px;
+    position: absolute;
+    margin-left: -5px;
     border: 2px solid;
     border-color: coral;
     background: coral;
@@ -123,11 +136,11 @@
 
 }
 
-.DivMinContaier_1 div{
+.DivMinContaier_1 div {
+    display: block;
     max-width: 308px;
     width: 100%;
-    max-height: 45px;
-    height: 100%;
+    height: 45px;
 }
 
 .minDivFooter img {
@@ -138,6 +151,15 @@
 .minDivFooter svg {
     color: #2A90D9;
 }
+
+.DivMinContaier_1 {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    max-width: 320px;
+    width: 100%;
+}
+
 
 @media(max-width: 1280px) {
     .FooterMin {
