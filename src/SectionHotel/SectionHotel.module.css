@@ -13,32 +13,38 @@
     justify-content: center;
 }
 
+.divTextContainerSection{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 10px;
+}
+
+.divTextContainerSection div{
+    display: flex;
+    align-items: center;
+}
+
+.divTextContainerSection img{
+    width: 24px;
+    height: 24px;
+}
+.divTextContainerSection p {
+    font-size: 10px;
+}
+
+.textSleeps{
+    height: 13px;
+}
+
 .divContainer {
     display: flex;
     justify-content: space-between;
     padding: 0px 20px;
 }
 
-.divTextContainer {
-    display: flex;
-    justify-content: space-between;
-    padding: 0px 10px;
-}
-
-.imgSerze {
-    position: absolute;
-    padding-left: 310px;
-    padding-top: 20px;
-}
-
-.zirca {
-    position: absolute;
-    padding-left: 20px;
-    padding-top: 20px;
-}
-
 .hotelImg {
-    width: 95%;
+    width: 94%;
     height: 100%;
     padding: 10px 10px 0px 10px
 }
@@ -54,21 +60,6 @@
     padding-left: 10px;
 }
 
-.divTextContainer div {
-    display: flex;
-    margin-bottom: 20px;
-}
-
-.divTextContainer img {
-    width: 25px;
-    height: 25px;
-    padding-right: 5px;
-}
-
-.divTextContainer p {
-    font-family: sans-serif;
-    margin: 0;
-}
 
 .divtext h2 {
     font-family: system-ui;
@@ -112,26 +103,19 @@
 }
 
 @media(max-width: 860px) {
+
+    .divTextContainerSection{
+        display: none;
+    }
+
     .divtext h3 {
         display: none;
     }
 
-    .divTextContainer {
-        display: none;
-    }
-
-    .divPidContainer {
-        max-width: 280px;
-        width: 100%;
-    }
-
-    .hotelImg {
-        max-width: 260px;
-        width: 100%;
-    }
-
-    .imgSerze {
-        padding-left: 230px;
+    .divTextContainer p{
+        display: flex;
+        font-size: 7px;
+        align-items: end;
     }
 }
 
@@ -139,17 +123,20 @@
     .divSpecialofers h2 {
         font-size: 30px;
     }
+
 }
 
 @media(max-width: 370px) {
     .divSpecialofers h2 {
         font-size: 30px;
     }
-
     .divContainer {
         padding: 0px;
     }
     .divSpecialofers h2 {
         font-size: 27px;
+    }
+    .hotelImg {
+        width: 93%;
     }
 }

@@ -56,12 +56,12 @@
 }
 
 
-.SearchContainer{
+.SearchContainer {
     display: flex;
     align-items: center;
 }
 
-.imgSearch{
+.imgSearch {
     width: 40px;
     height: 40px;
     padding: 10px 10px;
@@ -107,11 +107,12 @@
     display: flex;
 }
 
-.block_left img{
+.block_left img {
     width: 22px;
     height: 22px;
     padding: 10px 10px;
 }
+
 .divPoloska {
     display: block;
     position: static;
@@ -145,6 +146,14 @@
         max-width: 450px;
     }
 
+    .divPitBaner span {
+        font-size: 12px;
+    }
+
+    .divPitBaner p {
+        font-size: 12px;
+    }
+
     .divPoloska {
         left: 0px;
     }
@@ -168,10 +177,15 @@
     .block_left {
         display: none;
     }
+
     .hover_input {
-    
+
         min-width: 200px;
         width: 100%;
+    }
+
+    .imgSearch {
+        padding: 10px 10px 10px 20px;
     }
 
     .divTextbaner {

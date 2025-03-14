@@ -56,6 +56,7 @@ const Footer: React.FC = (props) => {
                     </ul>
                 </div>
                 <div className="DivMinContaier_1">
+                    <h2>{t("Footer.subTitle_3")}</h2>
                     <p>{t("Footer.subTitle_2")}</p>
                     <div>
                         <form>
@@ -78,7 +79,6 @@ const Footer: React.FC = (props) => {
                         <a href="https://web.telegram.org/"><img src={`/findHotelWeb/image/Telegram.png`} alt="undefined" loading="lazy" /></a>
                     </div>
                 </div>
-                <span>Danil Kogun</span>
             </div>
         </section>
     )
