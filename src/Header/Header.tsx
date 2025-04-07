@@ -6,6 +6,7 @@ import RegistrationForm from '../Login/RegistrationForm';
 import { useCookies } from 'react-cookie';
 import { Select } from 'antd';
 import { useTranslation } from 'react-i18next';
+import { NavLink } from 'react-router-dom';
 
 const Header = (props: void) => {
     const [nav, setNav] = useState<SetStateAction<boolean>>(false);
@@ -13,7 +14,6 @@ const Header = (props: void) => {
     const [cookie, setCookie, removeCookie] = useCookies(['userData']);
     const [userData, setUserData] = useState(cookie.userData);
     const { t, i18n } = useTranslation();
-
     const openModal = (): void => {
         setModalOpen(true);
     };
@@ -28,6 +28,7 @@ const Header = (props: void) => {
     const changeLanguage = (language: string) => {
         i18n.changeLanguage(language);
     };
+
     return (
         <header className={styles.sectionHeder}>
             <div className={styles.heder}>
@@ -37,7 +38,7 @@ const Header = (props: void) => {
                         <a href="#SectionHotel">{t('header.navBar.text_1')}</a>
                         <a href="#SectionBlog">{t('header.navBar.text_2')}</a>
                         <a href="#SectionChoose">{t('header.navBar.text_3')}</a>
-                        <a href="#SectionContacts">{t('header.navBar.text_4')}</a>
+                        <NavLink to="/AllHotels"><a>{t('header.navBar.text_4')}</a></NavLink>
                         <div className={styles.meregi_Btn}>
                             <a href="https://www.whatsapp.com/?lang=ru_RU"> <img src={`/findHotelWeb/image/Phone_black.png`} alt="undefined" rel="preload" /></a>
                             <a href="https://www.facebook.com/?locale=ru_RU"> <img src={`/findHotelWeb/image/facebook.png`} alt="undefined" rel="preload" /></a>

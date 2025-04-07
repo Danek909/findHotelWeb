@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import { CookiesProvider } from 'react-cookie';
 import store from './redux/redux-store';
 import Header from './Header/Header';
+import AllHotels from './AllHotels/AllHotels';
 
 const Choose = lazy(() => import('./Choose/Choose'));
 const Recent = lazy(() => import('./Recent/Recent'));
@@ -22,17 +23,17 @@ function App() {
       <Provider store={store} >
         <CookiesProvider>
           <Suspense>
-            <Header/>
-            <Banner onSearch={setSearchTerm}/>
+            <Header />
+            <Banner onSearch={setSearchTerm} />
             <Choose />
-            <SectionHotel searchTerm={searchTerm}/>
+            <SectionHotel searchTerm={searchTerm} />
             <Reviews />
             <Recent />
             <Footer />
             <Modal />
             <Routes>
-              <Route path='/Header' element={<Header />} />
               <Route path='/login' element={<Login />} />
+              <Route path="/AllHotels" element={<AllHotels />} />
             </Routes>
           </Suspense>
         </CookiesProvider>

@@ -1,0 +1,92 @@
+.HotelsSection {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* Висота 100% екрану */
+    background: white;
+    z-index: 1;
+    overflow: hidden;
+    /* Забороняємо прокрутку поза цією секцією */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.content {
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.textH1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #262729;
+    font-size: 45px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+}
+
+.buttonClose {
+    position: absolute;
+    top: 25px;
+    right: 27px;
+}
+
+.hotel_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1280px;
+    width: 100%;
+}
+
+.hotel_list div {
+    padding: 20px;
+    width: 370px;
+    height: 470px;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.modalContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    z-index: 10;
+}
+
+.sliderImage{
+    width: 500px;
+    height: 350px; 
+   
+}
+.slick-arrow,
+.slick-next {
+    display: contents;
+}
+

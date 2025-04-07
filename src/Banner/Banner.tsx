@@ -1,6 +1,7 @@
 // Banner.tsx
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 import styles from './Banner.module.css';
 import MapModal from './Maps';
 import SearchInput from './Search';
@@ -14,8 +15,9 @@ const Banner: React.FC<BannerProps> = ({ onSearch }) => {
   const [isMapOpen, setIsMapOpen] = useState(false);
   const [inputValue, setInputValue] = useState(""); // Для введеного тексту
   const [notFound, setNotFound] = useState(false); // Для відображення повідомлення, якщо нічого не знайдено
-
   const [currentRoomNames, setCurrentRoomNames] = useState<{ suite: string; deluxe: string; standard: string; } | null>(null);
+  const location = useLocation();
+  const isAllHotelPage = location.pathname.toLowerCase().includes("allhotels");
 
   // Назви номерів для кожної мови
   const roomNames: { [key: string]: { suite: string; deluxe: string; standard: string; } } = {
@@ -87,7 +89,6 @@ const Banner: React.FC<BannerProps> = ({ onSearch }) => {
           <img src={`/findHotelWeb/image/Banner.webp`} className={styles.banerPhoto} alt="banner" />
           <img src={`/findHotelWeb/image/Rectangle.webp`} className={styles.ImgZamina} alt="img" />
         </div>
-
         <div className={styles.divPitBaner}>
           <div className={styles.block_left}>
             <img onClick={openMap} src={`/findHotelWeb/image/point.png`} alt="open map" />

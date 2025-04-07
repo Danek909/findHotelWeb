@@ -4,8 +4,8 @@
             "text_1": "Last Minute Deals",
             "text_2": "Blog",
             "text_3": "About us",
-            "text_4": "Contacts",
-            "log out": "Log out"
+            "log out": "Log out",
+            "text_4": "All hotels"
         }
     },
     "Banner": {
@@ -13,6 +13,7 @@
         "h2_span": "for your vacation",
         "p": "We have several thousand apartments",
         "p_span": "for every taste in every corner of the globe",
+        "text": "All hotels",
         "search": {
             "p_1": "Where",
             "span_1": "Search Destination",
@@ -71,7 +72,6 @@
             "span_3": "1,350 Sq Ft",
             "span_4": "1,500 Sq Ft",
             "span_5": "1,900 Sq Ft"
-            
         }
     },
     "Reviews": {
@@ -115,7 +115,7 @@
     "Footer": {
         "Title": "Title of section",
         "subTitle_2": "Your email",
-        "subTitle_3":"Subscribe to Newsletter",
+        "subTitle_3": "Subscribe to Newsletter",
         "subTitle": "Page title",
         "text": "Design by",
         "text_span": "Delvig"
@@ -155,5 +155,8 @@
         "setError_message": "Check the password field and username",
         "required": "This field must be filled in",
         "MinLenght": "At least 2 characters!"
+    },
+    "AllHotels": {
+        "text_4": "All hotels"
     }
 }
