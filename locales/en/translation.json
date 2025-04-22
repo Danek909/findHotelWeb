@@ -157,6 +157,139 @@
         "MinLenght": "At least 2 characters!"
     },
     "AllHotels": {
-        "text_4": "All hotels"
+        "text_button":"Back to Home",
+        "text_4": "All hotels",
+        "sortByPrice": "Sort by price",
+        "sortByRating": "Sort by rating",
+        "sortByPriceAscending": "Lowest to highest",
+        "sortByPriceDescending": "Highest to lowest",
+        "sortByRatingAscending": "Lowest to highest",
+        "sortByRatingDescending": "Highest to highest",
+        "applyFilters": "Apply filters",
+        "reviews": "Reviews",
+        "sortBy": "Sort by",
+        "noSorting": "No sorting",
+        "sortOrder": "Order",
+        "ascending": "Ascending",
+        "descending": "Descending",
+        "showDiscounted": "Discounted only",
+        "searchPlaceholder": "Search for hotels...",
+        "price": "Price",
+        "rating": "Rating",
+        "date": "Date",
+        "discount": "Discount",
+        "sortByDate": "Sort by date",
+        "noResults": "No results found",
+        "resetFilters": "Reset filters"
+    },
+    "hotels": {
+        "paris": {
+            "name": "Hotel Paris",
+            "description": "Romantic hotel with a view of the Eiffel Tower.",
+            "reviews": [
+                "Incredible experience! ⭐⭐⭐⭐⭐",
+                "Friendly staff and cleanliness. ⭐⭐⭐⭐",
+                "Good location. ⭐⭐⭐⭐"
+            ]
+        },
+        "london": {
+            "name": "Hotel London",
+            "description": "Cozy hotel in the heart of London.",
+            "reviews": [
+                "All good, but noisy from the street. ⭐⭐⭐",
+                "Very close to the subway. ⭐⭐⭐⭐",
+                "Comfortable and convenient. ⭐⭐⭐⭐"
+            ]
+        },
+        "newYork": {
+            "name": "Hotel New York",
+            "description": "Luxurious hotel in the heart of Manhattan.",
+            "reviews": [
+                "Simply wow! ⭐⭐⭐⭐⭐",
+                "Top-notch service. ⭐⭐⭐⭐⭐",
+                "I love this place! ⭐⭐⭐⭐⭐"
+            ]
+        },
+        "tokyo": {
+            "name": "Hotel Tokyo",
+            "description": "Modern hotel with convenient subway access.",
+            "reviews": [
+                "Very tech-savvy! ⭐⭐⭐⭐",
+                "Delicious food, but rooms are a bit small. ⭐⭐⭐⭐",
+                "Clean and comfortable. ⭐⭐⭐⭐"
+            ]
+        },
+        "sydney": {
+            "name": "Hotel Sydney",
+            "description": "Beautiful beachfront hotel with stunning views.",
+            "reviews": [
+                "Amazing location! ⭐⭐⭐⭐⭐",
+                "Great for a relaxing stay. ⭐⭐⭐⭐⭐",
+                "Perfect for family vacations. ⭐⭐⭐⭐⭐"
+            ]
+        },
+        "berlin": {
+            "name": "Hotel Berlin",
+            "description": "Stylish hotel with easy access to the city center.",
+            "reviews": [
+                "Comfortable and stylish. ⭐⭐⭐⭐",
+                "Very good value for money. ⭐⭐⭐⭐",
+                "Nice atmosphere and friendly staff. ⭐⭐⭐⭐"
+            ]
+        },
+        "rome": {
+            "name": "Hotel Rome",
+            "description": "Charming hotel close to the Colosseum.",
+            "reviews": [
+                "Beautiful location! ⭐⭐⭐⭐⭐",
+                "Great service and amazing view. ⭐⭐⭐⭐⭐",
+                "Good experience, would stay again. ⭐⭐⭐⭐⭐"
+            ]
+        },
+        "losAngeles": {
+            "name": "Hotel Los Angeles",
+            "description": "Luxury hotel in downtown LA.",
+            "reviews": [
+                "Exceptional service! ⭐⭐⭐⭐⭐",
+                "Great location for tourists. ⭐⭐⭐⭐⭐",
+                "The view from the room was incredible. ⭐⭐⭐⭐⭐"
+            ]
+        },
+        "barcelona": {
+            "name": "Hotel Barcelona",
+            "description": "Modern hotel near the famous La Sagrada Familia.",
+            "reviews": [
+                "Very modern and stylish. ⭐⭐⭐⭐⭐",
+                "Loved the room, very spacious. ⭐⭐⭐⭐⭐",
+                "Great location for sightseeing. ⭐⭐⭐⭐⭐"
+            ]
+        },
+        "miami": {
+            "name": "Hotel Miami",
+            "description": "Cozy beach hotel with great amenities.",
+            "reviews": [
+                "Perfect for a beach getaway. ⭐⭐⭐⭐⭐",
+                "Friendly staff and great food. ⭐⭐⭐⭐⭐",
+                "Location couldn't be better. ⭐⭐⭐⭐⭐"
+            ]
+        },
+        "zurich": {
+            "name": "Hotel Zurich",
+            "description": "Elegant hotel with easy access to the city’s best attractions.",
+            "reviews": [
+                "Fantastic hotel, very comfortable. ⭐⭐⭐⭐⭐",
+                "Amazing breakfast! ⭐⭐⭐⭐⭐",
+                "Excellent service and clean rooms. ⭐⭐⭐⭐⭐"
+            ]
+        },
+        "bukovel": {
+            "name": "Hotel Bukovel",
+            "description": "Ski resort hotel with breathtaking mountain views.",
+            "reviews": [
+                "Perfect for a winter holiday! ⭐⭐⭐⭐⭐",
+                "Great location for skiing. ⭐⭐⭐⭐⭐",
+                "Cozy and warm rooms. ⭐⭐⭐⭐⭐"
+            ]
+        }
     }
 }
