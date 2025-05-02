@@ -38,7 +38,12 @@ const Header = (props: void) => {
                         <a href="#SectionHotel">{t('header.navBar.text_1')}</a>
                         <a href="#SectionBlog">{t('header.navBar.text_2')}</a>
                         <a href="#SectionChoose">{t('header.navBar.text_3')}</a>
-                        <NavLink to="/AllHotels"><a>{t('header.navBar.text_4')}</a></NavLink>
+                        <NavLink
+                            to="/AllHotels"
+                            onClick={() => setNav(false)}
+                            className={({ isActive }) => isActive ? styles.activeLink : ''}>
+                            {t('header.navBar.text_4')}
+                        </NavLink>
                         <div className={styles.meregi_Btn}>
                             <a href="https://www.whatsapp.com/?lang=ru_RU"> <img src={`/findHotelWeb/image/Phone_black.png`} alt="undefined" rel="preload" /></a>
                             <a href="https://www.facebook.com/?locale=ru_RU"> <img src={`/findHotelWeb/image/facebook.png`} alt="undefined" rel="preload" /></a>
@@ -65,6 +70,12 @@ const Header = (props: void) => {
                             { label: <button className={styles.Language_En} onClick={() => { changeLanguage("ua") }}>Ua</button>, value: 'Ukrainian' },
                         ]} />
                     <div className={styles.autorizedDiv}>
+                        <Select
+                            defaultValue={userData?.username ? userData?.username : "Exit"}
+                            className={styles.selectUser}
+                            options={[
+                                { label: <button className={styles.buttonExit} type="button" onClick={exitLogin}>{t('header.navBar.log out')}</button>, value: 'English' },
+                            ]} />
                         {cookie?.userData?.isLogined === 'authorized' ? (
                             <button type="button" onClick={openModal}>
                                 <img className={styles.PhotoUser} src={`/findHotelWeb/image/userPhoto.jpeg`} alt="User Photo" />
@@ -74,16 +85,6 @@ const Header = (props: void) => {
                                 <img className={styles.userPhoto} src={`/findHotelWeb/image/GuestPhoto.jpg`} alt="Guest Photo" />
                             </button>
                         )}
-
-                        <Select
-                            defaultValue={userData?.username ? userData?.username : "Exit"}
-                            style={{
-                                width: 90,
-                                height: 20,
-                            }}
-                            options={[
-                                { label: <button className={styles.buttonExit} type="button" onClick={exitLogin}>{t('header.navBar.log out')}</button>, value: 'English' },
-                            ]} />
                     </div>
 
                     <ConfigProvider theme={{

@@ -11,6 +11,11 @@
     padding-bottom: 50px;
 }
 
+.selectUser{
+    width: 90px;
+    height: 20px;
+}
+
 .item a {
     color: white;
     text-decoration: none;
@@ -45,13 +50,14 @@
     color: #2A90D9;
     font-weight: 900;
     margin-bottom: -25px;
+    margin-left: -15px;
 }
 
 .heder {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 95%;
+    width: 93%;
     height: 100%;
     margin: 0 auto;
 
@@ -146,8 +152,12 @@
 .autorizedDiv {
     display: flex;
     align-items: center;
-    flex-direction: column;
-    margin-top: 8px;
+    margin-top: 45px;
+}
+
+.reviews ul li{
+    text-align: start;
+    color: #2A90D9;
 }
 
 @media (max-width: 930px) {
@@ -158,8 +168,14 @@
 
 @media (max-width: 800px) {
 
+    .imgHeder {
+        position: relative;
+        top: -25px;
+    }
     .sectionHeder {
         padding-bottom: 30px;
+        position: relative;
+        z-index: 10;
     }
 
     .yourLogoHeder h1 {
@@ -174,9 +190,10 @@
     .mobile_btn {
         display: block;
         position: absolute;
-        left: 40px;
+        left: 20px;
         top: 10px;
         cursor: pointer;
+    
     }
 
     .menu {
@@ -186,7 +203,7 @@
         bottom: 0;
         left: -120%;
         right: 0;
-        transition: left 1s;
+        transition: left 0.6s;
     }
 
     .yourLogoHeder ul {
@@ -261,6 +278,7 @@
     .yourLogoHeder h1 {
         margin-bottom: 0px;
         margin-top: -50px;
+        margin-left: 0px;
     }
 
     .imgHeder {
@@ -295,4 +313,17 @@
         right: 20px;
         top: 5px;
     }
+
+} 
+
+@media (max-width: 400px) {
+    .selectUser{
+        width: 55px;
+        height: 20px;
+    }
+
+    .imgHeder {
+        right: 0px;
+    }
 }
+

@@ -1,4 +1,3 @@
-// MapModal.tsx
 import React from 'react';
 
 interface MapModalProps {

@@ -28,6 +28,14 @@
     font-family: sans-serif;
 }
 
+:global(.swiper) {
+    z-index: unset !important;
+  }
+  
+  :global(.swiper-wrapper) {
+    z-index: 0 !important;
+  }
+
 
 @media(max-width: 1435px){
     .btnBottom{

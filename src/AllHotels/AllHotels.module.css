@@ -4,15 +4,36 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    /* Висота 100% екрану */
     background: white;
-    z-index: 1;
+    z-index: 11;
     overflow: hidden;
-    /* Забороняємо прокрутку поза цією секцією */
     display: flex;
     align-items: center;
     justify-content: center;
 
+}
+
+.selectSorting {
+    text-align: center;
+    width: 120px;
+    margin-left: 10px;
+    border-radius: 10px;
+    margin-right: 20px;
+    border: 1px solid #d9d9d9;
+}
+
+.labelCheckbox input {
+    width: 25px;
+    margin-right: 20px;
+}
+
+.buttonReset {
+    width: 120px;
+    height: 30px;
+    border: 1px solid #ff0000;
+    color: #ff0000;
+    border-radius: 10px;
+    background-color: #fff;
 }
 
 .content {
@@ -24,7 +45,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .textH1 {
@@ -37,10 +57,18 @@
     font-family: sans-serif;
 }
 
+.divButton {
+    max-width: 1230px;
+    width: 100%;
+}
+
 .buttonClose {
-    position: absolute;
-    top: 25px;
-    right: 27px;
+    width: 100px;
+    background-color: white;
+    border: 1px solid #ff0000;
+    border-radius: 9px;
+    color: red;
+
 }
 
 .hotel_list {
@@ -49,13 +77,30 @@
     justify-content: space-between;
     max-width: 1280px;
     width: 100%;
+    margin-bottom: 100px;
+}
+
+.hotel_list img {
+    width: 100%;
 }
 
 .hotel_list div {
-    padding: 20px;
-    width: 370px;
-    height: 470px;
+    padding: 17px;
+    margin: 17px;
+    width: 350px;
+    height: 425px;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
+
+.hotel_card {
+    transition: transform 0.3s ease;
+}
+
+.hotel_card:hover {
+    transform: scale(1.03);
+}
+
 
 .modalOverlay {
     position: fixed;
@@ -69,24 +114,194 @@
     align-items: center;
     z-index: 10;
     transition: background-color 0.3s ease;
+    padding: 30px 30px;
 }
 
 .modalContent {
     background-color: white;
     padding: 20px;
+    margin: 20px;
     border-radius: 8px;
     max-width: 600px;
     width: 100%;
+    max-height: 650px;
+    height: 100%;
     z-index: 10;
+    overflow: auto;
 }
 
-.sliderImage{
-    width: 500px;
-    height: 350px; 
-   
+.sliderImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+
 }
+
 .slick-arrow,
 .slick-next {
     display: contents;
 }
 
+.divContainerFil_Sort {
+    display: flex;
+    max-width: 1230px;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.DivSortFilters {
+    display: flex;
+    align-items: center;
+}
+
+.divSortOrder {
+    margin-right: 20px;
+}
+
+.divSortOrder select {
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+
+.noResults h2 {
+    color: #ff0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hotel_list h3 {
+    font-family: system-ui;
+    color: #006ce4;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.hotel_list h4 {
+    color: #ff0000;
+    font-weight: 600;
+}
+
+.hotel_list h5 {
+    font-weight: 600;
+}
+
+.hotel_list p {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.hotel_list span {
+    color: #2ECC71;
+    font-weight: 700;
+}
+
+
+.hotelInfo h2 {
+    font-family: system-ui;
+    color: #006ce4;
+    font-weight: 700;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hotelInfo li {
+    color: gray;
+    font-weight: 500;
+}
+
+.hotelInfo p {
+    color: black;
+    font-weight: 500;
+}
+
+.hotelInfo span {
+    color: #2ECC71;
+    font-weight: 700;
+}
+
+.reviewsUl {
+    text-align: start;
+}
+
+@media(max-width: 875px) {
+    .hotel_list {
+        justify-content: center;
+    }
+
+    .divContainerFil_Sort {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .DivSortFilters {
+        flex-direction: column;
+    }
+
+    .selectSorting {
+        margin: 20px 10px;
+    }
+
+    .divSortOrder {
+        margin-bottom: 20px;
+    }
+
+    .labelCheckbox input {
+        margin-bottom: 20px;
+        margin-right: 0px;
+    }
+
+}
+
+
+@media(max-width: 550px) {
+    .reviewsUl {
+        padding-left: 15px;
+    }
+}
+
+
+@media(max-width: 450px) {
+    .hotel_list div {
+        width: 300px;
+        height: 415px;
+    }
+
+    .hotelInfo h2 {
+        font-size: 25px;
+    }
+
+    .modalContent {
+        margin: 0px;
+    }
+}
+
+@media(max-width: 410px) {
+    .hotel_list div {
+        width: 260px;
+        height: 354px;
+    }
+
+    .hotel_list h4 {
+        margin-top: -7px;
+        font-weight: 500;
+    }
+}
+
+@media(max-width: 355px) {
+    .hotel_list div {
+        width: 220px;
+        height: 325px;
+    }
+}

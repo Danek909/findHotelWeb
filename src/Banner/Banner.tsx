@@ -13,13 +13,12 @@ interface BannerProps {
 const Banner: React.FC<BannerProps> = ({ onSearch }) => {
   const { t, i18n } = useTranslation();
   const [isMapOpen, setIsMapOpen] = useState(false);
-  const [inputValue, setInputValue] = useState(""); // Для введеного тексту
-  const [notFound, setNotFound] = useState(false); // Для відображення повідомлення, якщо нічого не знайдено
+  const [inputValue, setInputValue] = useState(""); 
+  const [notFound, setNotFound] = useState(false);
   const [currentRoomNames, setCurrentRoomNames] = useState<{ suite: string; deluxe: string; standard: string; } | null>(null);
   const location = useLocation();
   const isAllHotelPage = location.pathname.toLowerCase().includes("allhotels");
 
-  // Назви номерів для кожної мови
   const roomNames: { [key: string]: { suite: string; deluxe: string; standard: string; } } = {
     en: {
       suite: "suite",
@@ -36,7 +35,7 @@ const Banner: React.FC<BannerProps> = ({ onSearch }) => {
   useEffect(() => {
     const language = i18n.language || "ua";
     setCurrentRoomNames(roomNames[language]);
-  }, [i18n.language]); // Оновлюємо при зміні мови
+  }, [i18n.language]);
 
   const openMap = () => setIsMapOpen(true);
   const closeMap = () => setIsMapOpen(false);

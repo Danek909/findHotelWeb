@@ -7,7 +7,7 @@ interface SearchInputProps {
     handleSearch: () => void;
     handleKeyPress: (event: React.KeyboardEvent<HTMLInputElement>) => void;
     notFound: boolean;
-    t: any; // Використання `t` для локалізації
+    t: any;
 }
 
 const SearchInput: React.FC<SearchInputProps> = ({
