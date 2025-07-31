@@ -1,0 +1,143 @@
+.sectionAboutUs {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+.divButton {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.buttonClose {
+    width: 100px;
+    background-color: white;
+    border: 1px solid #ff0000;
+    border-radius: 9px;
+    color: red;
+}
+
+.textTitle {
+    display: flex;
+    justify-content: center;
+}
+
+.textParagraph1 {
+    color: #494646;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.textParagraph2 {
+    margin-bottom: 80px;
+    color: #494646;
+     padding-left: 20px;
+    padding-right: 20px;
+}
+
+.divContent {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.divImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.divImg img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.FooterContainer {
+    background-color: #bebdbd54;
+}
+
+.MinContainer {
+    padding-top: 0px;
+}
+
+.FooterMin {
+    max-width: 1185px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 43px;
+}
+
+.FooterMin h1 {
+    font-family: sans-serif;
+    color: #2A90D9;
+}
+
+.FooterMin h1 span {
+    font-family: sans-serif;
+    color: #db35ab;
+}
+
+.FooterMin p {
+    font-family: sans-serif;
+}
+
+.FooterMin span {
+    color: #2A90D9;
+}
+
+.minDivFooter {
+    display: flex;
+    justify-content: space-between;
+    max-width: 200px;
+    width: 100%;
+    height: 30px;
+    height: 100%;
+}
+
+@media(max-width: 1280px) {
+    .minDivFooter {
+        padding-right: 30px;
+    }
+    .FooterMin{
+        padding: 0px;
+        flex-wrap: wrap;
+    }
+    .buttonClose{
+        margin-left: 10px;
+    }
+}
+
+@media(max-width: 800px) {
+    .divImg{
+        padding: 0;
+    }
+}
+
+@media(max-width: 500px){
+    .FooterMin p {
+     padding: 10px;
+    }
+    .FooterMin{
+       flex-direction: column;
+    }
+    .minDivFooter {
+        padding-right: 30px;
+        padding-bottom: 30px;
+    }
+}

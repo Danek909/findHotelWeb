@@ -18,6 +18,7 @@
     "i18next": "^23.16.8",
     "i18next-browser-languagedetector": "^8.1.0",
     "i18next-http-backend": "^2.7.3",
+    "js-cookie": "^3.0.5",
     "query-string": "^8.2.0",
     "react": "^18.2.0",
     "react-cookie": "^7.2.0",

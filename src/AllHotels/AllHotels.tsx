@@ -7,6 +7,7 @@ import HotelList from "./HotelList";
 import HotelModal from "./HotelModal";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useCookies } from "react-cookie";
 
 export interface Hotel {
   id: number;
@@ -42,6 +43,18 @@ const AllHotels = () => {
   const [sortBy, setSortBy] = useState("none");
   const [sortOrder, setSortOrder] = useState("ascending");
   const [selectedHotel, setSelectedHotel] = useState<Hotel | null>(null);
+  const [cookies, setCookie] = useCookies(['favorites']);
+  const [favorites, setFavorites] = useState<Hotel[]>(cookies.favorites || []);
+
+  const handleToggleFavorite = (hotel: Hotel) => {
+    const exists = favorites.some(h => h.id === hotel.id);
+    const updated = exists
+      ? favorites.filter(h => h.id !== hotel.id)
+      : [...favorites, hotel];
+
+    setFavorites(updated);
+    setCookie('favorites', updated, { path: '/', maxAge: 60 * 60 * 24 }); 
+  };
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -102,7 +115,12 @@ const AllHotels = () => {
           }}
         />
 
-        <HotelList hotels={filteredHotels} onHotelClick={setSelectedHotel} />
+        <HotelList
+          hotels={filteredHotels}
+          onHotelClick={setSelectedHotel}
+          onToggleFavorite={handleToggleFavorite}
+          favorites={favorites}
+        />
 
         {selectedHotel && (
           <HotelModal hotel={selectedHotel} onClose={() => setSelectedHotel(null)} />

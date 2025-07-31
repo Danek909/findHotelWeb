@@ -1,0 +1,243 @@
+.SelectedHotelsSection {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+.textH1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #262729;
+    font-size: 45px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+    margin-bottom: 60px;
+}
+
+.divButton {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.buttonClose {
+    width: 100px;
+    background-color: white;
+    border: 1px solid #ff0000;
+    border-radius: 9px;
+    color: red;
+}
+
+.LikeImg {
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+}
+
+.hotel_list h3 {
+    font-family: system-ui;
+    color: #006ce4;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.hotel_list h4 {
+    color: #ff0000;
+    font-weight: 600;
+}
+
+.hotel_list h5 {
+    font-weight: 600;
+}
+
+.hotel_list p {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.hotel_list span {
+    color: #2ECC71;
+    font-weight: 700;
+}
+
+
+.hotelInfo h2 {
+    font-family: system-ui;
+    color: #006ce4;
+    font-weight: 700;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hotelInfo li {
+    color: gray;
+    font-weight: 500;
+}
+
+.hotelInfo p {
+    color: black;
+    font-weight: 500;
+}
+
+.hotelInfo span {
+    color: #2ECC71;
+    font-weight: 700;
+}
+
+
+.hotel_list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.hotel_list img {
+    width: 100%;
+}
+
+.hotel_list div {
+    padding: 17px;
+    margin: 17px;
+    width: 350px;
+    height: 425px;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.hotel_card {
+    transition: transform 0.3s ease;
+}
+
+.hotel_card:hover {
+    transform: scale(1.03);
+}
+
+.favoriteButton {
+    position: relative;
+    top: -390px;
+    border: 0;
+    padding: 0;
+    border-radius: 15px;
+    height: 25px;
+}
+
+.discountButton {
+    position: relative;
+    top: -430px;
+    border: 0;
+    padding: 0;
+    border-radius: 15px;
+    height: 25px;
+}
+
+.LikeImg {
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+}
+
+@media(max-width: 1254px) {
+    .hotel_list {
+        justify-content: center;
+    }
+
+    .divButton {
+        max-width: 815px;
+        padding-left: 20px;
+    }
+
+}
+
+@media(max-width: 835px) {
+    .divButton {
+        max-width: 395px;
+    }
+}
+
+@media(max-width: 450px) {
+    .hotel_list div {
+        width: 300px;
+        height: 415px;
+    }
+
+    .favoriteButton{
+        position: relative;
+        top: -360px;
+        border: 0;
+        padding: 0;
+        border-radius: 15px;
+        height: 25px;
+    }
+    
+    .discountButton{
+        position: relative;
+        top: -400px;
+        border: 0;
+        padding: 0;
+        border-radius: 15px;
+        height: 25px;
+    }
+}
+
+@media(max-width: 410px) {
+
+    .hotel_list div {
+        width: 260px;
+        height: 354px;
+    }
+
+    .favoriteButton{
+        position: relative;
+        top: -335px;
+        border: 0;
+        padding: 0;
+        border-radius: 15px;
+        height: 25px;
+    }
+    
+    .discountButton{
+        position: relative;
+        top: -370px;
+        border: 0;
+        padding: 0;
+        border-radius: 15px;
+        height: 25px;
+    }
+}
+
+@media(max-width: 355px) {
+    .hotel_list div {
+        width: 220px;
+        height: 325px;
+    }
+
+    .favoriteButton{
+        position: relative;
+        top: -310px;
+        border: 0;
+        padding: 0;
+        border-radius: 15px;
+        height: 25px;
+    }
+
+    .discountButton{
+        position: relative;
+        top: -350px;
+        border: 0;
+        padding: 0;
+        border-radius: 15px;
+        height: 25px;
+    }
+}

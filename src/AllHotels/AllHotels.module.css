@@ -13,6 +13,30 @@
 
 }
 
+.favoriteButton{
+    position: relative;
+    top: -390px;
+    border: 0;
+    padding: 0;
+    border-radius: 15px;
+    height: 25px;
+}
+
+.discountButton{
+    position: relative;
+    top: -430px;
+    border: 0;
+    padding: 0;
+    border-radius: 15px;
+    height: 25px;
+}
+
+.LikeImg{
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+}
+
 .selectSorting {
     text-align: center;
     width: 120px;
@@ -285,6 +309,23 @@
     .modalContent {
         margin: 0px;
     }
+    .favoriteButton{
+        position: relative;
+        top: -360px;
+        border: 0;
+        padding: 0;
+        border-radius: 15px;
+        height: 25px;
+    }
+    
+    .discountButton{
+        position: relative;
+        top: -400px;
+        border: 0;
+        padding: 0;
+        border-radius: 15px;
+        height: 25px;
+    }
 }
 
 @media(max-width: 410px) {
@@ -297,11 +338,46 @@
         margin-top: -7px;
         font-weight: 500;
     }
+    .favoriteButton{
+        position: relative;
+        top: -335px;
+        border: 0;
+        padding: 0;
+        border-radius: 15px;
+        height: 25px;
+    }
+    
+    .discountButton{
+        position: relative;
+        top: -370px;
+        border: 0;
+        padding: 0;
+        border-radius: 15px;
+        height: 25px;
+    }
 }
 
 @media(max-width: 355px) {
     .hotel_list div {
         width: 220px;
         height: 325px;
+    }
+
+    .favoriteButton{
+        position: relative;
+        top: -310px;
+        border: 0;
+        padding: 0;
+        border-radius: 15px;
+        height: 25px;
+    }
+
+    .discountButton{
+        position: relative;
+        top: -350px;
+        border: 0;
+        padding: 0;
+        border-radius: 15px;
+        height: 25px;
     }
 }

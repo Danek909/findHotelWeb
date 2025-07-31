@@ -6,6 +6,8 @@ import { CookiesProvider } from 'react-cookie';
 import store from './redux/redux-store';
 import Header from './Header/Header';
 import AllHotels from './AllHotels/AllHotels';
+import SelectedHotels from './SelectedHotels/SelectedHotels';
+import AboutUs from './AboutUs/AboutUs';
 
 const Choose = lazy(() => import('./Choose/Choose'));
 const Recent = lazy(() => import('./Recent/Recent'));
@@ -34,6 +36,8 @@ function App() {
             <Routes>
               <Route path='/login' element={<Login />} />
               <Route path="/AllHotels" element={<AllHotels />} />
+              <Route path='/SelectedHotels' element={<SelectedHotels/>} />
+              <Route path='/AboutUs' element={<AboutUs/>} />
             </Routes>
           </Suspense>
         </CookiesProvider>
