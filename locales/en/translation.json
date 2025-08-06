@@ -157,7 +157,7 @@
         "MinLenght": "At least 2 characters!"
     },
     "AllHotels": {
-        "text_button":"Back to Home",
+        "text_button": "Back to Home",
         "text_4": "All hotels",
         "sortByPrice": "Sort by price",
         "sortByRating": "Sort by rating",
@@ -291,5 +291,15 @@
                 "Cozy and warm rooms. ⭐⭐⭐⭐⭐"
             ]
         }
+    },
+    "SelectedHotels": {
+        "close": "Back to Home",
+        "title": "Selected hotels",
+        "noFavorites": "No hotels selected"
+      },
+      "hotelAbout": {
+        "title": "About us",
+        "paragraph1": "Dear guests, we - Royal Hotel are already waiting for you with impatience. Here you will feel true comfort, warmth and hospitality. Our rooms are a combination of comfort and style, and the windows offer inspiring views. Here you can relax your soul, enjoy delicious breakfasts, walks, silence or adventures - choose your ideal vacation.",
+        "paragraph2": "Discover breathtaking views from the windows of our rooms. Enjoy delicious breakfasts prepared with care, and in the evening - walks in silence, the aroma of coffee or a glass of wine on the terrace. If you want peace - we will give you peace. If you want adventure - we will suggest the most interesting routes, excursions and impressions. At Royal Hotel, warmth, sincerity and attention to each guest reign. After all, it is important to us that you not only relax, but also want to come back again."
     }
 }
